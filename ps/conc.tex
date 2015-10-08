@@ -1,0 +1,6 @@
+\section{Conclusions}
+
+This paper focused on sentiment analysis on Twitter streams. We have introduced new algorithms for active training-set formation, which we denote as Pareto-Efficient Selective Sampling (PESS) and Kaldor-Hicks Selective Sample (KHSS). The proposed algorithms provide the resulting classifier with memorability and adaptiveness. We formalized the selective sampling process as a multi-objective optimization procedure, which finds a proper balance between adaptiveness and memorability.
+Adaptiveness is assessed by computing the distance in time and space between the target message and the candidate ones. Also, candidate messages are randomly shuffled, thus providing memorability to the resulting classifier. The message utility space is composed by such dimensions, and we compute the Pareto Frontier in this space in order to pick up messages satisfying the Pareto improvement condition, finding a proper balance between adaptiveness and memorability. The Kaldor-Hicks criterion enables memorability to compensate adaptiveness, or vice-versa. A systematic evaluation involving recent events demonstrated the effectiveness of our algorithms.
+
+As future work, we intend to extend our strategies for algorithms that do not depend on manual labeling.

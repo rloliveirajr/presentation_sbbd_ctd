@@ -1,0 +1,227 @@
+\begin{thebibliography}{10}
+
+\bibitem{rules}
+R.~Agrawal, T.~Imielinski, and A.~Swami.
+\newblock Mining association rules between sets of items in large databases.
+\newblock In {\em SIGMOD}, pages 207--216. ACM, 1993.
+
+\bibitem{baeza99modern}
+R.~Baeza-Yates and B.~R-Neto.
+\newblock {\em Modern Information Retrieval}.
+\newblock Addison-Wesley-Longman, 1999.
+
+\bibitem{fimi}
+R.~Bayardo, B.~Goethals, and M.~Zaki, editors.
+\newblock {\em Workshop on Frequent Itemset Mining Implementations}, volume
+  126, 2004.
+
+\bibitem{bifetsent1}
+A.~Bifet and E.~Frank.
+\newblock Sentiment knowledge discovery in twitter streaming data.
+\newblock In {\em Disc. Science}, pages 1--15, 2010.
+
+\bibitem{Bifet:2012:ERH:2089094.2089106}
+A.~Bifet, E.~Frank, G.~Holmes, and B.~Pfahringer.
+\newblock Ensembles of restricted hoeffding trees.
+\newblock {\em TIST}, 3(2):30:1--30:20, 2012.
+
+\bibitem{Bifet2007}
+A.~Bifet and R.~Gavald{\`a}.
+\newblock Learning from time-changing data with adaptive windowing.
+\newblock In {\em SDM}, 2007.
+
+\bibitem{Bifet:2009:ALE:1617420.1617445}
+A.~Bifet and R.~Gavald\`{a}.
+\newblock Adaptive learning from evolving data streams.
+\newblock In {\em IDA}, pages 249--260, 2009.
+
+\bibitem{moa}
+A.~Bifet, G.~Holmes, R.~Kirkby, and B.~Pfahringer.
+\newblock {MOA}: Massive online analysis.
+\newblock {\em JMLR}, 11:1601--1604, 2010.
+
+\bibitem{Bifet:2010:FPD:2144032.2144069}
+A.~Bifet, G.~Holmes, B.~Pfahringer, and E.~Frank.
+\newblock Fast perceptron decision tree learning from evolving data streams.
+\newblock In {\em PAKDD}, pages 299--310, 2010.
+
+\bibitem{bifetsent2}
+A.~Bifet, G.~Holmes, B.~Pfahringer, and R.~Gavald{\`a}.
+\newblock Detecting sentiment change in twitter streaming data.
+\newblock {\em JMLR}, 17:5--11, 2011.
+
+\bibitem{operator}
+S.~B{\"o}rzs{\"o}nyi, D.~Kossmann, and K.~Stocker.
+\newblock The skyline operator.
+\newblock In {\em ICDE}, pages 421--430, 2001.
+
+\bibitem{trees}
+L.~Breiman, J.~Friedman, R.~Olshen, and C.~Stone.
+\newblock Classification and regression trees.
+\newblock {\em Wadsworth Intl.}, 1984.
+
+\bibitem{compensation}
+J.~Chipman.
+\newblock Compensation principle.
+\newblock In S.~N. Durlauf and L.~E. Blume, editors, {\em The New Palgrave
+  Dictionary of Economics}. Palgrave Macmillan, 2008.
+
+\bibitem{cortes}
+C.~Cortes and V.~Vapnik.
+\newblock Support-vector networks.
+\newblock {\em Machine Learning}, 20(3):273--297, 1995.
+
+\bibitem{permutation}
+R.~Durstenfeld.
+\newblock Algorithm 235: Random permutation.
+\newblock {\em Commun. ACM}, 7(7):420, 1964.
+
+\bibitem{Feng2013}
+L.~Feng, F.~Chen, and Y.~Yao.
+\newblock A concept similarity based data stream classification model.
+\newblock {\em Journal of Information \& Computational Science},
+  10(4):949--957, 2013.
+
+\bibitem{Gama2009a}
+J.~Gama, R.~S. {a}o, and P.~Rodrigues.
+\newblock {Issues in evaluation of stream learning algorithms}.
+\newblock In {\em SIGKDD}, page 329, 2009.
+
+\bibitem{fp}
+J.~Han, J.~Pei, Y.~Yin, and R.~Mao.
+\newblock Mining frequent patterns without candidate generation: A
+  frequent-pattern tree approach.
+\newblock {\em Data Mining Knowledge Discovery}, 8(1):53--87, 2004.
+
+\bibitem{hicks}
+J.~Hicks.
+\newblock The foundations of welfare economics.
+\newblock {\em The Economic Journal}, 49(196):696--712, 1939.
+
+\bibitem{forbes}
+R.~Hof.
+\newblock Real-time advertising has arrived, thanks to {Oreo} and {The Super
+  Bowl}, April 2013.
+\newblock \url{www.forbes.com/}.
+
+\bibitem{uncertainty}
+C.~Jin, K.~Yi, L.~Chen, J.~Yu, and X.~Lin.
+\newblock Sliding-window top-{\it k} queries on uncertain streams.
+\newblock {\em VLDB J.}, 19(3):411--435, 2010.
+
+\bibitem{kaldor}
+N.~Kaldor.
+\newblock Welfare propositions in economics and interpersonal comparisons of
+  utility.
+\newblock {\em The Economic Journal}, 49(195):549--552, 1939.
+
+\bibitem{Klinkenberg:2004:LDC:1293831.1293836}
+R.~Klinkenberg.
+\newblock Learning drifting concepts: Example selection vs. example weighting.
+\newblock {\em Intell. Data Anal.}, 8(3), 2004.
+
+\bibitem{Koychev00gradualforgetting}
+I.~Koychev.
+\newblock Gradual forgetting for adaptation to concept drift.
+\newblock In {\em ECAI}, pages 101--106, 2000.
+
+\bibitem{Masud:2008:PAC:1510528.1511337}
+M.~Masud, J.~Gao, L.~Khan, J.~Han, and B.~Thuraisingham.
+\newblock A practical approach to classify evolving data streams: Training with
+  limited amount of labeled data.
+\newblock In {\em ICDM}, pages 929--934, 2008.
+
+\bibitem{icmr14}
+M.~Moreira, J.~dos Santos, and A.~Veloso.
+\newblock Learning to rank similar apparel styles with economically-efficient
+  rule-based active learning.
+\newblock In {\em ICMR}, pages 361--369, 2014.
+
+\bibitem{Nunez:2007:LEU:1314498.1390328}
+M.~N. {n}ez, R.~Fidalgo, and R.~Morales.
+\newblock Learning in environments with unknown dynamics: Towards more robust
+  concept learners.
+\newblock {\em JMLR}, 8, 2007.
+
+\bibitem{palda@book}
+F.~Palda.
+\newblock {\em Pareto's Republic and the new Science of Peace}.
+\newblock Cooper-Wolfling, 2011.
+
+\bibitem{recsys12}
+M.~Ribeiro, A.~Lacerda, A.~Veloso, and N.~Ziviani.
+\newblock Pareto-efficient hybridization for multi-objective recommender
+  systems.
+\newblock In {\em RecSys}, pages 19--26, 2012.
+
+\bibitem{sigir}
+I.~Santana, J.~Gomide, A.~Veloso, W.~M. {Jr.}, and R.~Ferreira.
+\newblock Effective sentiment stream analysis with self-augmenting training and
+  demand-driven projection.
+\newblock In {\em SIGIR}, pages 475--484. ACM, 2011.
+
+\bibitem{Torres:2011:CMD:2025756.2025758}
+D.~Torres, J.~Ruiz, and Y.~Sarabia.
+\newblock Classification model for data streams based on similarity.
+\newblock In {\em IEA}, pages 1--9, 2011.
+
+\bibitem{lac}
+A.~Veloso, W.~M. Jr., and M.~Zaki.
+\newblock Lazy associative classification.
+\newblock In {\em ICDM}, pages 645--654, 2006.
+
+\bibitem{calibrated}
+A.~Veloso, W.~{Meira Jr.}, M.~Gon\c{c}alves, H.~de~Almeida, and M.~Zaki.
+\newblock Calibrated lazy associative classification.
+\newblock {\em Inf. Sci.}, 181(13):2656--2670, 2011.
+
+\bibitem{hipc}
+A.~Veloso, M.~Otey, S.~Parthasarathy, and W.~{Meira Jr.}
+\newblock Parallel and distributed frequent itemset mining on dynamic datasets.
+\newblock In {\em HiPC}, pages 184--193, 2003.
+
+\bibitem{DBLP:journals/corr/abs-1010-4784}
+I.~\v{Z}liobait\.{e}.
+\newblock Learning under concept drift: an overview.
+\newblock {\em CoRR}, abs/1010.4784, 2010.
+
+\bibitem{DBLP:journals/jmlr/ZliobaiteBHP11}
+I.~\v{Z}liobait\.{e}, A.~Bifet, G.~Holmes, and B.~Pfahringer.
+\newblock {MOA} concept drift active learning strategies for streaming data.
+\newblock {\em JMLR}, 17:48--55, 2011.
+
+\bibitem{Indre2011k}
+I.~\v{Z}liobait\.{e}, A.~Bifet, B.~Pfahringer, and G.~Holmes.
+\newblock Active learning with evolving streaming data.
+\newblock In {\em Machine Learning and Knowledge Discovery in Databases},
+  volume 6913, pages 597--612. 2011.
+
+\bibitem{6414645}
+I.~\v{Z}liobait\.{e}, A.~Bifet, B.~Pfahringer, and G.~Holmes.
+\newblock Active learning with drifting streaming data.
+\newblock {\em IEEE Trans. on Neural Networks and Learning Systems},
+  PP(99):1--1, 2013.
+
+\bibitem{vertical}
+M.~Zaki and K.~Gouda.
+\newblock Fast vertical mining using diffsets.
+\newblock In {\em SIGKDD}, pages 326--335, 2003.
+
+\bibitem{eclat}
+M.~Zaki, S.~Parthasarathy, M.~Ogihara, and W.~Li.
+\newblock New algorithms for fast discovery of association rules.
+\newblock In {\em SIGKDD}, pages 283--286, 1997.
+
+\bibitem{5440901}
+X.~Zhu, P.~Zhang, X.~Lin, and Y.~Shi.
+\newblock Active learning from stream data using optimal weight classifier
+  ensemble.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics, Part B:
+  Cybernetics}, 40(6):1607--1621, 2010.
+
+\bibitem{shasha}
+Y.~Zhu and D.~Shasha.
+\newblock Efficient elastic burst detection in data streams.
+\newblock In {\em KDD}, pages 336--345, 2003.
+
+\end{thebibliography}

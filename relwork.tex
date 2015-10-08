@@ -1,0 +1,67 @@
+\section{Related Work}
+
+In the data stream model, data arrives at high speed and algorithms must
+work in real time and with limited resources. Further, in some domains,
+algorithms must deal either with burst detection~\cite{shasha} and concept drift (i.e.,
+data which nature or distribution change over time). \v{Z}liobait\.{e}
+\cite{DBLP:journals/corr/abs-1010-4784} categorizes such drifts as sudden, gradual,
+incremental and recurring. When data distribution or nature change over time, its relevance
+must be recalculated to avoid harming the model. This kind of data stream is known as
+evolving data streams.
+
+Many techniques have been proposed to allow accurate classification in evolving data
+streams.  N\'{u}\~{n}ez et al. \cite{Nunez:2007:LEU:1314498.1390328} proposed a
+method for keeping a variable training window by adjusting internal
+structures of decision trees. An ensemble of Hoeffding trees have been proposed
+in \cite{Bifet:2012:ERH:2089094.2089106}, each tree is limited to a small subset of
+attributes. Gama et al.\cite{Gama2009a} proposed a mechanism to discard old
+information based on sliding windows. Bifet et al.  \cite{Bifet2007,
+Bifet:2009:ALE:1617420.1617445} proposed an adaptive sliding window algorithm,
+called ADWIN, suitable for data streams with sudden drifts.
+The approach presented in
+\cite{Koychev00gradualforgetting} suggests that a time-based
+forgetting function, which makes more recent observations more significant,
+provides adaptiveness to the classifier.
+Klinkenberg \cite{Klinkenberg:2004:LDC:1293831.1293836} compares example selection, often
+used in windowing approaches with example weights. Experiments
+show that both approaches are effective.
+In \cite{sigir} the
+authors proposed an approach based on a training augmentation procedure, which
+automatically incorporates
+relevant training messages into the training-set.
+%Classification models are produced
+%on-the-fly using association rules, which are kept up-to-date in an incremental
+%fashion, so that at any given time the model properly reflects the sentiments
+%in the event being analyzed.
+
+Some works have focused on feature similarity, such as Torres et al.
+\cite{Torres:2011:CMD:2025756.2025758} that studied different methods for data
+stream classification and proposed a new way of keeping the representative
+data models based on similarity measures.
+Feng et al. \cite{Feng2013} extracted the
+concept from each data block using feature similarity
+probabilities. 
+Masud et al. \cite{Masud:2008:PAC:1510528.1511337} proposed a novel technique
+to overcome the lack of labeled examples by building models
+from unlabeled instances and a small amount of labeled ones.
+Zhu et al. \cite{5440901} employed active learning to produce a
+classifier ensemble that selects labeled instances from data streams to
+build classifiers. Also, in \cite{6414645,Indre2011k} active
+learning approaches are presented for data streams that explicitly handle
+concept drifts. They are based on uncertainty~\cite{uncertainty}, dynamic allocation 
+of labeling efforts over time, and randomization of the search space. \v{Z}liobait\.{e} et
+al.  \cite{DBLP:journals/jmlr/ZliobaiteBHP11} proposed a system that implements active
+learning strategies, extending the Massive Online Analysis (MOA) framework \cite{moa}.
+
+Works above cited attempt to face concept drift in data stream through manipulation of
+classifiers, with mechanisms such as training windows and decay functions,
+active learning and sampling. In this paper we present new algorithms that
+select high-utility examples in order to provide adaptiveness and memorability
+to the classifier. In order to balance adaptiveness
+and memorability, we formalized this issue as a multi-objective problem. The sample
+selection is performed using economic efficiency criteria: Pareto and Kaldor-Hicks.
+%Also, we discuss algorithms that operate under instance-basis and batch-mode scenarios. In particular, the batch-mode scenario enables our algorithms to
+%reduce labeling effort.
+We did not find in the recent literature
+approaches that employ multi-objective models based on economic efficiency criteria to
+deal with issues in the data stream environment.

@@ -1,0 +1,119 @@
+\documentclass[sig-alternate]{article}  
+\usepackage{ltexpprt}
+\usepackage{pst-3dplot}
+\usepackage{subfigure}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{fancybox}
+\usepackage{url}
+\usepackage{wrapfig}
+\usepackage{cite}
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage{units}
+\usepackage[normalem]{ulem}
+
+\pagestyle{empty}
+\thispagestyle{plain}
+
+\begin{document}
+
+\title{Economically-Efficient Sentiment Stream Analysis}
+
+\numberofauthors{6} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Ben Trovato\titlenote{Roberto Oliveira Júnior}\\
+       \affaddr{Computer Science Dept, Federal University of Minas Gerais\titlenote{The Ohio State University}\\
+       \email{robertolojr@dcc.ufmg.br}
+% 2nd. author
+\alignauthor
+Adriano Veloso}\\
+       \affaddr{Computer Science Dept, Federal University of Minas Gerais}\\
+       \email{adrianov@dcc.ufmg.br}
+% 3rd. author
+% 2nd. author
+\and
+\alignauthor
+Adriano Pereira}\\
+       \affaddr{Computer Science Dept, Federal University of Minas Gerais}\\
+       \email{adrianoc@dcc.ufmg.br}
+\and  % use '\and' if you need 'another row' of author names
+% 4th. author
+\alignauthor
+Wagner Meira Jr}\\
+       \affaddr{Computer Science Dept, Federal University of Minas Gerais}\\
+       \email{meira@dcc.ufmg.br}
+% 5th. author
+\and
+\alignauthor
+Renato Ferreira}\\
+       \affaddr{Computer Science Dept, Federal University of Minas Gerais}\\
+       \email{renato@dcc.ufmg.br}
+% 6th. author
+\and
+\alignauthor Srinivasan Parthasarathy\\
+       \affaddr{Dept. of Computer Science and Engineering and Department of Biomedical Informatics\\The Ohio-State University\\}\\
+       \email{srini@cse.ohio-state.edu}
+}
+% 
+% \author{
+% Roberto Louren\c{c}o$^{a,b}$ \and Adriano Veloso$^a$ \and Adriano Pereira$^a$ \and Wagner Meira Jr.$^a$ \and Renato Ferreira$^a$ and Srinivasan Parthasarathy$^b$\\\\
+% $^a$ Computer Science Dept, Federal University of Minas Gerais\\
+% \{robertolojr,adrianov,adrianoc,meira,renato\}@dcc.ufmg.br\\
+% $^b$ Dept. of Computer Science and Engineering and Department of Biomedical Informatics\\The Ohio-State University\\
+% srini@cse.ohio-state.edu
+% }
+\date{}
+\maketitle
+
+\vspace{-0.2in}
+
+\begin{abstract}
+Text-based social media channels, such as Twitter, produce
+torrents of opinionated data about the most diverse topics and entities.
+The analysis of such data (aka. sentiment analysis) is quickly becoming a key feature in recommender systems
+and search engines.
+A prominent approach to sentiment analysis is based on the application of classification techniques, that is,
+content is classified according to
+the attitude of the writer.
+A major challenge, however, is that Twitter
+follows the data stream model, and thus classifiers must operate
+with limited resources, including labeled data and time for building classification models. Also challenging is the fact that
+sentiment distribution may change as the stream evolves.
+In this paper we address these challenges by proposing algorithms that separate relevant training instances at each time step, so that training windows are kept small while providing to the classifier the capabilities to suit itself to, and to recover itself from, sentiment drifts. Simultaneously providing both capabilities to the classifier, however, is
+a conflicting-objective problem, and our algorithms employ notions of Economics in order to balance both capabilities. We performed the analysis of events that reverberated on Twitter,
+and the comparison against the state-of-the-art reveals improvements in terms of error reduction (up to 14\%) and reduction of training resources (by orders of magnitude).
+\end{abstract}
+
+\input{intro}
+\input{relwork}
+\input{stream}
+\input{case}
+\input{conc}
+
+\bibliographystyle{abbrv}
+\bibliography{adriano,references}
+
+\end{document}

@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Data Stream Analysis}{2}{0}{1}
+\beamer@sectionintoc {2}{Classification Model}{14}{0}{2}
+\beamer@sectionintoc {3}{Drifts}{17}{0}{3}
+\beamer@sectionintoc {4}{Labeling fforts}{25}{0}{4}
+\beamer@sectionintoc {5}{Results}{26}{0}{5}
+\beamer@sectionintoc {6}{Conclusions}{29}{0}{6}
+\beamer@sectionintoc {7}{Contact}{30}{0}{7}

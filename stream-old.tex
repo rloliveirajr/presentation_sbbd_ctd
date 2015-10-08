@@ -1,0 +1,215 @@
+\section{Algorithms}
+
+In this section we present novel selective sampling approaches for learning classifiers to distinguish between different sentiments expressed in Twitter messages. We start by discussing models based on specialized association rules.
+Then we present measures for adaptiveness and memorability, and describe the message utility space. Finally, we discuss Pareto and Kaldor-Hicks criteria, and algorithms that select training messages using these criteria.
+
+\subsection{Sentiment Stream Analysis}
+
+In our context, the task of learning sentiment streams is precisely defined as follows. At time step $n$, we have as input
+a training window referred to as $\mathcal{D}_n$, which consists of
+a set of records of the form $<d,s_i>$, where $d$ is a
+message (represented as a list of terms),
+and $s_i$ is the sentiment implicit in $d$.
+The sentiment variable $s$ draws its values from a pre-defined, fixed and discrete set of possibilities (e.g., $s_1$,
+$s_2$, $\ldots$, $s_k$).
+The training window is used to build a classifier relating textual patterns in the messages to their corresponding sentiments.
+A sequence of future messages referred to as $\mathcal{T}=\{t_n, t_{n+1}, \ldots\}$, consists of messages
+for which only their terms are known, while the corresponding sentiments are unknown.
+The classifier obtained from $\mathcal{D}_n$ is used
+to score the sentiments for message $t_n$ in $\mathcal{T}$.
+Messages in $\mathcal{T}$ are eventually incorporated into the next training window.
+
+There are countless strategies for devising
+a classifier for sentiment analysis. Many of these strategies, however, are not well-suited to deal with data streams. Some are specifically devised for offline classification~\cite{trees,cortes}, and this is problematic because producing classifiers on-the-fly would be unacceptably costly. %Even updating the models in scenarios with high-speed streams would be
+%excessively lengthy.
+In such circumstances, alternate classification strategies may become more convenient.
+
+\subsection{Sentiment Rules and Classification Model}
+
+Next we describe classifiers composed of association rules, and how these rules are used for sentiment-scoring. Such classifiers are built on-the-fly in an incremental fashion, being thus well-suited for sentiment stream analysis, as shown in~\cite{sigir}.
+
+\paragraph*{\bf{Definition 1}} A sentiment rule is a specialized association rule $\mathcal{X}\xrightarrow{}s_i$, where the antecedent $\mathcal{X}$ is a set of terms, and the consequent $s_i$ is the predicted sentiment. The domain for $\mathcal{X}$ is the vocabulary of the training window $\mathcal{D}_n$.
+%The cardinality of rule $\mathcal{X}\xrightarrow{}s_i$ is given by the number of terms in the antecedent, that is $|\mathcal{X}|$.
+The support of $\mathcal{X}$ is denoted as $\sigma(\mathcal{X})$, and is the number of messages in $\mathcal{D}_n$ having $\mathcal{X}$ as a subset. The confidence of rule $\mathcal{X}\xrightarrow{}s_i$ is denoted as $\theta(\mathcal{X}\xrightarrow{}s_i)$ and is given as $\displaystyle\frac{\sigma(\mathcal{X}\cup s_i)}{\sigma(\mathcal{X})}$.\\
+
+We denote as $\mathcal{R}(t_n)$ the classifier obtained at time step $n$.
+%Rules in $\mathcal{R}(t_n)$ are collectively used to score sentiments in message $t_n\in\mathcal{T}$.
+Basically, the classifier is a poll of rules, and each rule $\{\mathcal{X}\xrightarrow{}s_i\}\in\mathcal{R}(t_n)$ is a vote given for sentiment $s_i$. Given message $t_n$, a rule is a valid vote if it is applicable to $t_n$.
+
+\paragraph*{\bf{Definition 2}} A rule $\{\mathcal{X}\xrightarrow{}s_i\}\in\mathcal{R}(t_n)$ is said to be applicable to message $t_n\in\mathcal{T}$ if
+all terms in $\mathcal{X}$ are in $t_n$.\\
+
+We denote as $\mathcal{R}_a(t_n)$ the set of rules in $\mathcal{R}(t_n)$ that are applicable to message $t_n$. Thus, only rules in $\mathcal{R}_a(t_n)$ are considered as valid votes when scoring sentiments in $t_n$.
+Further, we denote as $\mathcal{R}^{s_i}_a(t_n)$ the subset of $\mathcal{R}(t_n)$ containing only rules predicting sentiment $s_i$.
+Votes in $\mathcal{R}^{s_i}_a(t_n)$ have different weights, depending on the confidence of the corresponding rules. The weighted votes for sentiment $s_i$ are averaged, giving the score for $s_i$ with regard to $t_n$:
+
+\begin{equation} \label{eq1}
+s(t_n, s_i)=\displaystyle\sum \displaystyle\frac{\theta(\mathcal{X}\xrightarrow{}s_i)}{|\mathcal{R}^{s_i}_a(t_n)|}
+\end{equation}
+
+Finally, the scores are normalized, thus giving the likelihood of sentiment $s_i$ being the attitude in message $t_n$:
+
+\begin{equation}
+\label{eq:prob}
+\hat{p}(s_i|t_n)=\displaystyle\frac{s(t_n, s_i)}{\displaystyle\sum^{k}_{j=0} s(t_n, s_j)}
+\end{equation}
+
+\subsection{Utility Space and Selective Sampling}
+
+Our approach to sentiment stream analysis is based on selecting high-utility messages to compose the training window at each time step. Training windows must provide adaptiveness and memorability to the corresponding classifiers. Improving adaptiveness and memorability simultaneously, however, is a conflicting-objective problem. Instead, our approaches form windows that balance between adaptiveness and memorability. Specifically, at each time step, candidate messages are placed into a n-dimensional space, in which each dimension corresponds to a utility measure which is either related to adaptiveness or memorability.
+
+\paragraph*{\bf{Utility Measures}}
+At each time step, the classifier must score sentiments that are expressed in the target message. Some of the utility measures we are going to discuss next are based on the distance to the target message. By minimizing such distance we are essentially maximizing adaptiveness, since the selected messages are similar to the target message. As for memorability, we are going to discuss a utility measure based on randomly shuffling candidate messages:
+
+\begin{itemize}
+\item{\bf{Distance in space}}
+The similarity between the target message $t_n$ and an arbitrary message $t_j$ is given by the number of rules in the classifier $\mathcal{R}_a(t_n)$ that are also applicable to $t_j$.
+Differently from traditional measures such as cosine and Jaccard~\cite{baeza99modern}, the rule-based similarity considers not only isolated terms, but also combination of terms.
+Thus, the utility of message $t_j$ is given as:
+
+\begin{equation}
+U_s(t_j)=\displaystyle\frac{|\{r\in\mathcal{R}_a(t_n)\mbox{ such that }r\mbox{ is applicable to }t_j\}|}{|\{\mathcal{R}_a(t_n)\}|}
+\end{equation}
+
+\item{\bf{Distance in time}}
+Let $\gamma(t_j)$ be a function that returns the time in which message $t_j$ arrived. The utility of message $t_j$ is given as: 
+
+\begin{equation}
+U_t(t_j)=\displaystyle\frac{\gamma(t_j)}{\gamma(t_n)}
+\end{equation}
+
+\item{\bf{Memorability}}
+In order to provide memorability, the training window must contain messages posted in different time periods. A simple way to force this is to generate a random permutation of the candidate messages, that is, randomly shuffling the candidate messages~\cite{permutation}.
+Let $\alpha(t_j)$ be a function that returns the position of message $t_j$ in the shuffle.
+The utility of message $t_j$ is given as:
+
+\begin{equation}
+U_r(t_j)=\frac{\alpha(t_j)}{|\mathcal{D}_n|}
+\end{equation}
+
+\end{itemize}
+
+Each candidate message is judged based on these three utility measures. The need to judge one situation better than another motivates much of Economics, and thus next we discuss concepts from Economics and how they can be applied to select messages to compose the training window.
+
+\subsection{Economic Efficiency}
+
+When the society is economically efficient, any changes made to assist one person would harm another. The same intuition could be exploited for the sake of selecting messages to compose the training window at each time step. In this case, a training window is economically efficient if it is only possible to improve memorability at the cost of adaptiveness, and vice-versa.
+
+\input{tt}
+
+There is an alternative, less stringent notion of efficiency, which is based on the principle of compensation~\cite{compensation}.
+Under new arrangements in the society, some may be better off while others may be worse off.
+Compensation holds if those made better off
+under the new set of conditions could compensate those made worse off. Next we discuss algorithms that exploit these two notions of economic efficiency in order to select messages to compose the training windows.
+
+\input{t}
+
+\paragraph*{\bf{Pareto Frontier}}
+Messages that are candidate to compose the training window at time step $n$ are placed in a 3-dimensional space, according to their utility measures, as shown in Figure~\ref{fig:ex1}.
+Thus, each message $a$ is a point in such utility space, and is given as $<U_s(a),U_t(a),U_r(a)>$.
+
+\paragraph*{\bf{Definition 3}} Message $a$ is said to dominate message $b$ iff both of the following conditions are hold:
+\begin{itemize}
+\item $U_s(a)\ge U_s(b)$ and $U_t(a)\ge U_t(b)$ and $U_r(a)\ge U_r(b)$
+\item $U_s(a) > U_s(b)$ or $U_t(a) > U_t(b)$ or $U_r(a) > U_r(b)$
+\end{itemize}
+Therefore, the dominance operator relates two messages so that the result of the
+operation has two possibilities as shown in Figure~\ref{fig:ex2} (Left): (i) one message dominates another or (ii) the two
+messages do not dominate each other.
+
+\paragraph*{\bf{Definition 4}} Window $\mathcal{P}_n=\{d_1, d_2, \ldots, d_m\}$ is said to be Pareto-efficient at time step $n$, if $\mathcal{P}_n\subseteq\mathcal{D}_n$ and there is no pair of messages $(d_i, d_j)\in\mathcal{P}_n$ for which $d_i$ dominates $d_j$.\\
+
+Messages that are not dominated
+by any other message, lie on the Pareto frontier~\cite{palda@book}. Therefore, by definition, the Pareto-efficient training window at time step $n$, $\mathcal{P}_n$, is composed by all the messages lying in the Pareto frontier that is built from $\mathcal{D}_n$.
+There are efficient algorithms for building and maintaining the Pareto frontier, and we employed the algorithm proposed in~\cite{operator} which ensures $O$($|\mathcal{D}_n|$) complexity.
+%Finally, dominated messages are discarded from $\mathcal{D}_n$, since for each dominated message there is at least one message in $\mathcal{P}_n$ that beats it in at least one utility measure.
+We denote the process of exploiting Pareto-efficient training windows as
+Pareto-Efficient Selective Sampling, or simply PESS. Figure~\ref{fig:ex2} (Middle) shows an illustrative example of a Pareto frontier built from arbitrary points in the utility space.
+%These messages are likely to offer a good balance between adaptiveness and memorability.
+
+\paragraph*{\bf{Kaldor-Hicks Region}}
+The PESS strategy follows a stringent criterion, which tends to select only few messages to compose the training windows. As a result, the training windows may become excessively small and prone to noise.
+The Kaldor-Hicks criterion, on the other hand,
+follows a benefit-cost analysis and circumvents the
+small-window problem by stating that efficiency is achieved if
+those that are made better off could in theory compensate those that are made worse off. Thus, under the Kaldor-Hicks criterion an utility measure can compensate other utility measures, and therefore, this criterion selects messages that are located inside a region which is below the Pareto frontier. To define this region we must first define the overall utility of a message.
+
+\paragraph*{\bf{Definition 5}} Assuming that all measures are equally important, the overall utility of an arbitrary message $d_i\in\mathcal{D}_n$ is:
+
+\begin{equation}
+\label{eq:cost}
+%\nonumber
+U(d_i)=U_s(d_i)+U_t(d_i)+U_r(d_i)
+\end{equation}
+
+\noindent That is, the overall utility of a message is given as the sum of its utility measures. Also, the baseline message, which is denoted as $d^*$, is defined as:
+
+\begin{equation}
+%\nonumber
+d^*=\{d_i\in\mathcal{P}_n | \forall d_j\in\mathcal{P}_n: U(d_i)\leq U(d_j)\}
+\end{equation}
+
+\noindent That is, the baseline is the message lying in the frontier for which the overall utility assumes its lowest value.\\
+
+The Kaldor-Hicks region is composed of messages for which the overall utility is not smaller than the baseline overall utility. Such baseline utility is the utility associated with the message lying in the Pareto frontier for which the overall utility is the lowest.
+
+%\begin{algorithm}[t!]
+%  \caption{\textbf{Pareto-Efficient Selective Sampling}}
+%  \label{alg:pareto}
+%  \begin{algorithmic}[1]
+%    \Require Messages in $\mathcal{D}_n$
+%    \Statex
+%    \State $\mathcal{P}_n \gets \emptyset$
+%    \ForAll {messages $d \in \mathcal{D}_n$}
+%        \State $notDominated \gets True$
+%        \ForAll {messages $p \in \mathcal{P}_n$}
+%            \If{$d$ dominates $p$}
+%                  \State Remove $p$ from $\mathcal{P}_n$
+%                \ElsIf{$p$ dominates $d$}
+%              \State insert $p$ into $\mathcal{P}_n$
+%                  \State $notDominated \gets False$
+%                  \State $break$
+%                \EndIf
+%        \EndFor
+%        \If{$notDominated$}
+%                \State insert $d$ into $\mathcal{P}_n$
+%        \EndIf
+%    \EndFor
+%    \State $\mathcal{D}_n \gets \mathcal{P}_n$
+%    \State \textbf{return} $\mathcal{P}_n$
+%  \end{algorithmic}
+%\end{algorithm}
+
+\paragraph*{\bf{Definition 6}} Window $\mathcal{K}_n=\{d_1, d_2, \ldots, d_m\}$ is said to be Kaldor-Hicks-efficient at time step $n$, if $\mathcal{P}_n\subseteq\mathcal{K}_n\subseteq\mathcal{D}_n$, and there is no message $d_i\in\mathcal{K}_n$ such that $U(d^*)>U(d_i)$.\\
+
+We denote the process of exploiting Kaldor-Hicks-efficient training windows as
+Kaldor-Hicks-Efficient Selective Sampling, or simply KHSS. Figure~\ref{fig:ex2} (Right) shows an illustrative example of a Kaldor-Hicks region built from arbitrary points in the utility space.
+
+%\begin{algorithm}[t!]
+%  \caption{\textbf{Kaldor-Hicks-Efficient Selective Sampling}}
+%  \label{alg:kh}
+%  \begin{algorithmic}[1]
+%    \Require Messages in $\mathcal{D}_n$ and messages in $\mathcal{P}_n$
+%    \Statex
+%
+%    \State $\mathcal{K}_n \gets \emptyset$
+%    %\State $min \gets \infty$
+%    %\ForAll{messages $p \in \mathcal{P}_n$}
+%    %    \State $k \gets U_s(p)+U_t(p)+U_r(p)$
+%    %    \If{$k < min$}
+%    %        \State $min \gets k$
+%    %    \EndIf
+%    %\EndFor
+%    \State $d^* \gets \{d_i\in\mathcal{P}_n | \forall d_j\in\mathcal{P}_n: U(d_i)\leq U(d_j)\}$
+%
+%    \ForAll{messages $d \in \{\mathcal{D}_n-\mathcal{P}_n\}$}
+%        %\State $q \gets U_s(d)+U_t(d)+U_r(d)$
+%        %\If{$q \geq min$}
+%        \If{$U(d) \geq U(d^*)$}
+%            \State insert $d$ into $\mathcal{K}_n$
+%        \EndIf
+%    \EndFor
+%    \State $\mathcal{D}_n \gets \mathcal{K}_n$
+%    \State \textbf{return} $\mathcal{K}_n$
+%  \end{algorithmic}
+%\end{algorithm}

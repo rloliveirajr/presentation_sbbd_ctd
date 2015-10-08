@@ -1,0 +1,122 @@
+\documentclass{sig-alternate}
+%\documentclass{acm_proc_article-sp}
+
+\usepackage{auto-pst-pdf}
+\usepackage{pst-3dplot}
+\usepackage{stfloats}
+\usepackage{subfigure}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{graphics}
+%\usepackage{epsfig}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+\usepackage{float}
+\usepackage{url}
+\usepackage{balance}
+\usepackage{cite}
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage{units}
+\usepackage{bmpsize}
+\usepackage[normalem]{ulem}
+\usepackage{graphicx}
+
+\subfigcapmargin=9pt
+
+\pdfpagewidth=8.5in
+\pdfpageheight=11in
+
+%\DeclareGraphicsExtensions{.pdf,.eps}
+
+\begin{document}
+
+\conferenceinfo{SIGIR'14,} {July 6--11, 2014, Gold Coast, Queensland, Australia.}
+\CopyrightYear{2014}
+\crdata{978-1-4503-2257-7/14/07}
+\clubpenalty=10000
+\widowpenalty = 10000
+
+\title{Economically-Efficient Sentiment Stream Analysis}
+
+\numberofauthors{6}
+\author{
+\alignauthor
+Roberto Louren\c{c}o Jr.\\
+       \affaddr{Computer Science Dept.}\\
+       \affaddr{Universidade Federal de Minas Gerais}\\
+       %\affaddr{Brazil}\\
+       \email{robertolojr@dcc.ufmg.br}
+\alignauthor
+Adriano Veloso\\
+       \affaddr{Computer Science Dept.}\\
+       \affaddr{Universidade Federal de Minas Gerais}\\
+       %\affaddr{Brazil}\\
+       \email{adrianov@dcc.ufmg.br}
+\alignauthor Adriano Pereira\\
+       \affaddr{Computer Science Dept.}\\
+       \affaddr{Universidade Federal de Minas Gerais}\\
+       %\affaddr{Brazil}\\
+       \email{adrianoc@dcc.ufmg.br}
+\and
+\alignauthor Wagner Meira Jr.\\
+       \affaddr{Computer Science Dept.}\\
+       \affaddr{Universidade Federal de Minas Gerais}\\
+       %\affaddr{Brazil}\\
+       \email{meira@dcc.ufmg.br}
+\alignauthor Renato Ferreira\\
+       \affaddr{Computer Science Dept.}\\
+       \affaddr{Universidade Federal de Minas Gerais}\\
+       %\affaddr{Brazil}\\
+       \email{renato@dcc.ufmg.br}
+\alignauthor Srinivasan Parthasarathy\\
+       \affaddr{Dept. of Computer Science and Engineering}\\
+       \affaddr{The Ohio-State University}\\
+       %\affaddr{USA}\\
+       \email{srini@cse.ohio-state.edu}
+}
+
+\date{}
+
+\maketitle
+\begin{abstract}
+Text-based social media channels, such as Twitter, produce
+torrents of opinionated data about the most diverse topics and entities.
+The analysis of such data (aka. sentiment analysis) is quickly becoming a key feature in recommender systems
+and search engines.
+A prominent approach to sentiment analysis is based on the application of classification techniques, that is,
+content is classified according to
+the attitude of the writer.
+A major challenge, however, is that Twitter
+follows the data stream model, and thus classifiers must operate
+with limited resources, including labeled data and time for building classification models. Also challenging is the fact that
+sentiment distribution may change as the stream evolves.
+In this paper we address these challenges by proposing algorithms that select relevant training instances at each time step, so that training sets are kept small while providing to the classifier the capabilities to suit itself to, and to recover itself from, different types of sentiment drifts. Simultaneously providing capabilities to the classifier, however, is
+a conflicting-objective problem, and our proposed algorithms employ basic notions of Economics in order to balance both capabilities. We performed the analysis of events that reverberated on Twitter,
+and the comparison against the state-of-the-art reveals improvements both in terms of error reduction (up to 14\%) and reduction of training resources (by orders of magnitude).
+\end{abstract}
+
+\category{H.3.1}{Information Storage and Retrieval}{Content Analysis}
+\category{I.5.2}{Pattern Recognition}{Classifier Design and Evaluation}
+
+\terms{Algorithms, Experimentation, Measurement, Performance}
+
+\keywords{Sentiment Analysis; Economic Efficiency; Streams and Drifts}
+
+\input{intro}
+\input{relwork}
+\input{stream}
+\input{case}
+\input{conc}
+
+\section{Acknowledgments}
+
+Adriano Veloso, Adriano Pereira, Wagner Meira Jr., and Renato Ferreira would like to acknowledge grants from CNPq, CAPES, Fapemig, Finep, and InWeb $-$ the Brazilian National Institute of Science and Technology for the Web.
+Srinivasan Parthasarathy would like to acknowledge NSF grant IIS 1111118 and a Google research award. Roberto Oliveira Jr. would like to acknowledge that some aspects of this work was conducted while he was a visiting researcher in Srinivasan Parthasarathy's lab at Ohio State University.
+
+\balance
+
+\bibliographystyle{abbrv}
+\bibliography{adriano,references}
+\end{document}

@@ -1,0 +1,71 @@
+\section{Introduction}
+
+The need for real-time text analytics is clear and present given the ubiquitous reach of social media sites like Facebook and Twitter. Specifically, recognizing customer sentiment in real-time and enabling advertising on-the-fly have the potential to be a breakthrough technology~\cite{forbes}.
+%(\url{http://www.forbes.com/sites/lorikozlowski/2012/04/24/twitter-and-our-feelings-real-time-sentiment-analysis}).
+Early examples of such technology in use were demonstrated in this year's National Football League's Superbowl (a premier sporting event in the USA) where a well known manufacturer of {\em Oreo} cookies took advantage of a third quarter blackout (and associated Twitter sentiment) to embed a contextual advertisement. Another example at the same event was the advertisement for a Hollywood movie, where, based on the initial advertisement which happened before the start of the first quarter (and associated Twitter sentiment), the decision on which of several possible advertisements to run later on in the program was apparently taken as a runtime decision.
+Examples like these are likely to occur more frequently due to
+%Examples such as these are likely to occur more frequently in the near future, going beyond advertising.
+lightweight and easy communication mechanisms, such as Twitter microblogging, which makes people eager not only to exchange information, but also to convey their opinions and emotions. People watch events together on television, while tweeting out about things happening around them. As a result, opinionated content is created almost at the same time the event is happening in the real world, and becomes available shortly after.  The analysis of such content (aka. sentiment analysis) in order to exploit the aggregate sentiment of the online crowd goes beyond advertising, and is becoming crucial to recommender systems and search engines.
+
+There is a growing trend in performing sentiment analysis using classification-related techniques: a process that automatically
+builds a classification model by learning, from a set of previously
+labeled data (i.e., the training-set), the underlying characteristics that distinguish one sentiment from another (i.e., happiness, madness, surprise, suspicion). The success of these classifiers
+rests on their ability to judge attitude by means of textual-patterns present in the data, which usually appear in the form
+of (idiomatic) expressions and combinations of words.
+Sentiment analysis over Twitter real-time messages, however, is particularly challenging, because: (i) Twitter follows the data stream model\footnote{
+There are three main source streams in Twitter. The Firehose provides all status updates from everyone in real-time.
+Spritzer and Gardenhose are two sub-samples of the Firehose. The current sampling rates are 5\% and 15\%, respectively.},
+requiring classifiers to operate with limited computing and training resources, 
+%(ii) the training-set is potentially noisy, since training messages may be (incorrectly) labeled using either author-provided sentiment indicators (i.e., emoticons and hash tags~\cite{sigir,tags}) or via crowdsourcing annotation,
+and (ii)
+either sentiment distribution or the characteristics related to certain sentiments may change over time in almost unforeseen ways (i.e., sentiment drift).
+
+%\paragraph*{\bf{Our Approach to Sentiment Stream Analysis}}
+\subsection*{Our Approach to Sentiment Stream Analysis}
+A possible strategy to cope with the aforementioned challenges is to employ selective sampling algorithms in order to
+focus only on the most relevant training examples/messages at
+each time step and to creating training sets from which classifiers are built. Such
+training sets are kept as small as possible to ensure fast learning times, since a new classifier must be built at each time step, after a new target message arrives.
+Also, messages should be
+selected so that the resulting training set
+provides sufficient resources to enable the resulting classifier to be effective under the occurrence of drifts.
+In order to provide sufficient training resources while keeping sets small, our algorithms select training messages by taking into account two
+important properties, that we define as adaptiveness and memorability.
+Informally, adaptiveness enables the classifier to adapt
+itself to drifts, and thus, improving adaptiveness involves incorporating fresh messages into
+the current training set, while discarding obsolete ones. Memorability, on the other hand, involves retaining messages belonging to pre-drift distributions,
+therefore enabling the classifier to recover itself from drifts.
+
+We hypothesize that adaptiveness and memorability are both necessary to make classifiers robust to drifts. 
+However, given their antagonistic natures, improving both properties may lead to a conflicting-objective problem, in which the attempt to improve memorability further may result in worsening adaptiveness.
+Thus, we tackle the problem
+by proposing selective sampling algorithms based on multi-objective optimization, that is, we propose to select training messages so that the resulting classifier achieves a proper balance between memorability and adaptiveness.
+Our algorithms are based on
+central concepts in Economics, namely {\em Pareto} and {\em Kaldor-Hicks} efficiency criteria~\cite{palda@book,kaldor,hicks}. The Pareto Efficiency criterion informally states
+that ``when some action could be done to make someone better off without
+hurting anyone else, then it should be done.'' This action is called Pareto improvement,
+and a system is said to be Pareto-Efficient if no such improvement is possible.
+The Kaldor-Hicks criterion is less stringent and states that ``when some action could be done to make someone better off, and this could compensate those that are made worse off, then it should be done.''
+
+\subsection*{Contributions and Findings}
+%\paragraph*{\bf{Contributions and Findings}}
+The main contribution of this paper is to exploit the intuition behind the aforementioned concepts for devising new algorithms for sentiment stream analysis.
+In practice, we claim the following benefits and contributions:
+
+
+\begin{itemize}
+\item We formulate simple-to-compute yet effective utility measures that capture the notions of adaptiveness and memorability. For instance, the similarity between messages that are candidate to compose the current training set and the target message, as well as the freshness of the candidate messages, are measures that tend to privilege adaptiveness. In contrast, candidate messages are also randomly shuffled, thus privileging memorability. These utility measures result in a utility space, and the extent to which each candidate message contributes to adaptiveness and memorability depends on where it is placed in this space.
+\item We exploit the concept of Pareto Efficiency by separating messages (viewed as points in the utility space) that are not dominated by any other message. These messages compose the Pareto frontier~\cite{palda@book}, and messages lying in this frontier correspond to cases for which no Pareto improvement is possible. These messages privilege either adaptiveness or memorability, and thus they are selected to compose the current training set from which the classifier is built.
+\item We exploit the concept of Kaldor-Hicks Efficiency by selecting an additional set of messages that, although not lying in the Pareto frontier, correspond to a positive trade-off between adaptiveness and memorability. These messages are selected to compose the current training set from which the classifier is built.
+\item Our algorithms may operate either on an instance-basis or in batch-mode, by employing classification models based on sentiment rules that are kept incrementally as the stream evolves and training sets are modified.
+\end{itemize}
+
+%While every Pareto improvement is a Kaldor-Hicks improvement, most Kaldor-Hicks improvements are not Pareto improvements. That is, the set of Pareto improvements is a proper subset of Kaldor-Hicks improvements, which reflects the greater flexibility and applicability of the Kaldor-Hicks criterion relative to the Pareto criterion.
+
+%We exploit these efficiency concepts as follows. Each possible training message is associated with a point in an n-dimensional scattergram (which we call utility space). In this case, a point is represented as $[a_1, a_2, \ldots, a_n]$, where each coordinate $a_i$ corresponds to a quantity that is either related to adaptiveness or memorability.
+%Points that are not dominated by any other point in the scattergram compose the Pareto frontier~\cite{palda@book}. Points lying in the frontier correspond to cases for which no Pareto improvement is possible, being therefore messages likely to privilege either adaptiveness or memorability at a particular time step. Dominated messages are discarded, while messages in the frontier are selected to compose the current training set, from which the classifier is built. 
+%A broader frontier, composed of additional training messages, can be built using the Kaldor-Hicks criterion. The process of building the classifier from the messages in the (either Pareto or Kaldor-Hicks) frontier is repeated every time a new target message arrives in the stream.
+
+To evaluate the effectiveness of our algorithms, we
+performed experiments using Twitter data collected from three important events in 2010, spanning different sentiments expressed in different languages.
+Results show that our algorithms make classifiers extremely effective, with gains in prediction performance that are up to 14\% when compared against the state-of-the-art. Further, the amount of training resources needed is decreased by two orders of magnitude.

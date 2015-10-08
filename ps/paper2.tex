@@ -1,0 +1,91 @@
+\documentclass{vldb}
+\usepackage{balance}
+
+\usepackage{pst-3dplot}
+
+\usepackage[english]{babel}
+%\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{stmaryrd}
+%\usepackage{graphics}
+%\usepackage{graphicx}
+%\usepackage{float}
+\usepackage{url}
+\usepackage{cite}
+%\usepackage{units}
+\usepackage{subfigure}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{epstopdf}
+
+\subfigcapmargin=9pt
+
+\newcounter{lineindex}
+
+\begin{document}
+
+\title{Economically-Efficient Sentiment Stream Analysis}
+
+\numberofauthors{2}
+\author{
+\alignauthor
+Roberto Louren\c{c}o, Adriano Veloso\\Wagner Meira Jr., Adriano Pereira\\Renato Ferreira\\
+       \affaddr{Computer Science Department}\\
+       \affaddr{Universidade Federal de Minas Gerais}\\
+       \email{\{robertolojr, adrianov, meira,\\adrianoc, renato\}@dcc.ufmg.br}
+\alignauthor
+Srinivasan Parthasarathy\\
+       \affaddr{Dept. of Computer Science and Engineering and Department of Biomedical Informatics}\\
+       \affaddr{The Ohio-State University}\\
+       \email{srini@cse.ohio-state.edu}
+}
+
+\date{}
+
+\maketitle
+
+\begin{abstract}
+Text-based social media channels, such as Twitter, produce
+torrents of opinionated data about the most diverse topics and entities.
+The analysis of such opinionated data (aka. sentiment analysis) is quickly becoming an essential feature in recommendation systems
+and search engines.
+A prominent approach to sentiment analysis is based on the application of classification techniques, that is,
+content is classified according to
+the implicit attitude of the writer with respect to a query term.
+A major challenge, however, is that Twitter (and other social channels)
+follows the data stream model, and thus the classifier must operate
+with limited resources, including labeled data and time for building classification models. Also challenging is the fact that
+sentiment distribution may change as the stream evolves.
+In this paper we address these challenges by proposing selective sampling algorithms that separate relevant training instances at each time step, so that the corresponding training window is kept small while providing to the classifier the capabilities to suit itself to sentiment drifts (i.e., adaptiveness), and also to recover itself from drifts (i.e., memorability). Simultaneously providing both capabilities to the classifier is a hard task, since this may
+lead to a conflicting-objective problem, in which the attempt to improve memorability further may result in worsening adaptiveness (or vice-versa). Our proposed selective sampling approaches employ basic notions of economic efficiency, such as {\em Pareto} and {\em Kaldor-Hicks} efficiency criteria, in order to find a proper balance between adaptiveness and memorability. We performed the analysis of major events in recent years that reverberated on Twitter,
+and the comparison against the state-of-the-art reveals improvements in terms of error reduction (up to 14\%) and reduction of training resources (by two orders of magnitude).
+\end{abstract}
+
+%\category{H.3.1}{Information Storage and Retrieval}{Content Analysis}
+%\category{I.5.2}{Pattern Recognition}{Classifier Design and Evaluation}
+
+%\terms{Algorithms, Experimentation, Measurement, Performance}
+
+%\keywords{Sentiment Analysis, Economic Efficiency}
+
+\input{intro}
+\input{relwork}
+\input{stream}
+\input{case}
+\input{conc}
+
+\balance
+
+\section{Acknowledgements}
+
+This research was partially supported by CNPq, Capes, Finep, Fapemig, and by project INCTWeb (CNPq grant number 573871/2008-6).
+
+
+\bibliographystyle{abbrv}
+\bibliography{adriano,references}
+
+\end{document}

@@ -1,0 +1,1029 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Cygwin) (format=latex 2014.2.6)  21 MAY 2014 20:27
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\AtBeginDocument{\RequirePackage{pslatex}} \def\PSLATEXTMP{\futurelet\PSLATEX
+TMP\PSLATEXTMPB} \def\PSLATEXTMPB{\ifx\PSLATEXTMP\nonstopmode\else\input\fi} \P
+SLATEXTMP sigirfp310-veloso.tex
+(./sigirfp310-veloso.tex (./sig-alternate.cls
+(/usr/share/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+(/usr/share/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+\epsfxsize=\dimen104
+\epsfysize=\dimen105
+)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip41
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen106
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen107
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count79
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count80
+\leftroot@=\count81
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count82
+\DOTSCASE@=\count83
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count84
+\c@MaxMatrixCols=\count85
+\dotsspace@=\muskip10
+\c@parentequation=\count86
+\dspbrk@lvl=\count87
+\tag@help=\toks17
+\row@=\count88
+\column@=\count89
+\maxfields@=\count90
+\andhelp@=\toks18
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks19
+\multlinegap=\skip42
+\multlinetaggap=\skip43
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+Document Class 'sig-alternate' <23rd. May '12>. Modified by G.K.M. Tobin/Gerry 
+Murray
+Based in part upon document Style `acmconf' <22 May 89>. Hacked 4/91 by
+shivers@cs.cmu.edu, 4/93 by theobald@cs.mcgill.ca
+Excerpts were taken from (Journal Style) 'esub2acm.cls'.
+****** Bugs/comments/suggestions/technicalities to Gerry Murray -- murray@hq.ac
+m.org ******
+Questions on the style, SIGS policies, etc. to Adrienne Griscti griscti@acm.org
+
+\footheight=\dimen115
+\@maxsep=\dimen116
+\@dblmaxsep=\dimen117
+\aucount=\count91
+\originalaucount=\count92
+\auwidth=\dimen118
+\auskip=\dimen119
+\auskipcount=\count93
+\auskip=\dimen120
+\allauboxes=\dimen121
+\addauthors=\toks21
+\addauflag=\count94
+\subtitletext=\toks22
+\savesection=\count95
+\sectioncntr=\count96
+\c@figure=\count97
+\c@table=\count98
+\titleboxnotes=\toks23
+\titleboxnoteflag=\count99
+Document Class: sig-alternate 2012/05/23 - V2.5 - based on acmproc.cls V1.3 <No
+v. 30 '99>
+(/usr/share/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+\@acmtitlebox=\box28
+\titlenotecount=\count100
+\tntoks=\toks24
+\tntokstwo=\toks25
+\tntoksthree=\toks26
+\tntoksfour=\toks27
+\tntoksfive=\toks28
+\catcount=\count101
+\copyrightnotice=\toks29
+\conf=\toks30
+\confinfo=\toks31
+\c@part=\count102
+\c@section=\count103
+\c@subsection=\count104
+\c@subsubsection=\count105
+\c@paragraph=\count106
+
+Using 'Abbrev' bibliography style
+LaTeX Info: Redefining \cite on input line 1211.
+\bibindent=\dimen122
+\colcntr=\count107
+\saveb@x=\box29
+\copyrtyr=\toks32
+\acmcopyr=\toks33
+\boilerplate=\toks34
+\copyrightetc=\toks35
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)
+LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
+
+(/usr/share/texmf-dist/tex/latex/ae/t1aer.fd
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+)))
+(/usr/share/texmf-dist/tex/latex/auto-pst-pdf/auto-pst-pdf.sty
+Package: auto-pst-pdf 2009/04/26 v0.6 Wrapper for pst-pdf
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+(/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks36
+\XKV@tempa@toks=\toks37
+\XKV@depth=\count108
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+))
+(/usr/share/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/catchfile.sty
+Package: catchfile 2011/03/01 v1.6 Catch the contents of a file (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))
+
+Package ifplatform Warning: 
+    shell escape is disabled, so I can only detect \ifwindows.
+
+)
+\c@app@runs=\count109
+ (/usr/share/texmf-dist/tex/latex/pst-pdf/pst-pdf.sty
+Package: pst-pdf 2008/10/09 v1.1v PS graphics for pdfLaTeX (RN,HjG)
+\c@pspicture=\count110
+Package pst-pdf Info: MODE: 9 (inactive mode) on input line 458.
+))
+(/usr/share/texmf-dist/tex/latex/pst-3dplot/pst-3dplot.sty
+(/usr/share/texmf-dist/tex/latex/pstricks/pstricks.sty
+Package: pstricks 2013/05/21 v0.56 LaTeX wrapper for `PSTricks' (RN,HV)
+
+(/usr/share/texmf-dist/tex/generic/pstricks/pstricks.tex
+(/usr/share/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+)
+(/usr/share/texmf-dist/tex/generic/pstricks/pst-fp.tex
+`pst-fp' v0.05, 2010/01/17 (hv)
+\pstFP@xs=\count111
+\pstFP@xia=\count112
+\pstFP@xib=\count113
+\pstFP@xfa=\count114
+\pstFP@xfb=\count115
+\pstFP@rega=\count116
+\pstFP@regb=\count117
+\pstFP@regs=\count118
+\pstFP@times=\count119
+)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks38
+)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks39
+\pgfkeys@temptoks=\toks40
+
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks41
+))
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+\pgffor@iter=\dimen123
+\pgffor@skip=\dimen124
+\pgffor@stack=\toks42
+\pgffor@toks=\toks43
+)
+\psLoopIndex=\count120
+
+`PSTricks' v2.43  <2013/05/12> (tvz)
+\pst@dima=\dimen125
+\pst@dimb=\dimen126
+\pst@dimc=\dimen127
+\pst@dimd=\dimen128
+\pst@dimg=\dimen129
+\pst@dimh=\dimen130
+\pst@dimm=\dimen131
+\pst@dimn=\dimen132
+\pst@dimo=\dimen133
+\pst@dimp=\dimen134
+\pst@hbox=\box30
+\pst@ibox=\box31
+\pst@boxg=\box32
+\pst@cnta=\count121
+\pst@cntb=\count122
+\pst@cntc=\count123
+\pst@cntd=\count124
+\pst@cntg=\count125
+\pst@cnth=\count126
+\pst@cntm=\count127
+\pst@cntn=\count128
+\pst@cnto=\count129
+\pst@cntp=\count130
+\@zero=\count131
+\pst@toks=\toks44
+(/usr/share/texmf-dist/tex/generic/pstricks/pstricks.con)
+\psunit=\dimen135
+\psxunit=\dimen136
+\psyunit=\dimen137
+\pst@C@@rType=\count132
+\pslinewidth=\dimen138
+\psk@startLW=\dimen139
+\psk@endLW=\dimen140
+\pst@customdefs=\toks45
+\pslinearc=\dimen141
+\pst@symbolStep=\dimen142
+\pst@symbolWidth=\dimen143
+\pst@symbolLinewidth=\dimen144
+\everypsbox=\toks46
+\psframesep=\dimen145
+\pslabelsep=\dimen146
+\sh@wgridXunit=\dimen147
+\sh@wgridYunit=\dimen148
+\pst@shift=\dimen149
+\theoverlaybox=\box33
+)
+File: pstricks.tex 2013/05/12 v2.43 `PSTricks' (tvz,hv)
+
+(/usr/share/texmf-dist/tex/generic/pstricks/pst-fp.tex)
+File: pst-fp.tex 2013/05/12 v2.43 `PST-fp' (hv)
+
+(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(/usr/share/texmf-dist/tex/latex/pst-3d/pst-3d.sty
+Package: pst-3d 2009/07/28 package wrapper for pst-3d.tex (hv)
+
+(/usr/share/texmf-dist/tex/generic/pst-3d/pst-3d.tex
+`PST-3d' v1.11, 2010/02/14 (tvz))
+File: pst-3d.tex 2010/02/14 v1.11 `PST-3d' (hv)
+)
+(/usr/share/texmf-dist/tex/latex/pst-plot/pst-plot.sty
+Package: pst-plot 2011/06/05 v1.00 LaTeX wrapper for `pst-plot' (HV)
+
+(/usr/share/texmf-dist/tex/latex/xkeyval/pst-xkey.sty
+Package: pst-xkey 2005/11/25 v1.6 package wrapper for pst-xkey.tex (HA)
+)
+(/usr/share/texmf-dist/tex/latex/multido/multido.sty
+Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
+
+
+(/usr/share/texmf-dist/tex/generic/multido/multido.tex
+ v1.42, 2010/05/14 <tvz>
+\multido@count=\count133
+\multidocount=\count134
+\multido@stuff=\toks47
+)
+File: multido.tex 2010/05/14 v1.42 `multido' (tvz,hv)
+)
+Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
+
+(/usr/share/texmf-dist/tex/generic/pst-plot/pst-plot.tex
+ v1.45, 2013/04/29 (tvz,hv)
+\pstRadUnit=\dimen150
+\pstRadUnitInv=\dimen151
+\pst@linecnt=\count135
+\psxlabelsep=\dimen152
+\psylabelsep=\dimen153
+\psk@subticksize=\dimen154
+\pst@xticksizeA=\dimen155
+\pst@xticksizeB=\dimen156
+\pst@xticksizeC=\dimen157
+\pst@yticksizeA=\dimen158
+\pst@yticksizeB=\dimen159
+\pst@yticksizeC=\dimen160
+\@digitcounter=\count136
+\psk@llx=\dimen161
+\psk@lly=\dimen162
+\psk@urx=\dimen163
+\psk@ury=\dimen164
+\pst@xunit=\dimen165
+\pst@yunit=\dimen166
+)
+File: pst-plot.tex 2013/04/29 1.45 `pst-plot' (tvz,hv)
+)
+(/usr/share/texmf-dist/tex/latex/pst-node/pst-node.sty
+Package: pst-node 2012/09/18 v1.01 LaTeX wrapper for `pst-node' (HV)
+Package: pst-node 2010/04/22 package wrapper for pst-node.tex
+
+(/usr/share/texmf-dist/tex/generic/pst-node/pst-node.tex  v1.27, 2013/04/12
+\psrow=\count137
+\pscol=\count138
+\psmatrixcnt=\count139
+\psrowsep=\skip44
+\pscolsep=\skip45
+\pst@args=\count140
+\num@pts=\count141
+\pst@argcnt=\count142
+)
+File: pst-node.tex 2013/04/12 1.27 `pst-node' (tvz,hv)
+)
+Package: pst-3dplot 2010/01/01 package wrapper for pst-3dplot.tex (hv)
+
+(/usr/share/texmf-dist/tex/generic/pst-3dplot/pst-3dplot.tex
+(/usr/share/texmf-dist/tex/generic/pst-node/pst-node.tex)
+(/usr/share/texmf-dist/tex/generic/multido/multido.tex
+ v1.42, 2010/05/14 <tvz>) `PST-3dplot' v1.97, 2012/06/07 (HV,DL)
+\pst@dimf=\dimen167
+\pst@cntx=\count143
+\pst@cnty=\count144
+\pst@cntz=\count145
+\pst@dimx=\dimen168
+\pst@dimy=\dimen169
+\pst@dimz=\dimen170
+\pst@dx=\dimen171
+\pst@dy=\dimen172
+\pszunit=\dimen173
+)
+File: pst-3dplot.tex 2012/06/07 v1.97 `PST-3dplot' (hv)
+)
+(/usr/share/texmf-dist/tex/latex/sttools/stfloats.sty
+Package: stfloats 2012/05/29 v1.1 Improve float mechanism and baselineskip sett
+ings
+\@dblbotnum=\count146
+\c@dblbotnumber=\count147
+)
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip46
+\subfigcapskip=\skip47
+\subfigcaptopadj=\dimen174
+\subfigbottomskip=\skip48
+\subfigcapmargin=\dimen175
+\subfiglabelskip=\skip49
+\c@subfigure=\count148
+\c@lofdepth=\count149
+\c@subtable=\count150
+\c@lotdepth=\count151
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip50
+\subfig@bottom=\skip51
+)
+(/usr/share/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count152
+\float@exts=\toks48
+\float@box=\box34
+\@float@everytoks=\toks49
+\@floatcapt=\box35
+)
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks50
+\c@algorithm=\count153
+)
+(/usr/share/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count154
+\c@ALG@rem=\count155
+\c@ALG@nested=\count156
+\ALG@tlm=\skip52
+\ALG@thistlm=\skip53
+\c@ALG@Lnr=\count157
+\c@ALG@blocknr=\count158
+\c@ALG@storecount=\count159
+\c@ALG@tmpcounter=\count160
+\ALG@tmplength=\skip54
+) (/usr/share/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/share/texmf-dist/tex/latex/preprint/balance.sty
+Package: balance 1999/02/23 4.3 (PWD)
+\oldvsize=\dimen176
+)
+(/usr/share/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
+(/usr/share/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/05/16 v3.9f The Babel package
+
+(/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/05/16 v3.9f Babel common definitions
+\babel@savecnt=\count161
+\U@D=\dimen177
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texmf-dist/tex/latex/units/units.sty
+Package: units 1998/08/04 v0.9b Typesetting units
+
+(/usr/share/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip55
+\L@UnitsRaiseTextstyle=\skip56
+\L@UnitsRaiseScriptstyle=\skip57
+))
+(/usr/share/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box36
+\UL@hyphenbox=\box37
+\UL@skip=\skip58
+\UL@hook=\toks51
+\UL@height=\dimen178
+\UL@pe=\count162
+\UL@pixel=\dimen179
+\ULC@box=\box38
+Package: ulem 2012/05/18
+\ULdepth=\dimen180
+) (./sigirfp310-veloso.aux)
+\openout1 = `sigirfp310-veloso.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 30.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+(/usr/share/texmf-dist/tex/latex/pslatex/pslatex.sty
+Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+\symbold=\mathgroup7
+\symitalic=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
+)
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 80
+.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 80
+.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 80
+.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/omspzccm.fd
+File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
+)
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 80
+.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 80.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 80.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 80.
+
+(/usr/share/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 80.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 80.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 80.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 99.
+
+Underfull \vbox (badness 1117) has occurred while \output is active []
+
+ [1
+
+
+]
+Overfull \hbox (11.08846pt too wide) in paragraph at lines 144--154
+\T1/ptm/m/n/9 tag-o-nis-tic na-tures, im-prov-ing both prop-er-ties may lead to
+ a conflicting-
+ []
+
+
+Overfull \hbox (9.2161pt too wide) in paragraph at lines 165--166
+\T1/ptm/m/n/9 sen-ti-ment rules that are kept in-cre-men-tally as the stream ev
+olves
+ []
+
+
+Overfull \hbox (3.42027pt too wide) in paragraph at lines 174--177
+\T1/ptm/m/n/9 ex-per-i-ments us-ing Twit-ter data col-lected from three im-por-
+tant events
+ []
+
+
+Overfull \hbox (1.85405pt too wide) in paragraph at lines 174--177
+\T1/ptm/m/n/9 guages. Re-sults show that our al-go-rithms make clas-si-fiers ex
+-tremely
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 275--277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--285
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 327--331
+
+ []
+
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 350.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--354
+
+ []
+
+
+Overfull \hbox (10.22972pt too wide) in paragraph at lines 356--370
+[]  \T1/ptm/b/n/9 Ex-tend-ing Clas-si-fiers Dy-nam-i-cally\subsecfnt . \T1/ptm/
+m/n/9 Let $\OMS/pzccm/m/n/9 R \OT1/ptmcm/m/n/9 = \OMS/pzccm/m/n/9 fR\OT1/ptmcm/
+m/n/9 (\OML/ptmcm/m/it/9 t[]\OT1/ptmcm/m/n/9 ) \OMS/pzccm/m/n/9 [ R\OT1/ptmcm/m
+/n/9 (\OML/ptmcm/m/it/9 t[]\OT1/ptmcm/m/n/9 )$ $\OMS/pzccm/m/n/9 [ [] [
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (1.9907pt too wide) in paragraph at lines 573--574
+ [][] 
+ []
+
+[4]
+Overfull \hbox (158.33841pt too wide) in paragraph at lines 685--686
+ [][] 
+ []
+
+
+Overfull \hbox (2.93051pt too wide) in paragraph at lines 690--691
+[]  \T1/ptm/b/n/9 Def-i-ni-tion 4\subsecfnt . \T1/ptm/m/n/9 Train-ing set $\OMS
+/pzccm/m/n/9 P[] \OT1/ptmcm/m/n/9 = \OMS/pzccm/m/n/9 f\OML/ptmcm/m/it/9 d[]; d[
+]; [] ; d[]\OMS/pzccm/m/n/9 g$ \T1/ptm/m/n/9 is said to be Pareto-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 690--691
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 771--772
+
+ []
+
+
+Overfull \hbox (6.09854pt too wide) in paragraph at lines 802--803
+[]  \T1/ptm/b/n/9 Def-i-ni-tion 6\subsecfnt . \T1/ptm/m/n/9 Train-ing set $\OMS
+/pzccm/m/n/9 K[] \OT1/ptmcm/m/n/9 = \OMS/pzccm/m/n/9 f\OML/ptmcm/m/it/9 d[]; d[
+]; [] ; d[]\OMS/pzccm/m/n/9 g$ \T1/ptm/m/n/9 is said to be Kaldor-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--803
+
+ []
+
+[5]
+Overfull \hbox (1.8817pt too wide) in paragraph at lines 916--920
+[]\T1/ptm/m/n/9 To eval-u-ate the amount of com-put-ing re-sources used as the 
+stream
+ []
+
+
+Overfull \hbox (6.55315pt too wide) in paragraph at lines 916--920
+\T1/ptm/m/n/9 evolves, we em-ploy the RAM-Hours mea-sure [9], where ev-ery RAM-
+
+ []
+
+
+! LaTeX Error: Cannot determine size of graphic in dilmaPositividade.pdf (no Bo
+undingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.938 ...2in,height=1.6in]{dilmaPositividade.pdf}}
+                                                  
+? 
+File: dilmaPositividade.pdf Graphic file (type eps)
+<dilmaPositividade.pdf>
+Underfull \hbox (badness 1314) in paragraph at lines 938--938
+[]\T1/ptm/m/n/9 (a) Ap-proval over Dilma Rouss-eff's
+ []
+
+
+! LaTeX Error: Cannot determine size of graphic in dilma_1_temporal_mse.pdf (no
+ BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.939 ...,height=1.6in]{dilma_1_temporal_mse.pdf}}
+                                                  
+? 
+File: dilma_1_temporal_mse.pdf Graphic file (type eps)
+<dilma_1_temporal_mse.pdf>
+
+! LaTeX Error: Cannot determine size of graphic in dilma_2_similaridade_rotulac
+oes.pdf (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.940 ...in]{dilma_2_similaridade_rotulacoes.pdf}}
+                                                  
+? 
+File: dilma_2_similaridade_rotulacoes.pdf Graphic file (type eps)
+<dilma_2_similaridade_rotulacoes.pdf>
+Underfull \hbox (badness 1681) in paragraph at lines 940--940
+[]\T1/ptm/m/n/9 (c) X-Y scat-ter plot cor-re-lat-ing the
+ []
+
+
+! LaTeX Error: Cannot determine size of graphic in dilma_3_rmse-labelling.pdf (
+no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.941 ...eight=1.6in]{dilma_3_rmse-labelling.pdf}}
+                                                  
+? 
+File: dilma_3_rmse-labelling.pdf Graphic file (type eps)
+<dilma_3_rmse-labelling.pdf>
+
+! LaTeX Error: Cannot determine size of graphic in dilma_window.pdf (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.942 ...th=2.2in,height=1.6in]{dilma_window.pdf}}
+                                                  
+? 
+File: dilma_window.pdf Graphic file (type eps)
+<dilma_window.pdf>
+Underfull \hbox (badness 1281) in paragraph at lines 942--942
+[]\T1/ptm/m/n/9 (e) Size of the train-ing sets as the
+ []
+
+
+! LaTeX Error: Cannot determine size of graphic in dilma_4.pdf (no BoundingBox)
+.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.943 ...s[width=2.2in,height=1.6in]{dilma_4.pdf}}
+                                                  
+? 
+File: dilma_4.pdf Graphic file (type eps)
+<dilma_4.pdf>
+
+! LaTeX Error: Cannot determine size of graphic in assange_1_temporal_mse.pdf (
+no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.988 ...eight=1.6in]{assange_1_temporal_mse.pdf}}
+                                                  
+? 
+File: assange_1_temporal_mse.pdf Graphic file (type eps)
+<assange_1_temporal_mse.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 988--988
+[]\T1/ptm/m/n/9 (a) MSE num-bers as the stream
+ []
+
+
+! LaTeX Error: Cannot determine size of graphic in assange_3_rmse-labelling.pdf
+ (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.989 ...ght=1.6in]{assange_3_rmse-labelling.pdf}}
+                                                  
+? 
+File: assange_3_rmse-labelling.pdf Graphic file (type eps)
+<assange_3_rmse-labelling.pdf>
+
+! LaTeX Error: Cannot determine size of graphic in assange_4.pdf (no BoundingBo
+x).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.990 ...width=2.2in,height=1.6in]{assange_4.pdf}}
+                                                  
+? 
+File: assange_4.pdf Graphic file (type eps)
+<assange_4.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+[7]
+Overfull \hbox (1.62094pt too wide) in paragraph at lines 1011--1014
+[]\T1/ptm/m/n/9 Figure 6[] (b) shows the trade-off be-tween la-bel-ing ef-fort 
+and MSE.
+ []
+
+
+Overfull \hbox (1.65648pt too wide) in paragraph at lines 1021--1024
+\T1/ptm/m/n/9 We col-lected 3,214 mes-sages in Por-tuguese ref-er-enc-ing Fe-li
+pe Melo
+ []
+
+
+! LaTeX Error: Cannot determine size of graphic in felipemeloPositividade.pdf (
+no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1042 ...ight=1.6in]{felipemeloPositividade.pdf}}
+                                                  
+? 
+File: felipemeloPositividade.pdf Graphic file (type eps)
+<felipemeloPositividade.pdf>
+
+! LaTeX Error: Cannot determine size of graphic in pt_1_temporal_mse.pdf (no Bo
+undingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1043 ...in,height=1.6in]{pt_1_temporal_mse.pdf}}
+                                                  
+? 
+File: pt_1_temporal_mse.pdf Graphic file (type eps)
+<pt_1_temporal_mse.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 1043--1043
+[]\T1/ptm/m/n/9 (b) MSE num-bers as the stream
+ []
+
+
+! LaTeX Error: Cannot determine size of graphic in pt_2_similaridade_rotulacoes
+.pdf (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1044 ....6in]{pt_2_similaridade_rotulacoes.pdf}}
+                                                  
+? 
+File: pt_2_similaridade_rotulacoes.pdf Graphic file (type eps)
+<pt_2_similaridade_rotulacoes.pdf>
+Underfull \hbox (badness 1681) in paragraph at lines 1044--1044
+[]\T1/ptm/m/n/9 (c) X-Y scat-ter plot cor-re-lat-ing the
+ []
+
+
+! LaTeX Error: Cannot determine size of graphic in pt_3_rmse-labelling.pdf (no 
+BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1045 ...,height=1.6in]{pt_3_rmse-labelling.pdf}}
+                                                  
+? 
+File: pt_3_rmse-labelling.pdf Graphic file (type eps)
+<pt_3_rmse-labelling.pdf>
+
+! LaTeX Error: Cannot determine size of graphic in pt_window.pdf (no BoundingBo
+x).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1046 ...idth=2.2in,height=1.6in]{pt_window.pdf}}
+                                                  
+? 
+File: pt_window.pdf Graphic file (type eps)
+<pt_window.pdf>
+Underfull \hbox (badness 1281) in paragraph at lines 1046--1046
+[]\T1/ptm/m/n/9 (e) Size of the train-ing sets as the
+ []
+
+
+! LaTeX Error: Cannot determine size of graphic in pt_4.pdf (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1047 ...ics[width=2.2in,height=1.6in]{pt_4.pdf}}
+                                                  
+? 
+File: pt_4.pdf Graphic file (type eps)
+<pt_4.pdf>
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.39297pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (1.14738pt too high) has occurred while \output is active []
+
+
+[9] [10] (./sigirfp310-veloso.aux) ) 
+Here is how much of TeX's memory you used:
+ 8412 strings out of 493316
+ 122399 string characters out of 6143702
+ 561060 words of memory out of 5000000
+ 11638 multiletter control sequences out of 15000+600000
+ 47810 words of font info for 64 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 44i,12n,58p,1305b,536s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on sigirfp310-veloso.dvi (10 pages, 389352 bytes).

@@ -1,0 +1,389 @@
+%% Revised 10/03/01 to remove page numbering
+%% Revised 10/19/01 to add space after run-in titles
+%%         word space no longer needed after run-ins
+%%         
+%%         Possible spacing bug in \subsection fixed
+%%
+%% This is soda2e.all. This file is to be used for creating a paper
+%% in the ACM/SIAM Preprint series with LaTeX2E. It consists of the following 
+%% two files:
+%%
+%%       ltexpprt.tex ---- an example and documentation file
+%%       ltexpprt.sty ---- the macro file
+%%
+%% To use, cut this file apart at the appropriate places.  You can run the
+%% example file with the macros to get sample output.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  CUT HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%  ltexpprt.tex  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is ltexpprt.tex, an example file for use with the SIAM LaTeX2E
+% Preprint Series macros. It is designed to provide double-column output. 
+% Please take the time to read the following comments, as they document
+% how to use these macros. This file can be composed and printed out for
+% use as sample output.
+
+% Any comments or questions regarding these macros should be directed to:
+%
+%                 Donna Witzleben
+%                 SIAM
+%                 3600 University City Science Center
+%                 Philadelphia, PA 19104-2688
+%                 USA
+%                 Telephone: (215) 382-9800
+%                 Fax: (215) 386-7999
+%                 e-mail: witzleben@siam.org
+
+
+% This file is to be used as an example for style only. It should not be read
+% for content.
+
+%%%%%%%%%%%%%%% PLEASE NOTE THE FOLLOWING STYLE RESTRICTIONS %%%%%%%%%%%%%%%
+
+%%  1. There are no new tags.  Existing LaTeX tags have been formatted to match
+%%     the Preprint series style.    
+%%
+%%  2. You must use \cite in the text to mark your reference citations and 
+%%     \bibitem in the listing of references at the end of your chapter. See
+%%     the examples in the following file. If you are using BibTeX, please
+%%     supply the bst file with the manuscript file.
+%% 
+%%  3. This macro is set up for two levels of headings (\section and 
+%%     \subsection). The macro will automatically number the headings for you.
+%%
+%%  5. No running heads are to be used for this volume.
+%% 
+%%  6. Theorems, Lemmas, Definitions, etc. are to be double numbered, 
+%%     indicating the section and the occurence of that element
+%%     within that section. (For example, the first theorem in the second
+%%     section would be numbered 2.1. The macro will 
+%%     automatically do the numbering for you.
+%%
+%%  7. Figures, equations, and tables must be single-numbered. 
+%%     Use existing LaTeX tags for these elements.
+%%     Numbering will be done automatically.
+%%   
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\documentclass[twoside,leqno,twocolumn]{article}  
+\usepackage{ltexpprt} 
+\usepackage{balance}
+\usepackage{pst-3dplot}
+
+\usepackage[english]{babel}
+%\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{stmaryrd}
+\usepackage{graphics}
+\usepackage{graphicx}
+%\usepackage{float}
+\usepackage{url}
+\usepackage{cite}
+%\usepackage{units}
+\usepackage{subfigure}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{epstopdf}
+
+\subfigcapmargin=9pt
+
+\newcounter{lineindex}
+
+\begin{document}
+
+
+%\setcounter{chapter}{2} % If you are doing your chapter as chapter one,
+%\setcounter{section}{3} % comment these two lines out.
+
+\title{Economically-Efficient Sentiment Stream Analysis}
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+\author{Roberto Oliveira Jr.\thanks{Computer Science Department - Universidade Federal de Minas Gerais}
+\and
+Adriano Veloso \samethanks
+\and
+Wagner Meira Jr. \samethanks
+\and
+Adriano Pereira \samethanks
+\and
+Renato Ferreira \samethanks \\
+\and 
+Srinivasan Parthasarathy\thanks{Dept. of Computer Science and Engineering and Department of Biomedical Informatics - The Ohio-State University}}
+\date{}
+
+\maketitle
+
+ 
+%\pagenumbering{arabic}
+%\setcounter{page}{1}%Leave this line commented out.
+
+\begin{abstract}
+Text-based social media channels, such as Twitter, produce
+torrents of opinionated data about the most diverse topics and entities.
+The analysis of such opinionated data (aka. sentiment analysis) is quickly becoming an essential feature in recommendation systems
+and search engines.
+A prominent approach to sentiment analysis is based on the application of classification techniques, that is,
+content is classified according to
+the implicit attitude of the writer with respect to a query term.
+A major challenge, however, is that Twitter (and other social channels)
+follows the data stream model, and thus the classifier must operate
+with limited resources, including labeled data and time for building classification models. Also challenging is the fact that
+sentiment distribution may change as the stream evolves.
+In this paper we address these challenges by proposing selective sampling algorithms that separate relevant training instances 
+at each time step, so that the corresponding training window is kept small while providing to the classifier the capabilities to suit 
+itself to sentiment drifts (i.e., adaptiveness), and also to recover itself from drifts (i.e., memorability). Simultaneously providing both 
+capabilities to the classifier is a hard task, since this may
+lead to a conflicting-objective problem, in which the attempt to improve memorability further may result in worsening adaptiveness (or vice-versa). 
+Our proposed selective sampling approaches employ basic notions of economic efficiency, such as {\em Pareto} and {\em Kaldor-Hicks} efficiency criteria, 
+in order to find a proper balance between adaptiveness and memorability. We performed the analysis of major events in recent years that reverberated on Twitter,
+and the comparison against the state-of-the-art reveals improvements in terms of error reduction (up to 14\%) and reduction of training resources (by two orders of magnitude).
+\end{abstract}
+
+\input{intro}
+\input{relwork}
+\input{stream}
+\input{case}
+\input{conc}
+
+\begin{thebibliography}{10}
+\bibitem{baeza99modern}
+R.~Baeza-Yates and B.~R-Neto.
+\newblock {\em Modern Information Retrieval}.
+\newblock Addison-Wesley-Longman, 1999.
+
+\bibitem{tags}
+G.~Barbosa, I.~S. Silva, M.~Zaki, W.~M. {Jr.}, R.~Prates, and A.~Veloso.
+\newblock Characterizing the effectiveness of twitter hashtags to detect and
+  track online population sentiment.
+\newblock In {\em CHI}, pages 2621--2626, 2012.
+
+\bibitem{bifetsent1}
+A.~Bifet and E.~Frank.
+\newblock Sentiment knowledge discovery in twitter streaming data.
+\newblock In {\em Discovery Science}, pages 1--15, 2010.
+
+\bibitem{Bifet:2012:ERH:2089094.2089106}
+A.~Bifet, E.~Frank, G.~Holmes, and B.~Pfahringer.
+\newblock Ensembles of restricted hoeffding trees.
+\newblock {\em ACM Trans. Intell. Syst. Technol.}, 3(2):30:1--30:20, 2012.
+
+\bibitem{Bifet2007}
+A.~Bifet and R.~Gavald{\`a}.
+\newblock Learning from time-changing data with adaptive windowing.
+\newblock In {\em SDM}, 2007.
+
+\bibitem{Bifet:2009:ALE:1617420.1617445}
+A.~Bifet and R.~Gavald\`{a}.
+\newblock Adaptive learning from evolving data streams.
+\newblock In {\em IDA}, pages 249--260, 2009.
+
+\bibitem{moa}
+A.~Bifet, G.~Holmes, R.~Kirkby, and B.~Pfahringer.
+\newblock {MOA}: Massive online analysis.
+\newblock {\em Journal of Machine Learning Research}, 11:1601--1604, 2010.
+
+\bibitem{Bifet:2010:FPD:2144032.2144069}
+A.~Bifet, G.~Holmes, B.~Pfahringer, and E.~Frank.
+\newblock Fast perceptron decision tree learning from evolving data streams.
+\newblock In {\em PAKDD}, pages 299--310, 2010.
+
+\bibitem{bifetsent2}
+A.~Bifet, G.~Holmes, B.~Pfahringer, and R.~Gavald{\`a}.
+\newblock Detecting sentiment change in twitter streaming data.
+\newblock {\em Journal of Machine Learning Research - Proceedings Track},
+  17:5--11, 2011.
+
+\bibitem{operator}
+S.~B{\"o}rzs{\"o}nyi, D.~Kossmann, and K.~Stocker.
+\newblock The skyline operator.
+\newblock In {\em ICDE}, pages 421--430, 2001.
+
+\bibitem{trees}
+L.~Breiman, J.~Friedman, R.~Olshen, and C.~Stone.
+\newblock Classification and regression trees.
+\newblock {\em Wadsworth Intl.}, 1984.
+
+\bibitem{compensation}
+J.~Chipman.
+\newblock Compensation principle.
+\newblock In S.~N. Durlauf and L.~E. Blume, editors, {\em The New Palgrave
+  Dictionary of Economics}. Palgrave Macmillan, 2008.
+
+\bibitem{Cormode:4812398}
+G.~Cormode, V.~Shkapenyuk, D.~Srivastava, and B.~Xu.
+\newblock Forward decay: A practical time decay model for streaming systems.
+\newblock In {\em ICDE}, pages 138--149, 2009.
+
+\bibitem{cortes}
+C.~Cortes and V.~Vapnik.
+\newblock Support-vector networks.
+\newblock {\em Machine Learning}, 20(3):273--297, 1995.
+
+\bibitem{permutation}
+R.~Durstenfeld.
+\newblock Algorithm 235: Random permutation.
+\newblock {\em Commun. ACM}, 7(7):420, 1964.
+
+\bibitem{Feng2013}
+L.~Feng, F.~Chen, and Y.~Yao.
+\newblock A concept similarity based data stream classification model.
+\newblock {\em Journal of Information \& Computational Science},
+  10(4):949--957, 2013.
+
+\bibitem{Gama2009a}
+J.~Gama, R.~S. {a}o, and P.~Rodrigues.
+\newblock {Issues in evaluation of stream learning algorithms}.
+\newblock In {\em SIGKDD}, page 329, 2009.
+
+\bibitem{goldberg}
+E.~Goldberg.
+\newblock {\em Genetic Algorithms in Search, Optimization and Machine
+  Learning}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., 1989.
+
+\bibitem{hicks}
+J.~Hicks.
+\newblock The foundations of welfare economics.
+\newblock {\em The Economic Journal}, 49(196):696--712, 1939.
+
+\bibitem{uncertainty}
+C.~Jin, K.~Yi, L.~Chen, J.~Yu, and X.~Lin.
+\newblock Sliding-window top-{\it k} queries on uncertain streams.
+\newblock {\em VLDB J.}, 19(3):411--435, 2010.
+
+\bibitem{kaldor}
+N.~Kaldor.
+\newblock Welfare propositions in economics and interpersonal comparisons of
+  utility.
+\newblock {\em The Economic Journal}, 49(195):549--552, 1939.
+
+\bibitem{Klinkenberg:2004:LDC:1293831.1293836}
+R.~Klinkenberg.
+\newblock Learning drifting concepts: Example selection vs. example weighting.
+\newblock {\em Intell. Data Anal.}, 8(3), 2004.
+
+\bibitem{Koychev00gradualforgetting}
+I.~Koychev.
+\newblock Gradual forgetting for adaptation to concept drift.
+\newblock In {\em ECAI}, pages 101--106, 2000.
+
+\bibitem{Li:2012:CFH:2367502.2367559}
+P.~Li, C.~Tziviskou, H.~Wang, X.~L. Dong, X.~Liu, A.~Maurino, and
+  D.~Srivastava.
+\newblock Chronos: facilitating history discovery by linking temporal records.
+\newblock {\em Proc. VLDB Endow.}, 5(12):2006--2009, 2012.
+
+\bibitem{skyline1}
+X.~Lin, Y.~Yuan, Q.~Zhang, and Y.~Zhang.
+\newblock Selecting stars: The k most representative skyline operator.
+\newblock In {\em ICDE}, pages 86--95, 2007.
+
+\bibitem{Masud:2008:PAC:1510528.1511337}
+M.~Masud, J.~Gao, L.~Khan, J.~Han, and B.~Thuraisingham.
+\newblock A practical approach to classify evolving data streams: Training with
+  limited amount of labeled data.
+\newblock In {\em ICDM}, pages 929--934, 2008.
+
+\bibitem{Nunez:2007:LEU:1314498.1390328}
+M.~N. {n}ez, R.~Fidalgo, and R.~Morales.
+\newblock Learning in environments with unknown dynamics: Towards more robust
+  concept learners.
+\newblock {\em JMLR}, 8, 2007.
+
+\bibitem{palda@book}
+F.~Palda.
+\newblock {\em Pareto's Republic and the new Science of Peace}.
+\newblock Cooper-Wolfling, 2011.
+
+\bibitem{skyline2}
+D.~Papadias, Y.~Tao, G.~Fu, and B.~Seeger.
+\newblock An optimal and progressive algorithm for skyline queries.
+\newblock In {\em SIGMOD Conference}, pages 467--478, 2003.
+
+\bibitem{sigir}
+I.~Santana, J.~Gomide, A.~Veloso, W.~M. {Jr.}, and R.~Ferreira.
+\newblock Effective sentiment stream analysis with self-augmenting training and
+  demand-driven projection.
+\newblock In {\em SIGIR}, pages 475--484. ACM, 2011.
+
+\bibitem{Srivastava:2010:ERT:1920841.1920843}
+D.~Srivastava, L.~Golab, R.~Greer, T.~Johnson, J.~Seidel, V.~Shkapenyuk,
+  O.~Spatscheck, and J.~Yates.
+\newblock Enabling real time data analysis.
+\newblock {\em Proc. VLDB Endow.}, 3(1-2):1--2, 2010.
+
+\bibitem{Torres:2011:CMD:2025756.2025758}
+D.~Torres, J.~Ruiz, and Y.~Sarabia.
+\newblock Classification model for data streams based on similarity.
+\newblock In {\em IEA/AIE}, pages 1--9, 2011.
+
+\bibitem{DBLP:journals/corr/abs-1010-4784}
+I.~\v{Z}liobait\.{e}.
+\newblock Learning under concept drift: an overview.
+\newblock {\em CoRR}, abs/1010.4784, 2010.
+
+\bibitem{Zliobaite:2011:CST:2010989.2010997}
+I.~\v{Z}liobait\.{e}.
+\newblock Combining similarity in time and space for training set formation
+  under concept drift.
+\newblock {\em Intelligent Data Analysis}, 15(4):589--611, 2011.
+
+\bibitem{DBLP:journals/jmlr/ZliobaiteBHP11}
+I.~\v{Z}liobait\.{e}, A.~Bifet, G.~Holmes, and B.~Pfahringer.
+\newblock {MOA} concept drift active learning strategies for streaming data.
+\newblock {\em Journal of Machine Learning Research}, 17:48--55, 2011.
+
+\bibitem{Indre2011k}
+I.~\v{Z}liobait\.{e}, A.~Bifet, B.~Pfahringer, and G.~Holmes.
+\newblock Active learning with evolving streaming data.
+\newblock In {\em Machine Learning and Knowledge Discovery in Databases},
+  volume 6913, pages 597--612. 2011.
+
+\bibitem{6414645}
+I.~\v{Z}liobait\.{e}, A.~Bifet, B.~Pfahringer, and G.~Holmes.
+\newblock Active learning with drifting streaming data.
+\newblock {\em IEEE Trans. on Neural Networks and Learning Systems},
+  PP(99):1--1, 2013.
+
+\bibitem{Yang:2011:SMD:2078324.2078328}
+D.~Yang, E.~A. Rundensteiner, and M.~O. Ward.
+\newblock Summarization and matching of density-based clusters in streaming
+  environments.
+\newblock {\em Proc. VLDB Endow.}, 5(2):121--132, Oct. 2011.
+
+\bibitem{zhang:2010}
+R.~Zhang, N.~Koudas, B.~Ooi, D.~Srivastava, and P.~Zhou.
+\newblock Streaming multiple aggregations using phantoms.
+\newblock {\em The VLDB Journal}, 19(4):557--583, 2010.
+
+\bibitem{5440901}
+X.~Zhu, P.~Zhang, X.~Lin, and Y.~Shi.
+\newblock Active learning from stream data using optimal weight classifier
+  ensemble.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics, Part B:
+  Cybernetics}, 40(6):1607--1621, 2010.
+
+\bibitem{stat}
+Y.~Zhu and D.~Shasha.
+\newblock Statstream: Statistical monitoring of thousands of data streams in
+  real time.
+\newblock In {\em VLDB}, pages 358--369, 2002.
+
+\bibitem{shasha}
+Y.~Zhu and D.~Shasha.
+\newblock Efficient elastic burst detection in data streams.
+\newblock In {\em KDD}, pages 336--345, 2003.
+
+\end{thebibliography}
+\end{document}
+
+% End of ltexpprt.tex
+%

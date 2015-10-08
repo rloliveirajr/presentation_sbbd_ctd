@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.12pt}
+\beamer@sectionintoc {1}{Scenario}{2}{0}{1}
+\beamer@sectionintoc {2}{Associative Classification}{7}{0}{2}
+\beamer@sectionintoc {3}{Applications}{11}{0}{3}
+\beamer@sectionintoc {4}{Thank you}{23}{0}{4}

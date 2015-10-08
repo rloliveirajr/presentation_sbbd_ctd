@@ -1,0 +1,249 @@
+\section{The Metric Dilemma}
+
+Selecting an appropriate association metric is a major issue while designing an associative classifier. Classifiers produced by different metrics often present different classification performance. Depending on the characteristics of the problem, some metrics may be more suitable than others. 
+That is, a sub-domain may present properties that make a metric more suitable than others.
+This suggests that classifiers produced by a certain metric are only able to make reliable predictions over a subset of the entire domain space, which is the area of expertise, or domain of competence, of such metric.
+In this section we exploit the training data to learn the competence, or expertise of each metric. Then, a specific metric is used to produce a classifier for sub-problems that belong to its domain of competence.
+
+\subsection{Association Metrics}
+
+Next we present several metrics for measuring the strength of association between a set of features ($\mathcal{X}$) and classes ($c_1, c_2,\ldots, c_n$).
+Some of these metrics are popular ones in routine use\cite{rules,tan}, while others were recently used in the context of associative classification\cite{cccs}.
+These metrics interpret association using different definitions. We believe that these definitions are sufficiently different to indicate that the corresponding classifiers may present some diversity.
+
+\begin{itemize}
+\item Confidence ($m_1$)~\cite{rules}: This metric measures the fraction of instances in $\mathcal{D}$ containing $\mathcal{X}$ that belong to $c_i$. It is the conditional probability of $c_i$ being the correct class of instance $t$ given that $\mathcal{X}\subseteq t$, as shown in Equation~\ref{eq:conf}. Its value ranges from 0 to 1.
+
+\begin{equation}
+\label{eq:conf}
+m_1=p(c_i|\mathcal{X})
+\end{equation}
+
+\item Added Value ($m_2$)~\cite{hilderman}: This metric measures the gain in accuracy obtained by using rule $\mathcal{X}$$\xrightarrow{}$$c_i$ instead of always predicting $c_i$, as shown in Equation~\ref{eq:added}. Negative values indicate that always predicting $c_i$ is better than using the rule. Its value ranges from -1 to 1.
+
+\begin{equation}
+\label{eq:added}
+m_2=p(c_i|\mathcal{X})-p(c_i)
+\end{equation}
+
+\item Certainty ($m_3$)~\cite{measures}: This metric measures the increase in accuracy between rule $\mathcal{X}\xrightarrow{}c_i$ and always predicting $c_i$, as shown in Equation~\ref{eq:certainty}. It assumes values smaller than 1.
+
+\begin{equation}
+\label{eq:certainty}
+m_3=\frac{p(c_i|\mathcal{X})-p(c_i)}{p(\overline{c_i})}
+\end{equation}
+
+\item Yules'Q ($m_4$) and Yules'Y ($m_5$)~\cite{tan}: These metrics are based on odds value, as shown in Equations~\ref{eq:yulesq} and~\ref{eq:yulesy}, respectively. Their values range from -1 to 1. The value 1 implies perfect positive association between $\mathcal{X}$ and $c_i$, value 0 implies no association, and value -1 implies perfect negative association.
+
+\begin{equation}
+\label{eq:yulesq}
+m_4=\frac{p(\mathcal{X}\cup c_i) p(\overline{\mathcal{X}\cup c_i})-p(\mathcal{X}\cup\overline{c_i}) p(\overline{\mathcal{X}}\cup c_i)}{p(\mathcal{X}\cup c_i) p(\overline{\mathcal{X}\cup c_i})+p(\mathcal{X}\cup\overline{c_i}) p(\overline{\mathcal{X}}\cup c_i)}
+\end{equation}
+
+\begin{equation}
+\label{eq:yulesy}
+m_5=\frac{\sqrt{p(\mathcal{X}\cup c_i) p(\overline{\mathcal{X}\cup c_i})}-\sqrt{p(\mathcal{X}\cup\overline{c_i}) p(\overline{\mathcal{X}}\cup c_i)}}{\sqrt{p(\mathcal{X}\cup c_i) p(\overline{\mathcal{X}\cup c_i})}+\sqrt{p(\mathcal{X}\cup\overline{c_i}) p(\overline{\mathcal{X}}\cup c_i)}}
+\end{equation}
+
+\item Strength Score ($m_6$)~\cite{cccs}: This metric measures the correlation between $\mathcal{X}$ and $c_i$, but it also takes into account how $\mathcal{X}$ is correlated with the complement of $c_i$ (i.e., $\overline{c_i}$), as shown in Equation~\ref{eq:ss}. Its value ranges from 0 to $\infty$.
+
+\begin{equation}
+\label{eq:ss}
+m_6=\frac{p(\mathcal{X}|c_i) p(c_i|\mathcal{X})}{p(\mathcal{X}|\overline{c_i})}
+\end{equation}
+
+\item Support ($m_7$)~\cite{rules}: This metric measures the fraction of instances in $\mathcal{D}$ covered by the rule $\mathcal{X}\xrightarrow{}c_i$, as shown in Equation~\ref{eq:supp}. Its value ranges from 0 to 1.
+\begin{equation}
+\label{eq:supp}
+m_7=p(\mathcal{X}\cup c_i)
+\end{equation}
+
+\item Weighted Relative Confidence ($m_8$)~\cite{measures}: This metric trades off accuracy and generality, as shown in Equation~\ref{eq:wrc}. The first component is the accuracy gain that is obtained by using rule $\mathcal{X}\xrightarrow{}c_i$ instead of always predicting $c_i$. The second component incorporates generality.
+\begin{equation}
+\label{eq:wrc}
+m_8=(p(c_i|\mathcal{X})-p(c_i)) p(\mathcal{X})
+\end{equation}
+
+\end{itemize}
+
+Although we focus our analysis only on these metrics, the techniques to be introduced here are general and able to exploit any number of metrics transparently.
+Next we will discuss a simple approach to boost classification performance by exploiting associative classifiers produced by these metrics.
+
+\paragraph*{Self-Delegating Classifier (SDC)} Equation~\ref{eq:prob} can be used to estimate the reliability of a prediction, and this information can be used to select the most reliable prediction from all involved classifiers. The process is illustrated in Algorithm~\ref{alg:delegating}. For a given test instance $t$, the selected class is the one which is associated with the highest likelihood $\hat{p}(c_i|t)$ amongst all classifiers $\mathcal{C}^t_{m_1}, \mathcal{C}^t_{m_2},\ldots,\mathcal{C}^t_{m_q}$. The basic idea is to use the most reliable prediction (among the predictions performed by all classifiers) to select the class for $t$.
+
+Although simple, SDC does not exploit the competence of each metric. In fact, each base classifier simply decides by itself the instances it will classify, not meaning that the select instances belong to its domain of competence.
+
+\begin{algorithm} [ht!]
+\caption{Classifier based on Self Delegation of Metrics.}
+\begin{algorithmic}[1]
+\REQUIRE The training data $\mathcal{D}$, and a test instance $t$
+\ENSURE The class for instance $t$
+
+\medskip
+
+\STATE $\mathcal{R}^t\Leftarrow$ rules $\mathcal{X}\xrightarrow{}c_i$ (with $1\le i\le n$) extracted from $\mathcal{D}$ such that $\mathcal{X}\subseteq t$
+\STATE produce different classifiers $\mathcal{C}^t_{m_1}, \mathcal{C}^t_{m_2},$ $\ldots, \mathcal{C}^t_{m_q}$, for instance $t$, using rules in $\mathcal{R}^t$
+\STATE {\bf return} the class associated with the highest likelihood of membership for $t$ (i.e., Eq. 2), amongst all classifiers
+
+\end{algorithmic}
+\label{alg:delegating}
+\end{algorithm}
+
+\begin{table*} [htp!]
+\begin{minipage}[b]{0.27\linewidth}
+\centering
+%\resizebox{4.53cm}{!} {
+\begin{tabular}{|c|c|c|} \hline
+  &     &Attribute-Values\\
+Id&Class&$a_1$ $a_2$ $\ldots$ $a_l$\\ \hline\hline
+1 &$c_1$&1~ 3~ $\ldots$ 6\\ \hline
+2 &$c_1$&1~ 3~ $\ldots$ 7\\ \hline
+3 &$c_1$&2~ 4~ $\ldots$ 6\\ \hline
+4 &$c_2$&2~ 4~ $\ldots$ 7\\ \hline
+5 &$c_2$&2~ 5~ $\ldots$ 8\\ \hline
+6 &$c_2$&2~ 4~ $\ldots$ 6\\ \hline
+7 &$c_3$&1~ 3~ $\ldots$ 9\\ \hline
+8 &$c_3$&2~ 5~ $\ldots$ 9\\ \hline
+9 &$c_3$&2~ 4~ $\ldots$ 8\\ \hline
+10&$c_3$&2~ 4~ $\ldots$ 9\\ \hline
+\end{tabular}
+%}
+\caption{Training Data, $\mathcal{D}$.}
+\label{table:ex1}
+\end{minipage}
+\begin{minipage}[b]{0.77\linewidth}
+\centering
+%\resizebox{8.2cm}{!} {
+\begin{tabular}{|c|c|c|c|c|} \hline
+  &     & Attribute-Values & Competent & Most Competent \\
+Id&Class&$a_1$ $a_2$ $\ldots$ $a_l$ & Metric(s) (per instance) & Metric(s) (per class)\\ \hline\hline
+1 &$c_1$&1~ 3~ $\ldots$ 6           & $m_2$               &       \\ \cline{1-4}
+2 &$c_1$&1~ 3~ $\ldots$ 7           & $m_1$ ~~~~~~ $m_3$  & $m_1$ \\ \cline{1-4}
+3 &$c_1$&2~ 4~ $\ldots$ 6           & $m_1$ ~~~~~~~~~~~~  &       \\ \hline
+4 &$c_2$&2~ 4~ $\ldots$ 7           & $m_1$ $m_2$ ~~~~~~  &       \\ \cline{1-4}
+5 &$c_2$&2~ 5~ $\ldots$ 8           & $m_1$ $m_2$ $m_3$   & $m_1$ \\ \cline{1-4}
+6 &$c_2$&2~ 4~ $\ldots$ 6           & $m_1$ ~~~~~~~~~~~~  &       \\ \hline
+7 &$c_3$&1~ 3~ $\ldots$ 9           & $m_2$               &       \\ \cline{1-4}
+8 &$c_3$&2~ 5~ $\ldots$ 9           & ~~~~~~ $m_2$ $m_3$  & $m_2$ \\ \cline{1-4}
+9 &$c_3$&2~ 4~ $\ldots$ 8           & $m_1$ $m_2$ $m_3$   &       \\ \cline{1-4}
+10&$c_3$&2~ 4~ $\ldots$ 9           & $m_2$               &       \\ \hline
+\end{tabular}
+%}
+\caption{Enhanced Training Data, $\mathcal{D}_e$.}
+\label{table:ex4}
+\end{minipage}
+\end{table*}
+
+
+\subsection{Learning the Metric Competence}
+
+The optimal match between metrics and problems is valuable information. In this section we present an approach to estimate such matching. The proposed approach may be viewed as an application of Wolpert's stacked generalization~\cite{stacking}. From a general point of view, stacking can be considered a meta-learning method, as it refers to the induction of classifiers over inputs that are, in turn, the predictions of other classifiers induced from the training data.
+
+\begin{algorithm} [ht!]
+\caption{Enhancing the Training Data with the Competence of each Metric.}
+\begin{algorithmic}[1]
+\REQUIRE The original training data $\mathcal{D}$, and a cross-validation parameter $k$
+\ENSURE The enhanced training data $\mathcal{D}_e$
+
+\medskip
+
+\STATE split $\mathcal{D}$ into $k$ partitions, so that $\mathcal{D}$=\{$d_1\cup d_2\cup\ldots\cup d_k$\}
+\STATE $\mathcal{D}_e\Leftarrow\emptyset$
+\FOR{{\bf each} partition $d_i$}
+\FOR{{\bf each} instance $t\in d_i$}
+\STATE $m\Leftarrow\emptyset$
+\STATE $\mathcal{R}^t\Leftarrow$ rules $\mathcal{X}\xrightarrow{}c_i$ (with $1\le i\le n$) extracted from \{$\mathcal{D}$-$d$\} such that $\mathcal{X}\subseteq t$
+\STATE produce different classifiers, $\mathcal{C}^t_{m_1}, \mathcal{C}^t_{m_2},$ $\ldots, \mathcal{C}^t_{m_q}$, using rules in $\mathcal{R}^t$
+\FOR{{\bf each} classifier $\mathcal{C}^t_{m_j}$}
+\IF{$\mathcal{C}^t_{m_j}$ correctly predicts the class for t}
+\STATE $m\Leftarrow m\cup m_j$
+\ENDIF
+\ENDFOR
+\STATE $\mathcal{D}_e\Leftarrow\mathcal{D}_e\cup \{t\cup m\}$
+\ENDFOR
+\ENDFOR
+\end{algorithmic}
+\label{alg:stacking}
+\end{algorithm}
+
+The process starts by enhancing the original training data using the outputs of the base classifiers, $\mathcal{C}^t_{m_1}$, $\mathcal{C}^t_{m_2}\ldots\mathcal{C}^t_{m_q}$. Algorithm~\ref{alg:stacking} shows the basic steps involved in the process. Initially, the enhanced training data, $\mathcal{D}_e$ is empty. An example $t$, along with the competence of each metric with regard to $t$ (i.e., which metric correctly predicted the class for $t$), is inserted into $\mathcal{D}_e$. The process continues until all examples are processed.
+In the end, for each example $t\in\mathcal{D}_e$ we have a list of metrics that produced a competent classifier for $t$, and this information enables learning the comains of competence of each metric, as will be discussed in the next section.
+
+To illustrate this process, please consider the example shown in Tables~\ref{table:ex1} and~\ref{table:ex4}. Table~\ref{table:ex1} shows the original training data, $\mathcal{D}$. Using the process described in Algorithm~\ref{alg:stacking}, the competence of each metric to each instance is appended to $\mathcal{D}$, resulting in the enhanced training data, $\mathcal{D}_e$, which is shown in Table~\ref{table:ex4}. In this case, for a given example $t$, metric $m_i$ is shown if the corresponding classifier $\mathcal{C}^t_{m_i}$ has correctly classified $t$ using the stacking procedure (i.e., metric $m_i$ is competent with regard to example $t$).
+The enhanced training data, $\mathcal{D}_e$, can be exploited in several ways. In particular, we will use $\mathcal{D}_e$ to produce competence-conscious classifiers, as will be discussed next. 
+
+%For example, given a test instance $w$, rather than predicting the correct class for $w$ (which is the original problem), we can predict metrics that competently classifies $w$ (which is a modified version of the original problem). In fact, by definition, the problem of predicting a competent metric for $w$ is the same problem of predicting the correct class for $w$ (since a metric that competently classifies $w$ is one that produces a classifier that correctly predicts the class for $w$). The crucial point is that the problem of predicting a competent metric seems to be much easier than the problem of predicting the correct class for $w$. The reason is simple,
+
+\subsection{Competence-Conscious Classifiers}
+
+In this section we present strategies for exploiting $\mathcal{D}_e$ in order to produce competence-conscious classifiers.
+The challenge, in this case, is to properly select a competent metric for a specific problem.
+The competence-conscious classifiers to be presented differ in how they perform the analysis of the domains of competence of metrics.
+
+\paragraph*{Class-Centric Competence-Conscious Classifier (C$^5$)} The competence of a metric is often associated with certain classes. Some metrics, for instance, produce classifiers which show preference for more frequent classes, while others produce classifiers which show preference for less frequent ones.
+As an illustrative example, please consider Table~\ref{table:ex4}.
+Metric $m_1$ is extremely competent for classifying instances that belong to classes $c_1$ and $c_2$. On the other hand, if we consider instances belonging to $c_3$, metric $m_2$ perfectly classifies all instances. This information (which is shown in the last column of Table~\ref{table:ex4}) may be used to produce class-centric competence-conscious classifiers. The process is depicted in Algorithm~\ref{alg:meta1}. It starts with a meta-classifier, $\mathcal{M}$, which learns the most competent metric for a given class. Any classifier can be used to build the meta-classifier. For simplicity we choose an associative classifier that weights the votes given by rules using the confidence metric. In this case, instead of generating rules $\mathcal{X}\xrightarrow{}c_i$, the meta-classifier generates rules $\mathcal{X}\xrightarrow{}m_i$, which maps features (i.e., in the second column of Table~\ref{table:ex4}) to metrics (i.e., in the fourth column of Table~\ref{table:ex4}). Then, for each test instance $t$, the meta-classifier indicates the most competent metric, $m_j$, that is then used to produce the final classifier, $\mathcal{C}^t_{m_j}$, which is finally used to predict the class for instance $t$.
+
+\begin{algorithm} [htp]
+\caption{Class-Centric Meta Classifier.}
+\begin{algorithmic}[1]
+\REQUIRE The enhanced training data $\mathcal{D}_e$ (i.e., \underline{the 3$^{rd}$ and 5$^{th}$ columns of Table~\ref{table:ex4}}), and a test instance $t$
+\ENSURE The most competent metric for instance $t$
+
+\medskip
+
+\FOR{{\bf each} metric $m_i$}
+\STATE $\mathcal{R}^{t}_{m_i}\Leftarrow$ rules $\mathcal{X}\xrightarrow{}m_i$ extracted from $\mathcal{D}_e$ such that $\mathcal{X}\subseteq t$
+\STATE Estimate $\hat{p}(m_i|t)$, according to Equation~\ref{eq:prob} (using confidence to weigh the votes)
+\ENDFOR
+\STATE {\bf return} metric $m_j$ such that $\hat{p}(m_j|t)>\hat{p}(m_i|t)\forall i\ne j$
+
+\end{algorithmic}
+\label{alg:meta1}
+\end{algorithm}
+
+\paragraph*{Instance-Centric Competence-Conscious Classifier (IC$^4$)} Although the competence of some metrics are associated with certain classes, specific instances may be better classified using other metrics. In such cases, a more fine-grained analysis of competence is desired. As an illustrative example, please consider again Table~\ref{table:ex4}. Although metric $m_1$ is the most competent one to classify instances belonging to class $c_1$, metric $m_2$ is the only one which competently classifies instance 1 (which belongs to $c_1$). Again, a meta-classifier, $\mathcal{M}$, is used to explore such cases. The process is depicted in algorithm~\ref{alg:meta2}. In this case, the meta-classifier learns the most competent metric by generating rules of the form $\mathcal{X}\xrightarrow{}m_i$, which maps features (i.e., the second column of Table~\ref{table:ex4}) to metrics (i.e., in the third column of Table~\ref{table:ex4}). Then, for each test instance $t$, the meta-classifier indicates the most competent metric, $m_j$, which is used to produce the final classifier, $\mathcal{C}^t_{m_j}$.
+
+The main advantage of C$^5$ and IC$^4$ is that, in practice, multiple metrics produce competent classifiers for a particular instance $t$, but $\mathcal{M}$ needs to predict only one of them
+(competent metrics are not mutually exclusive, and thus, in practice, multiple metrics produce competent classifiers for $t$).
+This redundancy in competence that exists when different metrics are taken into account, may increase the chance of selecting a competent metric.
+
+\begin{algorithm} [htp]
+\caption{Instance-Centric Meta Classifier.}
+\begin{algorithmic}[1]
+\REQUIRE The enhanced training data $\mathcal{D}_e$ (i.e., \underline{the 3$^{rd}$ and 4$^{th}$ columns of Table~\ref{table:ex4}}), and a test instance $t$
+\ENSURE The most competent metric for instance $t$
+
+\medskip
+
+\FOR{{\bf each} metric $m_i$}
+\STATE $\mathcal{R}^{t}_{m_i}\Leftarrow$ rules $\mathcal{X}\xrightarrow{}m_i$ extracted from $\mathcal{D}_e$ such that $\mathcal{X}\subseteq t$
+\STATE Estimate $\hat{p}(m_i|t)$, according to Equation~\ref{eq:prob} (using confidence to weigh the votes)
+\ENDFOR
+\STATE {\bf return} metric $m_j$ such that $\hat{p}(m_j|t)>\hat{p}(m_i|t)\forall i\ne j$
+
+\end{algorithmic}
+\label{alg:meta2}
+\end{algorithm}
+
+\begin{algorithm} [htp]
+\caption{Competence-Conscious Classifiers.}
+\begin{algorithmic}[1]
+\REQUIRE The training data $\mathcal{D}$, the meta-classifier $\mathcal{M}$, and a test instance $t$
+\ENSURE The class for instance $t$
+
+\medskip
+
+\FOR{{\bf each} class $c_i$}
+\STATE $\mathcal{R}^{t}_{c_i}\Leftarrow$ rules $\mathcal{X}\xrightarrow{}c_i$ extracted from $\mathcal{D}$ such that $\mathcal{X}\subseteq t$
+\ENDFOR
+\STATE select the most competent classifier for $t$, $\mathcal{C}^t_{m_x}$, using $\mathcal{M}$
+\STATE Estimate $\hat{p}(c_i|t)$ (with $1$$\le$$i$$\le$$n$), according to Equation~\ref{eq:prob} (using metric $m_x$ to weigh the votes)
+\STATE {\bf return} class $c_j$ such that $\hat{p}(c_j|t)>\hat{p}(c_i|t)\forall i\ne j$
+
+\end{algorithmic}
+\label{alg:competence}
+\end{algorithm}
+
+\paragraph*{Bounds for Competence-Conscious Classifiers} We derived lower and upper bounds for the classification performance of the proposed competence-conscious associative classifiers. The lower bound is the performance that is obtained by randomly selecting a competent metric. Clearly, this lower bound increases with the redundancy between the base classifiers, $\mathcal{C}^t_{m_1},\ldots\mathcal{C}^t_{m_q}$ (this redundancy exists because competent metrics are not mutually exclusive, and, thus, for a particular instance $t$, multiple metrics can be competent).
+The upper bound is the classification performance that would be obtained by an oracle which always predicts a competent metric (note that perfect performance is not always possible, since it may not exist a competent metric for some instances). Clearly, this upper bound increases with the accuracy and diversity associated with base classifiers.
