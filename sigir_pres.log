@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.17)  7 OCT 2015 20:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.17)  8 OCT 2015 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -866,52 +866,69 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 ] [2
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 73.
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 73.
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<mercedez.png, id=125, 516.93124pt x 181.67876pt>
+<mercedez.png, id=133, 516.93124pt x 181.67876pt>
 File: mercedez.png Graphic file (type png)
  <use mercedez.png>
-Package pdftex.def Info: mercedez.png used on input line 73.
+Package pdftex.def Info: mercedez.png used on input line 58.
 (pdftex.def)             Requested size: 267.32289pt x 93.95122pt.
 
-<audi.png, id=127, 517.935pt x 163.61125pt>
+<audi.png, id=135, 517.935pt x 163.61125pt>
 File: audi.png Graphic file (type png)
  <use audi.png>
-Package pdftex.def Info: audi.png used on input line 73.
+Package pdftex.def Info: audi.png used on input line 58.
 (pdftex.def)             Requested size: 251.65654pt x 79.49744pt.
  [3
 
- <./mercedez.png> <./audi.png>] <playstation.png, id=163, 367.3725pt x 333.7468
-7pt>
-File: playstation.png Graphic file (type png)
-
-<use playstation.png>
-Package pdftex.def Info: playstation.png used on input line 84.
-(pdftex.def)             Requested size: 198.88269pt x 180.67499pt.
- [4
-
- <./playstation.png>]
-<stream1.png, id=197, 320.69812pt x 142.03062pt>
+ <./mercedez.png> <./audi.png>] <stream1.png, id=171, 320.69812pt x 142.03062pt
+>
 File: stream1.png Graphic file (type png)
- <use stream1.png>
-Package pdftex.def Info: stream1.png used on input line 115.
+
+<use stream1.png>
+Package pdftex.def Info: stream1.png used on input line 76.
 (pdftex.def)             Requested size: 212.14586pt x 93.95122pt.
- [5
+ [4
 
  <./stream1.png>]
 File: stream1.png Graphic file (type png)
  <use stream1.png>
-Package pdftex.def Info: stream1.png used on input line 115.
+Package pdftex.def Info: stream1.png used on input line 76.
 (pdftex.def)             Requested size: 212.14586pt x 93.95122pt.
- [6
+ [5
+
+]
+<concept_drift.png, id=236, 315.1775pt x 87.32625pt>
+File: concept_drift.png Graphic file (type png)
+ <use concept_drift.png>
+Package pdftex.def Info: concept_drift.png used on input line 93.
+(pdftex.def)             Requested size: 315.17673pt x 87.32603pt.
+
+Overfull \hbox (7.88686pt too wide) in paragraph at lines 93--93
+ [] 
+ []
+
+[6
+
+ <./concept_drift.png>]
+File: concept_drift.png Graphic file (type png)
+ <use concept_drift.png>
+Package pdftex.def Info: concept_drift.png used on input line 93.
+(pdftex.def)             Requested size: 315.17673pt x 87.32603pt.
+
+Overfull \hbox (7.88686pt too wide) in paragraph at lines 93--93
+ [] 
+ []
+
+[7
 
 ]
 Package epstopdf Info: Source file: <golrobinho.eps>
@@ -922,14 +939,13 @@ Package epstopdf Info: Source file: <golrobinho.eps>
 (epstopdf)                    size: 84863 bytes
 (epstopdf)             Command: <repstopdf --outfile=golrobinho-eps-converted-t
 o.pdf golrobinho.eps>
-(epstopdf)             \includegraphics on input line 133.
+(epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
-
-<golrobinho-eps-converted-to.pdf, id=263, 451.6875pt x 277.035pt>
+ <golrobinho-eps-converted-to.pdf, id=304, 451.6875pt x 277.035pt>
 File: golrobinho-eps-converted-to.pdf Graphic file (type pdf)
 
 <use golrobinho-eps-converted-to.pdf>
-Package pdftex.def Info: golrobinho-eps-converted-to.pdf used on input line 133
+Package pdftex.def Info: golrobinho-eps-converted-to.pdf used on input line 112
 .
 (pdftex.def)             Requested size: 117.82883pt x 72.26999pt.
 Package epstopdf Info: Source file: <contra.eps>
@@ -940,14 +956,14 @@ Package epstopdf Info: Source file: <contra.eps>
 (epstopdf)                    size: 131989 bytes
 (epstopdf)             Command: <repstopdf --outfile=contra-eps-converted-to.pd
 f contra.eps>
-(epstopdf)             \includegraphics on input line 133.
+(epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
 
-<contra-eps-converted-to.pdf, id=264, 669.50125pt x 501.875pt>
+<contra-eps-converted-to.pdf, id=305, 669.50125pt x 501.875pt>
 File: contra-eps-converted-to.pdf Graphic file (type pdf)
 
 <use contra-eps-converted-to.pdf>
-Package pdftex.def Info: contra-eps-converted-to.pdf used on input line 133.
+Package pdftex.def Info: contra-eps-converted-to.pdf used on input line 112.
 (pdftex.def)             Requested size: 96.40605pt x 72.26999pt.
 Package epstopdf Info: Source file: <vermelho.eps>
 (epstopdf)                    date: 2014-07-03 21:42:42
@@ -957,17 +973,17 @@ Package epstopdf Info: Source file: <vermelho.eps>
 (epstopdf)                    size: 86200 bytes
 (epstopdf)             Command: <repstopdf --outfile=vermelho-eps-converted-to.
 pdf vermelho.eps>
-(epstopdf)             \includegraphics on input line 133.
+(epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
 
-<vermelho-eps-converted-to.pdf, id=265, 466.74374pt x 312.16624pt>
+<vermelho-eps-converted-to.pdf, id=306, 466.74374pt x 312.16624pt>
 File: vermelho-eps-converted-to.pdf Graphic file (type pdf)
 
 <use vermelho-eps-converted-to.pdf>
-Package pdftex.def Info: vermelho-eps-converted-to.pdf used on input line 133.
+Package pdftex.def Info: vermelho-eps-converted-to.pdf used on input line 112.
 (pdftex.def)             Requested size: 108.05386pt x 72.26999pt.
 
-Overfull \hbox (14.99887pt too wide) in paragraph at lines 133--133
+Overfull \hbox (14.99887pt too wide) in paragraph at lines 112--112
  [][][] 
  []
 
@@ -980,42 +996,42 @@ f>
 (epstopdf)                    size: 6602 bytes
 (epstopdf)             Command: <repstopdf --outfile=felipemeloPositividade-eps
 -converted-to.pdf felipemeloPositividade.eps>
-(epstopdf)             \includegraphics on input line 133.
+(epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
-<felipemeloPositividade-eps-converted-to.pdf, id=266, 361.35pt x 328.22626pt>
+<felipemeloPositividade-eps-converted-to.pdf, id=307, 361.35pt x 328.22626pt>
 File: felipemeloPositividade-eps-converted-to.pdf Graphic file (type pdf)
 
 <use felipemeloPositividade-eps-converted-to.pdf>
 Package pdftex.def Info: felipemeloPositividade-eps-converted-to.pdf used on in
-put line 133.
+put line 112.
 (pdftex.def)             Requested size: 169.83452pt x 126.47017pt.
 
-Overfull \vbox (8.38423pt too high) detected at line 133
+Overfull \vbox (8.38423pt too high) detected at line 112
  []
 
-[7
+[8
 
  <./golrobinho-eps-converted-to.pdf> <./contra-eps-converted-to.pdf> <./vermelh
 o-eps-converted-to.pdf> <./felipemeloPositividade-eps-converted-to.pdf>]
-<dilma1.jpg, id=314, 210.7875pt x 143.8173pt>
+<dilma1.jpg, id=354, 210.7875pt x 143.8173pt>
 File: dilma1.jpg Graphic file (type jpg)
  <use dilma1.jpg>
-Package pdftex.def Info: dilma1.jpg used on input line 151.
+Package pdftex.def Info: dilma1.jpg used on input line 130.
 (pdftex.def)             Requested size: 100.62685pt x 68.65627pt.
 
-<lula.jpg, id=315, 200.75pt x 133.49875pt>
+<lula.jpg, id=355, 200.75pt x 133.49875pt>
 File: lula.jpg Graphic file (type jpg)
  <use lula.jpg>
-Package pdftex.def Info: lula.jpg used on input line 151.
+Package pdftex.def Info: lula.jpg used on input line 130.
 (pdftex.def)             Requested size: 103.24495pt x 68.65627pt.
 
-<copa.jpg, id=316, 702.625pt x 395.4775pt>
+<copa.jpg, id=356, 702.625pt x 395.4775pt>
 File: copa.jpg Graphic file (type jpg)
  <use copa.jpg>
-Package pdftex.def Info: copa.jpg used on input line 151.
+Package pdftex.def Info: copa.jpg used on input line 130.
 (pdftex.def)             Requested size: 121.97487pt x 68.65627pt.
 
-Overfull \hbox (18.5568pt too wide) in paragraph at lines 151--151
+Overfull \hbox (18.5568pt too wide) in paragraph at lines 130--130
  [][][] 
  []
 
@@ -1027,147 +1043,122 @@ Package epstopdf Info: Source file: <dilmaPositividade.eps>
 (epstopdf)                    size: 6478 bytes
 (epstopdf)             Command: <repstopdf --outfile=dilmaPositividade-eps-conv
 erted-to.pdf dilmaPositividade.eps>
-(epstopdf)             \includegraphics on input line 151.
+(epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
-<dilmaPositividade-eps-converted-to.pdf, id=317, 361.35pt x 328.22626pt>
+<dilmaPositividade-eps-converted-to.pdf, id=357, 361.35pt x 328.22626pt>
 File: dilmaPositividade-eps-converted-to.pdf Graphic file (type pdf)
 
 <use dilmaPositividade-eps-converted-to.pdf>
 Package pdftex.def Info: dilmaPositividade-eps-converted-to.pdf used on input l
-ine 151.
+ine 130.
 (pdftex.def)             Requested size: 169.83452pt x 126.47017pt.
 
-Overfull \vbox (4.77051pt too high) detected at line 151
- []
-
-[8
-
- <./dilma1.jpg> <./lula.jpg> <./copa.jpg> <./dilmaPositividade-eps-converted-to
-.pdf>] <concept_drift.png, id=355, 315.1775pt x 87.32625pt>
-File: concept_drift.png Graphic file (type png)
-
-<use concept_drift.png>
-Package pdftex.def Info: concept_drift.png used on input line 169.
-(pdftex.def)             Requested size: 315.17673pt x 87.32603pt.
-
-Overfull \hbox (7.88686pt too wide) in paragraph at lines 169--169
- [] 
+Overfull \vbox (4.77051pt too high) detected at line 130
  []
 
 [9
 
- <./concept_drift.png>]
-File: concept_drift.png Graphic file (type png)
- <use concept_drift.png>
-Package pdftex.def Info: concept_drift.png used on input line 169.
-(pdftex.def)             Requested size: 315.17673pt x 87.32603pt.
-
-Overfull \hbox (7.88686pt too wide) in paragraph at lines 169--169
- [] 
- []
+ <./dilma1.jpg> <./lula.jpg> <./copa.jpg> <./dilmaPositividade-eps-converted-to
+.pdf>] <stream2.png, id=396, 320.69812pt x 184.18813pt>
+File: stream2.png Graphic file (type png)
+ <use stream2.png>
+Package pdftex.def Info: stream2.png used on input line 149.
+(pdftex.def)             Requested size: 201.33133pt x 115.63243pt.
 
 [10
 
-] <stream2.png, id=422, 320.69812pt x 184.18813pt>
-File: stream2.png Graphic file (type png)
- <use stream2.png>
-Package pdftex.def Info: stream2.png used on input line 189.
-(pdftex.def)             Requested size: 201.33133pt x 115.63243pt.
+ <./stream2.png>] [11
 
-[11
-
- <./stream2.png>] [12
+] [12
 
 ] [13
 
 ] [14
 
-] [15
-
-] [16
-
-] [17
-
 ]
-<drift3.png, id=649, 585.68813pt x 213.29688pt>
+<drift3.png, id=561, 585.68813pt x 213.29688pt>
 File: drift3.png Graphic file (type png)
  <use drift3.png>
-Package pdftex.def Info: drift3.png used on input line 343.
+Package pdftex.def Info: drift3.png used on input line 223.
 (pdftex.def)             Requested size: 257.9806pt x 93.95122pt.
- [18
+ [15
 
- <./drift3.png>] [19
+ <./drift3.png>] [16
 
-] <hotel1.png, id=718, 295.60437pt x 246.42062pt>
+] <hotel1.png, id=629, 295.60437pt x 246.42062pt>
 File: hotel1.png Graphic file (type png)
  <use hotel1.png>
-Package pdftex.def Info: hotel1.png used on input line 379.
+Package pdftex.def Info: hotel1.png used on input line 259.
 (pdftex.def)             Requested size: 138.71304pt x 115.63243pt.
 
-[20
+[17
 
- <./hotel1.png>] <hotel2.png, id=752, 290.08376pt x 246.42062pt>
+ <./hotel1.png>] <hotel2.png, id=663, 290.08376pt x 246.42062pt>
 File: hotel2.png Graphic file (type png)
 
 <use hotel2.png>
-Package pdftex.def Info: hotel2.png used on input line 390.
+Package pdftex.def Info: hotel2.png used on input line 270.
 (pdftex.def)             Requested size: 136.12248pt x 115.63243pt.
- [21
+ [18
 
  <./hotel2.png>]
-<hotel3.png, id=786, 290.08376pt x 246.42062pt>
+<hotel3.png, id=697, 290.08376pt x 246.42062pt>
 File: hotel3.png Graphic file (type png)
  <use hotel3.png>
-Package pdftex.def Info: hotel3.png used on input line 401.
+Package pdftex.def Info: hotel3.png used on input line 281.
 (pdftex.def)             Requested size: 136.12248pt x 115.63243pt.
- [22
+ [19
 
- <./hotel3.png>] [23
+ <./hotel3.png>] [20
 
-] <pareto.png, id=856, 539.51563pt x 331.73938pt>
+] <pareto.png, id=767, 539.51563pt x 331.73938pt>
 File: pareto.png Graphic file (type png)
  <use pareto.png>
-Package pdftex.def Info: pareto.png used on input line 449.
+Package pdftex.def Info: pareto.png used on input line 326.
 (pdftex.def)             Requested size: 270.32516pt x 166.2212pt.
 
-Overfull \vbox (4.03865pt too high) detected at line 449
+Overfull \vbox (4.03865pt too high) detected at line 326
  []
 
-[24
+[21
 
- <./pareto.png>] [25
+ <./pareto.png>] [22
 
-] [26
+] [23
 
-] <results3.png, id=957, 399.4925pt x 155.58125pt>
+] [24
+
+] [25
+
+]
+<results3.png, id=932, 399.4925pt x 155.58125pt>
 File: results3.png Graphic file (type png)
-
-<use results3.png>
-Package pdftex.def Info: results3.png used on input line 520.
+ <use results3.png>
+Package pdftex.def Info: results3.png used on input line 406.
 (pdftex.def)             Requested size: 315.4737pt x 122.85876pt.
 
-Overfull \hbox (8.18382pt too wide) in paragraph at lines 520--520
+Overfull \hbox (8.18382pt too wide) in paragraph at lines 406--406
+ [] 
+ []
+
+[26
+
+ <./results3.png>] <results2.png, id=965, 405.01312pt x 160.09813pt>
+File: results2.png Graphic file (type png)
+
+<use results2.png>
+Package pdftex.def Info: results2.png used on input line 419.
+(pdftex.def)             Requested size: 310.81046pt x 122.85876pt.
+
+Overfull \hbox (3.52058pt too wide) in paragraph at lines 419--419
  [] 
  []
 
 [27
 
- <./results3.png>] <results2.png, id=992, 405.01312pt x 160.09813pt>
-File: results2.png Graphic file (type png)
+ <./results2.png>] [28
 
-<use results2.png>
-Package pdftex.def Info: results2.png used on input line 533.
-(pdftex.def)             Requested size: 310.81046pt x 122.85876pt.
-
-Overfull \hbox (3.52058pt too wide) in paragraph at lines 533--533
- [] 
- []
-
-[28
-
- <./results2.png>] [29
-
-] [30
+] [29
 
 ]
 \tf@nav=\write6
@@ -1179,11 +1170,11 @@ Overfull \hbox (3.52058pt too wide) in paragraph at lines 533--533
 \tf@snm=\write8
 \openout8 = `sigir_pres.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 576.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 576.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 457.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 457.
  (./sigir_pres.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 576.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 576.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 457.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 457.
 
 
 Package rerunfilecheck Warning: File `sigir_pres.out' has changed.
@@ -1191,41 +1182,39 @@ Package rerunfilecheck Warning: File `sigir_pres.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `sigir_pres.out':
-(rerunfilecheck)             Before: B5671C414F9BBEE7F601BEA00C862E7E;151
-(rerunfilecheck)             After:  AF8521B71157FD719A8F201AABE12DB1;331.
+(rerunfilecheck)             Before: F27FF106491AD4BC2CDDD6B4DF9E0E11;244
+(rerunfilecheck)             After:  F9F06E65DE94BD2B4227DE0E42939DD2;332.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 576.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 457.
  ) 
 Here is how much of TeX's memory you used:
- 16029 strings out of 495028
- 298438 string characters out of 6181496
+ 16024 strings out of 495028
+ 298365 string characters out of 6181496
  370655 words of memory out of 5000000
- 18758 multiletter control sequences out of 15000+600000
- 17308 words of font info for 65 fonts, out of 8000000 for 9000
+ 18756 multiletter control sequences out of 15000+600000
+ 17908 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,16n,58p,445b,663s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Navigation31} has been referenced but does not ex
-ist, replaced by a fixed one
-
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on sigir_pres.pdf (30 pages, 1109468 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on sigir_pres.pdf (29 pages, 871224 bytes).
 PDF statistics:
- 1151 PDF objects out of 1200 (max. 8388607)
- 1038 compressed objects within 11 object streams
- 69 named destinations out of 1000 (max. 500000)
- 220 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1126 PDF objects out of 1200 (max. 8388607)
+ 1014 compressed objects within 11 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

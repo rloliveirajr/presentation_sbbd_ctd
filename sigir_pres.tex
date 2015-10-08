@@ -26,35 +26,20 @@
 \end{itemize}
 \item Motivation
 \begin{itemize}
-%\item Twitter, and other text-based channels, produce torrents of opinionated content.
 \item It allows us to process huge volumes of data.
-%It allows us to track products, brands and people to determine whether they are viewed positively or negatively.
 \end{itemize}
 \end{itemize}
 \begin{itemize}
 \item Problem
 \begin{itemize}
 \item Automatically extraction of relevant patterns and relations from data that is continuously created.
-%Content is created almost at the same time the event is happening in the real world.
 \begin{itemize}
 \item Keep track of data streams is useful for systems monitoring, online social network advertising, etc.
-%Keeping track of \alert{sentiment streams} is useful for advertising.
 \end{itemize}
 \end{itemize}
 \end{itemize}
 
 \end{frame}
-
-%\begin{frame}\frametitle{Sentiment Streams and Outbreaks}
-%
-%{\underline{Dengue Fever}}
-%
-%\begin{figure}
-%\centering
-%\includegraphics[height=2.30in]{ow2}
-%\end{figure}
-%
-%\end{frame}
 
 \begin{frame}\frametitle{Social Networks Streams and Advertising}
 
@@ -72,33 +57,10 @@
 
 \end{frame}
 
-% \begin{frame}\frametitle{Sentiment Streams and Advertising}
-
-% and last year ... Brazil 1 $\times$ Germany 7
-
-% \begin{figure}
-% \centering
-% \includegraphics[height=2.50in]{playstation}
-% \end{figure}
-
-% \end{frame}
-
-%\begin{frame}\frametitle{Sentiment Streams and Advertising}
-%
-%and yesterday ... Brazil 1 $\times$ Germany 7
-%
-%\begin{figure}
-%\centering
-%\includegraphics[height=2.50in]{sevenup}
-%\end{figure}
-%
-%\end{frame}
-
-\begin{frame}\frametitle{Classifying Data Streams}
+\begin{frame}\frametitle{Classification in Data Streams}
 
 \begin{itemize}
-\item Classifiers are applied to distinguish between pre-defined labels.
-%Classifiers may be used to distinguish sentiments in the text.
+\item Classification models are applied to distinguish between pre-defined labels.
 \end{itemize}
 
 \vspace{-0.2in}
@@ -113,9 +75,9 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}\frametitle{Concept Drifts Types}
+\begin{frame}\frametitle{Concept Drifts}
 \begin{itemize}
-\item Most common types of Concept Drifts:
+\item Concept Drift is unforeseen changes in data's nature over time.
 \end{itemize}
 
 \vspace{0.1in}
@@ -123,10 +85,10 @@
 \centering
 \includegraphics[scale=1]{concept_drift}
 \end{figure}
-%\vspace{-0.2in}
 \pause
+
 \begin{itemize}
-\item Data streams contains combination of such concept drifts types.
+\item Data streams contains combination of such patterns.
 \end{itemize}
 \end{frame}
 
@@ -174,7 +136,7 @@
 \begin{itemize}
 \item Updating the classification model as the stream evolves.
 \begin{itemize}
-\item Account for limited resoucres: memory, time and learning requirements.
+\item Taking into account resources limitation: memory, time and learning requirements.
 \end{itemize}
 \end{itemize}
 \end{itemize}
@@ -189,120 +151,54 @@
 
 \begin{frame}\frametitle{Research Question}
 
-\begin{itemize}
-\item How to deal with concept drifts?
-\end{itemize}
-
+\centering
+\large{How to deal with concept drifts?}
+\vspace{0.5in}
+\small{\begin{enumerate}
+\item Which classification model choose?
+\item How to reduce labeling efforts?
+\end{enumerate}}
 \end{frame}
 
+\begin{frame}\frametitle{Research Question}
 
-% \begin{frame}\frametitle{Research Questions}
+\centering
+\large{How to deal with concept drifts?}
+\vspace{0.5in}
+\small{\begin{enumerate}
+\item \alert{Which classification model choose?}
+\item How to reduce labeling efforts?
+\end{enumerate}}
+\end{frame}
 
-% \begin{enumerate}
-% \item Resources:
-% \begin{itemize}
-% \item \alert{How to build classification models fast?}
-% \end{itemize}
+\section{Classification Model}
+\begin{frame}\frametitle{Classification Model}
+\begin{itemize}
+\item Classification models are composed by association rules.
+  \begin{itemize}
+    \item $\{x \to y\}$, where $x \in X$ and $y \in Y$
+  \end{itemize}
+\item Models are built on-the-fly:
+  \begin{itemize}
+    \item For a given $[x_i, *]$, rules $\{x \to y\}$ such that $x \in x_i$ are produced.
+    \item Prediction is performed from the combination of these rules.
+  \end{itemize}
+\item At each time step is produced a model $\mathcal{R}(x_i)$.
+\end{itemize}
+\end{frame}
 
-% \item Accuracy:
-% \begin{itemize}
-% \item How to deal with concept drifts?
-% \end{itemize}
+\begin{frame}\frametitle{Research Question}
 
-% \item Effort:
-% \begin{itemize}
-% \item How to reduce labeling effort?
-% \end{itemize}
-
-% \end{enumerate}
-
-% \end{frame}
-
-% \section{Classification Model}
-% \begin{frame}
-% \frametitle{Classification Model}%Lightweight Classifiers}
-
-% \begin{itemize}
-% \item Our classification model $\mathcal{R}$ is composed of rules $\{X\to c_i\}$.
-% \begin{itemize}
-% \item $X$ is any combination of features in the target instance.
-% \item $c_i$ is a label.
-% \end{itemize}
-% \end{itemize}
-
-% \end{frame}
-
-
-% \begin{frame}\frametitle{Label Scoring}
-
-% \begin{itemize}
-% \item Given a target instance $t_n$:
-% \begin{enumerate}
-% \item Build a classification model $\mathcal{R}(t_n)$ composed of rules $\{X\to c_i\}$ for which $X\subseteq t_n$.
-% \item The label score is given by the linear combination of the rules.
-% \end{enumerate}
-% \end{itemize}
-
-% \pause
-
-% {\small{``It works well, my sister loves it, but unfortunatelly it broke.''}}
-
-% \begin{itemize}
-% \item $\{$broke$\}\to$ negative (0.77)
-% \item $\{$work, well$\}\to$ positive (0.85)
-% \item $\{$love, it$\}\to$ positive (0.91)
-% \end{itemize}
-% \end{frame}
-
-
-% \section{Labeling Effort}
-
-% \begin{frame}\frametitle{Research Questions}
-
-% \begin{enumerate}
-% \item Resources:
-% \begin{itemize}
-% \item \alert{How to build classification models fast?}
-% \end{itemize}
-
-% \item Accuracy:
-% \begin{itemize}
-% \item How to deal with concept drifts?
-% \end{itemize}
-
-% \item Effort:
-% \begin{itemize}
-% \item \alert{How to reduce labeling effort?}
-% \end{itemize}
-
-% \end{enumerate}
-
-% \end{frame}
+\centering
+\large{\alert{How to deal with concept drifts?}}
+\vspace{0.5in}
+\small{\begin{enumerate}
+\item Which classification model choose?
+\item How to reduce labeling efforts?
+\end{enumerate}}
+\end{frame}
 
 \section{Drifts}
-
-% \begin{frame}\frametitle{Research Questions}
-
-% \begin{enumerate}
-% \item Resources:
-% \begin{itemize}
-% \item How to build classification models fast?
-% \end{itemize}
-
-% \item Accuracy:
-% \begin{itemize}
-% \item \alert{How to deal with concept drifts?}
-% \end{itemize}
-
-% \item Effort:
-% \begin{itemize}
-% \item How to reduce labeling effort?
-% \end{itemize}
-
-% \end{enumerate}
-
-% \end{frame}
-
 
 \begin{frame}\frametitle{Dealing with Drifts}
 
@@ -364,7 +260,7 @@ Example: hotels in Petr\'{o}polist.
 
 \begin{frame}\frametitle{Pareto Efficiency}
 
-Pareto frontier.
+Pareto frontier: ``when some action could be done to make someone better off without hurting anyone else, then it should be done.''
 
 \begin{figure}
 \centering
@@ -375,7 +271,7 @@ Pareto frontier.
 
 \begin{frame}\frametitle{Compensation $-$ Kaldor-Hicks Principle}
 
-Region of compensation.
+Region of compensation: ``when some action could be done to make someone better off, and this could compensate those that are made worse off, then it should be done.''
 
 \begin{figure}
 \centering
@@ -384,10 +280,7 @@ Region of compensation.
 
 \end{frame}
 
-
-
 \begin{frame}\frametitle{Utility Measures}
-
 \begin{itemize}
 \item Distance in space:
 \begin{itemize}
@@ -433,30 +326,22 @@ Region of compensation.
 \end{frame}
 
 \section{Labeling Efforts}
-\begin{frame}\frametitle{Research Questions}
+\begin{frame}\frametitle{Research Question}
 
-\begin{enumerate}
-\item Resources:
-\begin{itemize}
-\item How to build classification models fast?
-\end{itemize}
+\centering
+\large{How to deal with concept drifts?}
+\vspace{0.5in}
+\small{\begin{enumerate}
+\item Which classification model choose?
+\item \alert{How to reduce labeling efforts?}
+\end{enumerate}}
+\end{frame}
 
-\item Accuracy:
-\begin{itemize}
-\item How to deal with concept drifts?
-\end{itemize}
-
-\item Effort:
-\begin{itemize}
-\item \alert{How to reduce labeling effort?}
-\end{itemize}
-
-\end{enumerate}
+\begin{frame}\frametitle{Reducing Labeling Efforts}
 
 \end{frame}
 
 \section{Results}
-
 \begin{frame}\frametitle{Evaluation}
 
 \begin{itemize}
@@ -472,12 +357,6 @@ Region of compensation.
 \begin{itemize}
 \item Different batch sizes and $\delta$ values.
 \end{itemize}
-\item Three datasets:
-\begin{itemize}
-\item Brazilian elections 2010.
-\item World Cup 2010.
-\item Person of the Year 2010 (Assange vs. Zuckerberg)
-\end{itemize}
 \begin{itemize}
 \item Baselines:
 \begin{itemize}
@@ -488,6 +367,29 @@ Region of compensation.
 \end{itemize}
 \end{itemize}
 
+\end{frame}
+
+\begin{frame}\frametitle{Datasets}
+\begin{table}
+\centering
+
+\scalebox{0.7}{
+\begin{tabular}{lcccc}
+\hline
+& \multicolumn{4}{c}{Concept Drift Pattern} \\ \cline{2-5}
+Dataset & Sudden & Incremental & Gradual & Recurrent \\
+\hline \hline
+Presidential Elections & - & X & X & - \\
+Person of the Year & - & X & X &  - \\
+\textbf{FIFA World Cup - EN} & X & - & - & - \\
+\textbf{FIFA World Cup - PT} & X & - & - & -  \\
+\textbf{Cover Type} & X & - & X & X \\
+Spam Filtering & X & - & X & X \\
+\textbf{Poker Hand} & - & - & X & X \\
+\hline
+\end{tabular}
+}
+\end{table}
 \end{frame}
 
 \begin{frame}\frametitle{Evaluation}
@@ -544,11 +446,6 @@ Region of compensation.
 \end{itemize}
 
 \end{frame}
-
-
-
-
-
 
 \section{Contact}
 \begin{frame}{Thank you!}
