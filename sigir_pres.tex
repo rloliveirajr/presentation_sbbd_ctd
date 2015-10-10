@@ -1,7 +1,7 @@
 \documentclass[14pt]{beamer}
 %\usetheme[compress]{Singapore} % Guia no alto, nada mais, degrade azul
 \usetheme{Frankfurt} % Guia no alto, nada mais
-
+\usepackage{subfigure}
 \usepackage{multirow}
 
 \title{Economically-Efficient\\Data Stream Analysis}
@@ -66,7 +66,7 @@
 \vspace{-0.2in}
 \begin{figure}
 \centering
-\includegraphics[height=1.30in]{stream1}
+\includegraphics[scale=0.6]{Stream1}
 \end{figure}
 \vspace{-0.2in}
 \pause
@@ -144,31 +144,21 @@
 \vspace{-0.2in}
 \begin{figure}
 \centering
-\includegraphics[height=1.60in]{stream2}
+\includegraphics[height=1.60in]{Stream2}
 \end{figure}
 \end{frame}
 
 
 \begin{frame}\frametitle{Research Question}
 
-\centering
+\begin{center}
 \large{How to deal with concept drifts?}
-\vspace{0.5in}
-\small{\begin{enumerate}
-\item Which classification model choose?
-\item How to reduce labeling efforts?
-\end{enumerate}}
-\end{frame}
-
-\begin{frame}\frametitle{Research Question}
-
-\centering
-\large{How to deal with concept drifts?}
-\vspace{0.5in}
-\small{\begin{enumerate}
-\item \alert{Which classification model choose?}
-\item How to reduce labeling efforts?
-\end{enumerate}}
+\end{center}
+% \vspace{0.5in}
+% \small{\begin{enumerate}
+% \item Which classification model choose?
+% \item How to reduce labeling efforts?
+% \end{enumerate}}
 \end{frame}
 
 \section{Classification Model}
@@ -184,22 +174,12 @@
     \item Prediction is performed from the combination of these rules.
   \end{itemize}
 \item At each time step is produced a model $\mathcal{R}(x_i)$.
+\pause
+\item \alert{Can be updated efficiently as the training set evolves.}
 \end{itemize}
 \end{frame}
 
-\begin{frame}\frametitle{Research Question}
-
-\centering
-\large{\alert{How to deal with concept drifts?}}
-\vspace{0.5in}
-\small{\begin{enumerate}
-\item Which classification model choose?
-\item How to reduce labeling efforts?
-\end{enumerate}}
-\end{frame}
-
 \section{Drifts}
-
 \begin{frame}\frametitle{Dealing with Drifts}
 
 \begin{itemize}
@@ -260,7 +240,7 @@ Example: hotels in Petr\'{o}polist.
 
 \begin{frame}\frametitle{Pareto Efficiency}
 
-Pareto frontier: ``when some action could be done to make someone better off without hurting anyone else, then it should be done.''
+Pareto frontier
 
 \begin{figure}
 \centering
@@ -271,7 +251,7 @@ Pareto frontier: ``when some action could be done to make someone better off wit
 
 \begin{frame}\frametitle{Compensation $-$ Kaldor-Hicks Principle}
 
-Region of compensation: ``when some action could be done to make someone better off, and this could compensate those that are made worse off, then it should be done.''
+Region of compensation
 
 \begin{figure}
 \centering
@@ -313,7 +293,7 @@ Region of compensation: ``when some action could be done to make someone better 
 \item At each time step $n$:
 \begin{enumerate}
 \item Place candidate messages in the utility space.
-\item Select messages in the Pareto frontier.
+\item Select messages in the Efficiency Region (Pareto-frontier / Kaldor-Hicks Region).
 \end{enumerate}
 \end{enumerate}
 
@@ -326,53 +306,61 @@ Region of compensation: ``when some action could be done to make someone better 
 \end{frame}
 
 \section{Labeling Efforts}
-\begin{frame}\frametitle{Research Question}
-
-\centering
-\large{How to deal with concept drifts?}
-\vspace{0.5in}
-\small{\begin{enumerate}
-\item Which classification model choose?
-\item \alert{How to reduce labeling efforts?}
-\end{enumerate}}
+\begin{frame}\frametitle{Reducing Labeling Efforts}
+\begin{itemize}
+\item Random Active Learning
+\begin{itemize}
+\item Naive strategy.
+\item Simple to integrate.
+\item Labeling Effort control: $\delta$.
+\end{itemize}
+\end{itemize}
 \end{frame}
 
-\begin{frame}\frametitle{Reducing Labeling Efforts}
-
+\section{Economically-Efficient Data Stream Analysis}
+\begin{frame}\frametitle{EESS in Stream Classification Flow}
+\begin{figure}
+\centering
+\includegraphics[scale=0.7]{EESS}
+\end{figure}
 \end{frame}
 
 \section{Results}
+\begin{frame}
+\frametitle{Experimental Evaluation}
+\framesubtitle{Setup}
+\begin{itemize}
+    \item Interleaved Test-Then-Train
+    \item 1\% of data provided as training seed;
+    \item Massive Online Analysis (MOA) framework as evaluation environment;
+    \item Baselines:
+    \begin{itemize}
+      \item AC $-$ Active Classifiers (KDD 2011)
+      \item HAT $-$ Hoeffding Adaptive Trees (JMLR 2011)
+      \item ILAC $-$ Incremental Lazy Classifiers (SIGIR 2011)
+    \end{itemize}
+    \item Labeling Efforts (AC and EESS): 10\%; \textbf{25\%}; 50\%; 75\% and 100\%;
+\end{itemize}
+
+\end{frame}
+
 \begin{frame}\frametitle{Evaluation}
 
 \begin{itemize}
 \item Measures used:
 \begin{itemize}
 \item Mean Squared Error.
+\item Labeling Effort.
+\item Training set site.
 \item RAM-Hours:
 \begin{itemize}
 \item A GB of RAM deployed for 1 hour execution.
 \end{itemize}
 \end{itemize}
-\item Labeling Effort:
-\begin{itemize}
-\item Different batch sizes and $\delta$ values.
+\item Datasets:
 \end{itemize}
-\begin{itemize}
-\item Baselines:
-\begin{itemize}
-\item AC $-$ Active Classifiers (KDD 2011)
-\item HAT $-$ Hoeffding Adaptive Trees (JMLR 2011)
-\item ILAC $-$ Incremental Lazy Classifiers (SIGIR 2011)
-\end{itemize}
-\end{itemize}
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}\frametitle{Datasets}
 \begin{table}
 \centering
-
 \scalebox{0.7}{
 \begin{tabular}{lcccc}
 \hline
@@ -392,32 +380,66 @@ Spam Filtering & X & - & X & X \\
 \end{table}
 \end{frame}
 
-\begin{frame}\frametitle{Evaluation}
+% \begin{frame}\frametitle{Datasets}
+% \begin{itemize}
+% \item Seven datasets from different applications:
+% \begin{itemize}
+% \item Sentiment Analysis
+% \item Forest cover type prediction
+% \item Spam filtering
+% \item Poker game
+% \end{itemize}
+% \end{itemize}
 
-\begin{itemize}
-\item MSE and RAM-Hours
-\end{itemize}
+% \end{frame}
 
-\begin{figure}
+\begin{frame}
+\frametitle{Evaluation}
+\framesubtitle{Brazilian Presidential Elections}
+MSE and Labeling Efforts
+\begin{figure}[htp!]
+\label{fig:dilma_1}
 \centering
-\includegraphics[height=1.70in]{results3}
+\includegraphics[scale=0.41]{dilma_mse.eps}
+\includegraphics[scale=0.41]{dilma_le_mse.eps}
 \end{figure}
-
 \end{frame}
 
-\begin{frame}\frametitle{Evaluation}
-
-\begin{itemize}
-\item MSE and Labeling Effort
-\end{itemize}
-
-\begin{figure}
+\begin{frame}
+\frametitle{Evaluation}
+\framesubtitle{Brazilian Presidential Elections}
+Training Size and RAM-Hours
+\begin{figure}[htp!]
+\label{fig:dilma_2}
 \centering
-\includegraphics[height=1.70in]{results2}
+\includegraphics[scale=0.41]{dilma_window.eps}
+\includegraphics[scale=0.41]{dilma_ramhours.eps}
 \end{figure}
-
 \end{frame}
 
+\begin{frame}
+\frametitle{Evaluation}
+\framesubtitle{FIFA World Cup - Portuguese}
+MSE and Labeling Efforts
+\begin{figure}[htp!]
+\label{fig:fm_1}
+\centering
+\includegraphics[scale=0.41]{pt_mse.eps}
+\includegraphics[scale=0.41]{pt_le_mse.eps}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Evaluation}
+\framesubtitle{FIFA World Cup - Portuguese}
+Training Size and RAM-Hours
+\begin{figure}[htp!]
+\label{fig:fm_2}
+\centering
+\includegraphics[scale=0.41]{pt_window.eps}
+\includegraphics[scale=0.41]{pt_ramhours.eps}
+\end{figure}
+\end{frame}
 
 \section{Conclusions}
 

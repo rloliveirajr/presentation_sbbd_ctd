@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.17)  8 OCT 2015 15:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.17)  9 OCT 2015 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -677,8 +677,28 @@ Package: beamercolorthemeorchid 2010/06/17  (rcs-revision d02a7cf4d8ae)
 )
 (/usr/share/texmf/tex/latex/beamer/base/themes/color/beamercolorthemewhale.sty
 Package: beamercolorthemewhale 2010/06/17  (rcs-revision d02a7cf4d8ae)
-)) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen185
+)) (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip57
+\subfigcapskip=\skip58
+\subfigcaptopadj=\dimen185
+\subfigbottomskip=\skip59
+\subfigcapmargin=\dimen186
+\subfiglabelskip=\skip60
+\c@subfigure=\count153
+\c@lofdepth=\count154
+\c@subtable=\count155
+\c@lotdepth=\count156
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip61
+\subfig@bottom=\skip62
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen187
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -742,16 +762,16 @@ LaTeX Font Info:    ... okay on input line 12.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count153
-\scratchdimen=\dimen186
+\scratchcounter=\count157
+\scratchdimen=\dimen188
 \scratchbox=\box53
-\nofMPsegments=\count154
-\nofMParguments=\count155
+\nofMPsegments=\count158
+\nofMParguments=\count159
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count156
-\MPscratchDim=\dimen187
-\MPnumerator=\count157
-\makeMPintoPDFobject=\count158
+\MPscratchCnt=\count160
+\MPscratchDim=\dimen189
+\MPnumerator=\count161
+\makeMPintoPDFobject=\count162
 \everyMPtoPDFconversion=\toks41
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -778,7 +798,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count159
+\c@section@level=\count163
 )
 LaTeX Info: Redefining \ref on input line 12.
 LaTeX Info: Redefining \pageref on input line 12.
@@ -857,18 +877,31 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 LaTeX Info: Redefining \includegraphics on input line 12.
  (./sigir_pres.nav)
+Overfull \hbox (45.59079pt too wide) detected at line 12
+  [] [] [] [] [] [] [] [] []  
+ []
+
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 16.
 
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2
+]
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[2
 
 ]
 LaTeX Font Info:    Try loading font information for U+msa on input line 58.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 58.
@@ -876,44 +909,66 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<mercedez.png, id=133, 516.93124pt x 181.67876pt>
+<mercedez.png, id=149, 516.93124pt x 181.67876pt>
 File: mercedez.png Graphic file (type png)
  <use mercedez.png>
 Package pdftex.def Info: mercedez.png used on input line 58.
 (pdftex.def)             Requested size: 267.32289pt x 93.95122pt.
 
-<audi.png, id=135, 517.935pt x 163.61125pt>
+<audi.png, id=151, 517.935pt x 163.61125pt>
 File: audi.png Graphic file (type png)
  <use audi.png>
 Package pdftex.def Info: audi.png used on input line 58.
 (pdftex.def)             Requested size: 251.65654pt x 79.49744pt.
- [3
 
- <./mercedez.png> <./audi.png>] <stream1.png, id=171, 320.69812pt x 142.03062pt
->
-File: stream1.png Graphic file (type png)
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
 
-<use stream1.png>
-Package pdftex.def Info: stream1.png used on input line 76.
-(pdftex.def)             Requested size: 212.14586pt x 93.95122pt.
- [4
+[3
 
- <./stream1.png>]
-File: stream1.png Graphic file (type png)
- <use stream1.png>
-Package pdftex.def Info: stream1.png used on input line 76.
-(pdftex.def)             Requested size: 212.14586pt x 93.95122pt.
- [5
+ <./mercedez.png> <./audi.png>]
 
-]
-<concept_drift.png, id=236, 315.1775pt x 87.32625pt>
+pdfTeX warning: pdflatex (file ./Stream1.pdf): PDF inclusion: found PDF version
+ <1.7>, but at most version <1.5> allowed
+<Stream1.pdf, id=188, 335.2525pt x 160.6pt>
+File: Stream1.pdf Graphic file (type pdf)
+ <use Stream1.pdf>
+Package pdftex.def Info: Stream1.pdf used on input line 76.
+(pdftex.def)             Requested size: 201.15305pt x 96.36073pt.
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[4
+
+ <./Stream1.pdf>]
+File: Stream1.pdf Graphic file (type pdf)
+ <use Stream1.pdf>
+Package pdftex.def Info: Stream1.pdf used on input line 76.
+(pdftex.def)             Requested size: 201.15305pt x 96.36073pt.
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[5
+
+] <concept_drift.png, id=262, 315.1775pt x 87.32625pt>
 File: concept_drift.png Graphic file (type png)
- <use concept_drift.png>
+
+<use concept_drift.png>
 Package pdftex.def Info: concept_drift.png used on input line 93.
 (pdftex.def)             Requested size: 315.17673pt x 87.32603pt.
 
 Overfull \hbox (7.88686pt too wide) in paragraph at lines 93--93
  [] 
+ []
+
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
  []
 
 [6
@@ -926,6 +981,11 @@ Package pdftex.def Info: concept_drift.png used on input line 93.
 
 Overfull \hbox (7.88686pt too wide) in paragraph at lines 93--93
  [] 
+ []
+
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
  []
 
 [7
@@ -941,7 +1001,7 @@ Package epstopdf Info: Source file: <golrobinho.eps>
 o.pdf golrobinho.eps>
 (epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
- <golrobinho-eps-converted-to.pdf, id=304, 451.6875pt x 277.035pt>
+ <golrobinho-eps-converted-to.pdf, id=332, 451.6875pt x 277.035pt>
 File: golrobinho-eps-converted-to.pdf Graphic file (type pdf)
 
 <use golrobinho-eps-converted-to.pdf>
@@ -959,7 +1019,7 @@ f contra.eps>
 (epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
 
-<contra-eps-converted-to.pdf, id=305, 669.50125pt x 501.875pt>
+<contra-eps-converted-to.pdf, id=333, 669.50125pt x 501.875pt>
 File: contra-eps-converted-to.pdf Graphic file (type pdf)
 
 <use contra-eps-converted-to.pdf>
@@ -976,7 +1036,7 @@ pdf vermelho.eps>
 (epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
 
-<vermelho-eps-converted-to.pdf, id=306, 466.74374pt x 312.16624pt>
+<vermelho-eps-converted-to.pdf, id=334, 466.74374pt x 312.16624pt>
 File: vermelho-eps-converted-to.pdf Graphic file (type pdf)
 
 <use vermelho-eps-converted-to.pdf>
@@ -988,17 +1048,17 @@ Overfull \hbox (14.99887pt too wide) in paragraph at lines 112--112
  []
 
 Package epstopdf Info: Source file: <felipemeloPositividade.eps>
-(epstopdf)                    date: 2014-05-21 18:32:12
+(epstopdf)                    date: 2015-10-09 11:15:12
 (epstopdf)                    size: 20915 bytes
 (epstopdf)             Output file: <felipemeloPositividade-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2014-07-03 21:47:05
-(epstopdf)                    size: 6602 bytes
+(epstopdf)                    date: 2015-10-09 11:45:22
+(epstopdf)                    size: 6606 bytes
 (epstopdf)             Command: <repstopdf --outfile=felipemeloPositividade-eps
 -converted-to.pdf felipemeloPositividade.eps>
 (epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
-<felipemeloPositividade-eps-converted-to.pdf, id=307, 361.35pt x 328.22626pt>
+<felipemeloPositividade-eps-converted-to.pdf, id=335, 361.35pt x 328.22626pt>
 File: felipemeloPositividade-eps-converted-to.pdf Graphic file (type pdf)
 
 <use felipemeloPositividade-eps-converted-to.pdf>
@@ -1009,23 +1069,28 @@ put line 112.
 Overfull \vbox (8.38423pt too high) detected at line 112
  []
 
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
 [8
 
  <./golrobinho-eps-converted-to.pdf> <./contra-eps-converted-to.pdf> <./vermelh
 o-eps-converted-to.pdf> <./felipemeloPositividade-eps-converted-to.pdf>]
-<dilma1.jpg, id=354, 210.7875pt x 143.8173pt>
+<dilma1.jpg, id=384, 210.7875pt x 143.8173pt>
 File: dilma1.jpg Graphic file (type jpg)
  <use dilma1.jpg>
 Package pdftex.def Info: dilma1.jpg used on input line 130.
 (pdftex.def)             Requested size: 100.62685pt x 68.65627pt.
 
-<lula.jpg, id=355, 200.75pt x 133.49875pt>
+<lula.jpg, id=385, 200.75pt x 133.49875pt>
 File: lula.jpg Graphic file (type jpg)
  <use lula.jpg>
 Package pdftex.def Info: lula.jpg used on input line 130.
 (pdftex.def)             Requested size: 103.24495pt x 68.65627pt.
 
-<copa.jpg, id=356, 702.625pt x 395.4775pt>
+<copa.jpg, id=386, 702.625pt x 395.4775pt>
 File: copa.jpg Graphic file (type jpg)
  <use copa.jpg>
 Package pdftex.def Info: copa.jpg used on input line 130.
@@ -1036,16 +1101,16 @@ Overfull \hbox (18.5568pt too wide) in paragraph at lines 130--130
  []
 
 Package epstopdf Info: Source file: <dilmaPositividade.eps>
-(epstopdf)                    date: 2014-05-21 18:32:12
+(epstopdf)                    date: 2015-10-09 11:15:12
 (epstopdf)                    size: 20492 bytes
 (epstopdf)             Output file: <dilmaPositividade-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-07-03 23:24:53
-(epstopdf)                    size: 6478 bytes
+(epstopdf)                    date: 2015-10-09 11:45:23
+(epstopdf)                    size: 6474 bytes
 (epstopdf)             Command: <repstopdf --outfile=dilmaPositividade-eps-conv
 erted-to.pdf dilmaPositividade.eps>
 (epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
-<dilmaPositividade-eps-converted-to.pdf, id=357, 361.35pt x 328.22626pt>
+<dilmaPositividade-eps-converted-to.pdf, id=387, 361.35pt x 328.22626pt>
 File: dilmaPositividade-eps-converted-to.pdf Graphic file (type pdf)
 
 <use dilmaPositividade-eps-converted-to.pdf>
@@ -1056,109 +1121,358 @@ ine 130.
 Overfull \vbox (4.77051pt too high) detected at line 130
  []
 
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
 [9
 
  <./dilma1.jpg> <./lula.jpg> <./copa.jpg> <./dilmaPositividade-eps-converted-to
-.pdf>] <stream2.png, id=396, 320.69812pt x 184.18813pt>
-File: stream2.png Graphic file (type png)
- <use stream2.png>
-Package pdftex.def Info: stream2.png used on input line 149.
-(pdftex.def)             Requested size: 201.33133pt x 115.63243pt.
+.pdf>]
+
+pdfTeX warning: pdflatex (file ./Stream2.pdf): PDF inclusion: found PDF version
+ <1.7>, but at most version <1.5> allowed
+<Stream2.pdf, id=426, 335.2525pt x 199.74625pt>
+File: Stream2.pdf Graphic file (type pdf)
+ <use Stream2.pdf>
+Package pdftex.def Info: Stream2.pdf used on input line 149.
+(pdftex.def)             Requested size: 194.07826pt x 115.63243pt.
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
 
 [10
 
- <./stream2.png>] [11
+ <./Stream2.pdf>]
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
 
-] [12
-
-] [13
-
-] [14
+[11
 
 ]
-<drift3.png, id=561, 585.68813pt x 213.29688pt>
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[12
+
+]
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[13
+
+] <drift3.png, id=570, 585.68813pt x 213.29688pt>
 File: drift3.png Graphic file (type png)
  <use drift3.png>
-Package pdftex.def Info: drift3.png used on input line 223.
+Package pdftex.def Info: drift3.png used on input line 203.
 (pdftex.def)             Requested size: 257.9806pt x 93.95122pt.
- [15
 
- <./drift3.png>] [16
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
 
-] <hotel1.png, id=629, 295.60437pt x 246.42062pt>
+[14
+
+ <./drift3.png>]
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[15
+
+] <hotel1.png, id=640, 295.60437pt x 246.42062pt>
 File: hotel1.png Graphic file (type png)
  <use hotel1.png>
-Package pdftex.def Info: hotel1.png used on input line 259.
+Package pdftex.def Info: hotel1.png used on input line 239.
 (pdftex.def)             Requested size: 138.71304pt x 115.63243pt.
 
-[17
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
 
- <./hotel1.png>] <hotel2.png, id=663, 290.08376pt x 246.42062pt>
+[16
+
+ <./hotel1.png>] <hotel2.png, id=675, 290.08376pt x 246.42062pt>
 File: hotel2.png Graphic file (type png)
 
 <use hotel2.png>
-Package pdftex.def Info: hotel2.png used on input line 270.
+Package pdftex.def Info: hotel2.png used on input line 250.
 (pdftex.def)             Requested size: 136.12248pt x 115.63243pt.
- [18
 
- <./hotel2.png>]
-<hotel3.png, id=697, 290.08376pt x 246.42062pt>
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[17
+
+ <./hotel2.png>] <hotel3.png, id=711, 290.08376pt x 246.42062pt>
 File: hotel3.png Graphic file (type png)
- <use hotel3.png>
-Package pdftex.def Info: hotel3.png used on input line 281.
+
+<use hotel3.png>
+Package pdftex.def Info: hotel3.png used on input line 261.
 (pdftex.def)             Requested size: 136.12248pt x 115.63243pt.
- [19
 
- <./hotel3.png>] [20
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
 
-] <pareto.png, id=767, 539.51563pt x 331.73938pt>
+[18
+
+ <./hotel3.png>]
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[19
+
+] <pareto.png, id=782, 539.51563pt x 331.73938pt>
 File: pareto.png Graphic file (type png)
  <use pareto.png>
-Package pdftex.def Info: pareto.png used on input line 326.
+Package pdftex.def Info: pareto.png used on input line 306.
 (pdftex.def)             Requested size: 270.32516pt x 166.2212pt.
 
-Overfull \vbox (4.03865pt too high) detected at line 326
+Overfull \vbox (18.70534pt too high) detected at line 306
+ []
+
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[20
+
+ <./pareto.png>]
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
  []
 
 [21
 
- <./pareto.png>] [22
+]
 
-] [23
+pdfTeX warning: pdflatex (file ./EESS.pdf): PDF inclusion: found PDF version <1
+.7>, but at most version <1.5> allowed
+<EESS.pdf, id=849, 415.5525pt x 175.65625pt>
+File: EESS.pdf Graphic file (type pdf)
+ <use EESS.pdf>
+Package pdftex.def Info: EESS.pdf used on input line 326.
+(pdftex.def)             Requested size: 290.88477pt x 122.95853pt.
 
-] [24
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
 
-] [25
+[22
+
+ <./EESS.pdf>]
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[23
 
 ]
-<results3.png, id=932, 399.4925pt x 155.58125pt>
-File: results3.png Graphic file (type png)
- <use results3.png>
-Package pdftex.def Info: results3.png used on input line 406.
-(pdftex.def)             Requested size: 315.4737pt x 122.85876pt.
+Overfull \vbox (7.05106pt too high) detected at line 381
+ []
 
-Overfull \hbox (8.18382pt too wide) in paragraph at lines 406--406
- [] 
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[24
+
+]
+Package epstopdf Info: Source file: <dilma_mse.eps>
+(epstopdf)                    date: 2015-10-09 11:15:12
+(epstopdf)                    size: 24572 bytes
+(epstopdf)             Output file: <dilma_mse-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-10-09 11:45:24
+(epstopdf)                    size: 8757 bytes
+(epstopdf)             Command: <repstopdf --outfile=dilma_mse-eps-converted-to
+.pdf dilma_mse.eps>
+(epstopdf)             \includegraphics on input line 406.
+Package epstopdf Info: Output file is already uptodate.
+ <dilma_mse-eps-converted-to.pdf, id=958, 361.35pt x 252.945pt>
+File: dilma_mse-eps-converted-to.pdf Graphic file (type pdf)
+
+<use dilma_mse-eps-converted-to.pdf>
+Package pdftex.def Info: dilma_mse-eps-converted-to.pdf used on input line 406.
+
+(pdftex.def)             Requested size: 148.15445pt x 103.70811pt.
+Package epstopdf Info: Source file: <dilma_le_mse.eps>
+(epstopdf)                    date: 2015-10-09 11:15:12
+(epstopdf)                    size: 20656 bytes
+(epstopdf)             Output file: <dilma_le_mse-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-10-09 11:45:24
+(epstopdf)                    size: 7893 bytes
+(epstopdf)             Command: <repstopdf --outfile=dilma_le_mse-eps-converted
+-to.pdf dilma_le_mse.eps>
+(epstopdf)             \includegraphics on input line 406.
+Package epstopdf Info: Output file is already uptodate.
+
+<dilma_le_mse-eps-converted-to.pdf, id=959, 361.35pt x 252.945pt>
+File: dilma_le_mse-eps-converted-to.pdf Graphic file (type pdf)
+
+<use dilma_le_mse-eps-converted-to.pdf>
+Package pdftex.def Info: dilma_le_mse-eps-converted-to.pdf used on input line 4
+06.
+(pdftex.def)             Requested size: 148.15445pt x 103.70811pt.
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[25
+
+ <./dilma_mse-eps-converted-to.pdf> <./dilma_le_mse-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <dilma_window.eps>
+(epstopdf)                    date: 2015-10-09 11:15:12
+(epstopdf)                    size: 24501 bytes
+(epstopdf)             Output file: <dilma_window-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-10-09 11:50:40
+(epstopdf)                    size: 8269 bytes
+(epstopdf)             Command: <repstopdf --outfile=dilma_window-eps-converted
+-to.pdf dilma_window.eps>
+(epstopdf)             \includegraphics on input line 418.
+Package epstopdf Info: Output file is already uptodate.
+
+<dilma_window-eps-converted-to.pdf, id=1009, 361.35pt x 252.945pt>
+File: dilma_window-eps-converted-to.pdf Graphic file (type pdf)
+
+<use dilma_window-eps-converted-to.pdf>
+Package pdftex.def Info: dilma_window-eps-converted-to.pdf used on input line 4
+18.
+(pdftex.def)             Requested size: 148.15445pt x 103.70811pt.
+Package epstopdf Info: Source file: <dilma_ramhours.eps>
+(epstopdf)                    date: 2015-10-09 11:15:12
+(epstopdf)                    size: 24446 bytes
+(epstopdf)             Output file: <dilma_ramhours-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-10-09 11:50:40
+(epstopdf)                    size: 9118 bytes
+(epstopdf)             Command: <repstopdf --outfile=dilma_ramhours-eps-convert
+ed-to.pdf dilma_ramhours.eps>
+(epstopdf)             \includegraphics on input line 418.
+Package epstopdf Info: Output file is already uptodate.
+
+<dilma_ramhours-eps-converted-to.pdf, id=1010, 361.35pt x 252.945pt>
+File: dilma_ramhours-eps-converted-to.pdf Graphic file (type pdf)
+
+<use dilma_ramhours-eps-converted-to.pdf>
+Package pdftex.def Info: dilma_ramhours-eps-converted-to.pdf used on input line
+ 418.
+(pdftex.def)             Requested size: 148.15445pt x 103.70811pt.
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
  []
 
 [26
 
- <./results3.png>] <results2.png, id=965, 405.01312pt x 160.09813pt>
-File: results2.png Graphic file (type png)
+ <./dilma_window-eps-converted-to.pdf> <./dilma_ramhours-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <pt_mse.eps>
+(epstopdf)                    date: 2015-10-09 11:15:13
+(epstopdf)                    size: 24279 bytes
+(epstopdf)             Output file: <pt_mse-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-10-09 14:12:11
+(epstopdf)                    size: 8807 bytes
+(epstopdf)             Command: <repstopdf --outfile=pt_mse-eps-converted-to.pd
+f pt_mse.eps>
+(epstopdf)             \includegraphics on input line 430.
+Package epstopdf Info: Output file is already uptodate.
+ <pt_mse-eps-converted-to.pdf, id=1056, 361.35pt x 252.945pt>
+File: pt_mse-eps-converted-to.pdf Graphic file (type pdf)
 
-<use results2.png>
-Package pdftex.def Info: results2.png used on input line 419.
-(pdftex.def)             Requested size: 310.81046pt x 122.85876pt.
+<use pt_mse-eps-converted-to.pdf>
+Package pdftex.def Info: pt_mse-eps-converted-to.pdf used on input line 430.
+(pdftex.def)             Requested size: 148.15445pt x 103.70811pt.
+Package epstopdf Info: Source file: <pt_le_mse.eps>
+(epstopdf)                    date: 2015-10-09 11:15:12
+(epstopdf)                    size: 20395 bytes
+(epstopdf)             Output file: <pt_le_mse-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-10-09 14:12:12
+(epstopdf)                    size: 7815 bytes
+(epstopdf)             Command: <repstopdf --outfile=pt_le_mse-eps-converted-to
+.pdf pt_le_mse.eps>
+(epstopdf)             \includegraphics on input line 430.
+Package epstopdf Info: Output file is already uptodate.
 
-Overfull \hbox (3.52058pt too wide) in paragraph at lines 419--419
- [] 
+<pt_le_mse-eps-converted-to.pdf, id=1057, 361.35pt x 252.945pt>
+File: pt_le_mse-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pt_le_mse-eps-converted-to.pdf>
+Package pdftex.def Info: pt_le_mse-eps-converted-to.pdf used on input line 430.
+
+(pdftex.def)             Requested size: 148.15445pt x 103.70811pt.
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
  []
 
 [27
 
- <./results2.png>] [28
+ <./pt_mse-eps-converted-to.pdf> <./pt_le_mse-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <pt_window.eps>
+(epstopdf)                    date: 2015-10-09 11:15:13
+(epstopdf)                    size: 24227 bytes
+(epstopdf)             Output file: <pt_window-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-10-09 14:12:12
+(epstopdf)                    size: 8183 bytes
+(epstopdf)             Command: <repstopdf --outfile=pt_window-eps-converted-to
+.pdf pt_window.eps>
+(epstopdf)             \includegraphics on input line 442.
+Package epstopdf Info: Output file is already uptodate.
 
-] [29
+<pt_window-eps-converted-to.pdf, id=1106, 361.35pt x 252.945pt>
+File: pt_window-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pt_window-eps-converted-to.pdf>
+Package pdftex.def Info: pt_window-eps-converted-to.pdf used on input line 442.
+
+(pdftex.def)             Requested size: 148.15445pt x 103.70811pt.
+Package epstopdf Info: Source file: <pt_ramhours.eps>
+(epstopdf)                    date: 2015-10-09 11:15:13
+(epstopdf)                    size: 24238 bytes
+(epstopdf)             Output file: <pt_ramhours-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-10-09 14:12:12
+(epstopdf)                    size: 9073 bytes
+(epstopdf)             Command: <repstopdf --outfile=pt_ramhours-eps-converted-
+to.pdf pt_ramhours.eps>
+(epstopdf)             \includegraphics on input line 442.
+Package epstopdf Info: Output file is already uptodate.
+
+<pt_ramhours-eps-converted-to.pdf, id=1107, 361.35pt x 252.945pt>
+File: pt_ramhours-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pt_ramhours-eps-converted-to.pdf>
+Package pdftex.def Info: pt_ramhours-eps-converted-to.pdf used on input line 44
+2.
+(pdftex.def)             Requested size: 148.15445pt x 103.70811pt.
+
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[28
+
+ <./pt_window-eps-converted-to.pdf> <./pt_ramhours-eps-converted-to.pdf>]
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[29
+
+]
+Overfull \hbox (45.59079pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] [] [] []  
+ []
+
+[30
 
 ]
 \tf@nav=\write6
@@ -1170,51 +1484,51 @@ Overfull \hbox (3.52058pt too wide) in paragraph at lines 419--419
 \tf@snm=\write8
 \openout8 = `sigir_pres.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 457.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 457.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 479.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 479.
  (./sigir_pres.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 457.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 457.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 479.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 479.
+Package rerunfilecheck Info: File `sigir_pres.out' has not changed.
+(rerunfilecheck)             Checksum: F12170F857E4A12CC4D2F64D3223E206;410.
 
-
-Package rerunfilecheck Warning: File `sigir_pres.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `sigir_pres.out':
-(rerunfilecheck)             Before: F27FF106491AD4BC2CDDD6B4DF9E0E11;244
-(rerunfilecheck)             After:  F9F06E65DE94BD2B4227DE0E42939DD2;332.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 457.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 479.
  ) 
 Here is how much of TeX's memory you used:
- 16024 strings out of 495028
- 298365 string characters out of 6181496
- 370655 words of memory out of 5000000
- 18756 multiletter control sequences out of 15000+600000
+ 16240 strings out of 495028
+ 302067 string characters out of 6181496
+ 374601 words of memory out of 5000000
+ 18951 multiletter control sequences out of 15000+600000
  17908 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,16n,58p,445b,663s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on sigir_pres.pdf (29 pages, 871224 bytes).
+pdfTeX warning (dest): name{Navigation31} has been referenced but does not ex
+ist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on sigir_pres.pdf (30 pages, 861162 bytes).
 PDF statistics:
- 1126 PDF objects out of 1200 (max. 8388607)
- 1014 compressed objects within 11 object streams
- 66 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1282 PDF objects out of 1440 (max. 8388607)
+ 1152 compressed objects within 12 object streams
+ 74 named destinations out of 1000 (max. 500000)
+ 290 words of extra memory for PDF output out of 10000 (max. 10000000)
 
