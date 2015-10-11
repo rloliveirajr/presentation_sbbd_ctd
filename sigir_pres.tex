@@ -43,16 +43,11 @@
 
 \begin{frame}\frametitle{Social Networks Streams and Advertising}
 
-{\underline{Superbowl 2013}}
+{\underline{FIFA World Cup 2014}}
 
 \begin{figure}
 \centering
-\includegraphics[height=1.30in]{mercedez}
-\end{figure}
-\vspace{-0.1in}
-\begin{figure}
-\centering
-\includegraphics[height=1.10in]{audi}
+\includegraphics[scale=0.65]{playstation}
 \end{figure}
 
 \end{frame}
@@ -111,23 +106,23 @@
 
 \end{frame}
 
-\begin{frame}\frametitle{Elections (Brazil 2010)}
+% \begin{frame}\frametitle{Elections (Brazil 2010)}
 
-\vspace{-0.1in}
-\begin{figure}
-\centering
-\includegraphics[height=0.95in]{dilma1}
-\includegraphics[height=0.95in]{lula}
-\includegraphics[height=0.95in]{copa}
-\end{figure}
+% \vspace{-0.1in}
+% \begin{figure}
+% \centering
+% \includegraphics[height=0.95in]{dilma1}
+% \includegraphics[height=0.95in]{lula}
+% \includegraphics[height=0.95in]{copa}
+% \end{figure}
 
-\vspace{-0.15in}
-\begin{figure}
-\centering
-\includegraphics[width=2.35in,height=1.75in]{dilmaPositividade.eps}
-\end{figure}
+% \vspace{-0.15in}
+% \begin{figure}
+% \centering
+% \includegraphics[width=2.35in,height=1.75in]{dilmaPositividade.eps}
+% \end{figure}
 
-\end{frame}
+% \end{frame}
 
 \begin{frame}\frametitle{Classifying Data Streams}
 
@@ -161,7 +156,8 @@
 % \end{enumerate}}
 \end{frame}
 
-\section{Classification Model}
+\section{Economically-Efficient Selective Sampling}
+%\section{Classification Model}
 \begin{frame}\frametitle{Classification Model}
 \begin{itemize}
 \item Classification models are composed by association rules.
@@ -179,7 +175,7 @@
 \end{itemize}
 \end{frame}
 
-\section{Drifts}
+%\section{Drifts}
 \begin{frame}\frametitle{Dealing with Drifts}
 
 \begin{itemize}
@@ -205,19 +201,6 @@
 \begin{frame}\frametitle{Dealing with Drifts}
 
 \begin{itemize}
-\item Two properties are necessary in order to produce classifiers that are robust to drifts:
-\begin{itemize}
-\item Adaptiveness:
-\begin{itemize}
-\item The ability to adapt itself to drifts.
-\item The training-set must contain fresh messages.
-\end{itemize}
-\item Memorability:
-\begin{itemize}
-\item The ability to recover itself from drifts.
-\item The training-set must contain pre-drift messages.
-\end{itemize}
-\end{itemize}
 \item Improving both properties simultaneously may lead to a conflict-objective problem.
 \begin{itemize}
 \item Improve adaptiveness may hurt memorability, and vice-versa.
@@ -264,18 +247,18 @@ Region of compensation
 \begin{itemize}
 \item Distance in space:
 \begin{itemize}
-\item How similar message $t_j$ is to the newest message $t_n$.
+\item How similar training instance $t_j$ is to the newest instance $t_n$.
 \item $U_s(t_j)=\frac{|\mathcal{R}(t_n) \cap \mathcal{R}(t_j)|}{|\mathcal{R}(t_n)|}$
 \end{itemize}
 \item Distance in time:
 \begin{itemize}
-\item How fresh is the message.
+\item How fresh is the training instance.
 \item $U_t(t_j)=\frac{\gamma(t_j)}{\gamma(t_n)}$.
 \begin{itemize}
-\item $\gamma(t_j)$ returns the time in which message $t_j$ arrived.
+\item $\gamma(t_j)$ returns the time in which training instance $t_j$ arrived.
 \end{itemize}
 \end{itemize}
-\item Random permutation of messages:
+\item Random permutation of training instances:
 \begin{itemize}
 \item $U_r(t_j)=\frac{\alpha(t_j)}{|\mathcal{D}_n|}$
 \begin{itemize}
@@ -292,8 +275,8 @@ Region of compensation
 \begin{enumerate}
 \item At each time step $n$:
 \begin{enumerate}
-\item Place candidate messages in the utility space.
-\item Select messages in the Efficiency Region (Pareto-frontier / Kaldor-Hicks Region).
+\item Place training instances in the utility space.
+\item Select training instances in the Efficiency Region (Pareto-frontier / Kaldor-Hicks Region).
 \end{enumerate}
 \end{enumerate}
 
@@ -305,20 +288,20 @@ Region of compensation
 
 \end{frame}
 
-\section{Labeling Efforts}
+%\section{Labeling Efforts}
 \begin{frame}\frametitle{Reducing Labeling Efforts}
 \begin{itemize}
 \item Random Active Learning
 \begin{itemize}
 \item Naive strategy.
 \item Simple to integrate.
-\item Labeling Effort control: $\delta$.
+\item Labeling Effort control: $\beta$.
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\section{Economically-Efficient Data Stream Analysis}
-\begin{frame}\frametitle{EESS in Stream Classification Flow}
+%\section{EESS}
+\begin{frame}\frametitle{Economically-Efficient Selective Sampling}
 \begin{figure}
 \centering
 \includegraphics[scale=0.7]{EESS}
@@ -393,52 +376,75 @@ Spam Filtering & X & - & X & X \\
 
 % \end{frame}
 
+% \begin{frame}
+% \frametitle{Evaluation}
+% \framesubtitle{Brazilian Presidential Elections}
+% MSE and Labeling Efforts
+% \begin{figure}[htp!]
+% \label{fig:dilma_1}
+% \centering
+% \includegraphics[scale=0.41]{dilma_mse.eps}
+% \includegraphics[scale=0.41]{dilma_le_mse.eps}
+% \end{figure}
+% \end{frame}
+
+% \begin{frame}
+% \frametitle{Evaluation}
+% \framesubtitle{Brazilian Presidential Elections}
+% Training Size and RAM-Hours
+% \begin{figure}[htp!]
+% \label{fig:dilma_2}
+% \centering
+% \includegraphics[scale=0.41]{dilma_window.eps}
+% \includegraphics[scale=0.41]{dilma_ramhours.eps}
+% \end{figure}
+% \end{frame}
+
+% \begin{frame}
+% \frametitle{Evaluation}
+% \framesubtitle{FIFA World Cup - Portuguese}
+% MSE and Labeling Efforts
+% \begin{figure}[htp!]
+% \label{fig:fm_1}
+% \centering
+% \includegraphics[scale=0.41]{pt_mse.eps}
+% \includegraphics[scale=0.41]{pt_le_mse.eps}
+% \end{figure}
+% \end{frame}
+
+% \begin{frame}
+% \frametitle{Evaluation}
+% \framesubtitle{FIFA World Cup - Portuguese}
+% Training Size and RAM-Hours
+% \begin{figure}[htp!]
+% \label{fig:fm_2}
+% \centering
+% \includegraphics[scale=0.41]{pt_window.eps}
+% \includegraphics[scale=0.41]{pt_ramhours.eps}
+% \end{figure}
+% \end{frame}
+
 \begin{frame}
 \frametitle{Evaluation}
-\framesubtitle{Brazilian Presidential Elections}
+\framesubtitle{Forest Cover Type Prediction}
 MSE and Labeling Efforts
 \begin{figure}[htp!]
-\label{fig:dilma_1}
 \centering
-\includegraphics[scale=0.41]{dilma_mse.eps}
-\includegraphics[scale=0.41]{dilma_le_mse.eps}
+\includegraphics[scale=0.41]{covtype_mse.eps}
+\includegraphics[scale=0.41]{covtype_le_mse.eps}
 \end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{Evaluation}
-\framesubtitle{Brazilian Presidential Elections}
+\framesubtitle{Forest Cover Type Prediction}
 Training Size and RAM-Hours
 \begin{figure}[htp!]
-\label{fig:dilma_2}
 \centering
-\includegraphics[scale=0.41]{dilma_window.eps}
-\includegraphics[scale=0.41]{dilma_ramhours.eps}
+\includegraphics[scale=0.41]{covtype_window.eps}
+\includegraphics[scale=0.41]{covtype_ramhours.eps}
 \end{figure}
-\end{frame}
 
-\begin{frame}
-\frametitle{Evaluation}
-\framesubtitle{FIFA World Cup - Portuguese}
-MSE and Labeling Efforts
-\begin{figure}[htp!]
-\label{fig:fm_1}
-\centering
-\includegraphics[scale=0.41]{pt_mse.eps}
-\includegraphics[scale=0.41]{pt_le_mse.eps}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Evaluation}
-\framesubtitle{FIFA World Cup - Portuguese}
-Training Size and RAM-Hours
-\begin{figure}[htp!]
-\label{fig:fm_2}
-\centering
-\includegraphics[scale=0.41]{pt_window.eps}
-\includegraphics[scale=0.41]{pt_ramhours.eps}
-\end{figure}
 \end{frame}
 
 \section{Conclusions}
@@ -446,10 +452,10 @@ Training Size and RAM-Hours
 \begin{frame}\frametitle{Conclusions}
 
 \begin{itemize}
-\item Sentiment analysis on Twitter streams.
+\item Data analysis on streams.
 \begin{itemize}
 \item Limited computing and training resources.
-\item Sentiment drifts.
+\item Concept drifts.
 \end{itemize}
 \item Efficiency and accuracy.
 \begin{itemize}
@@ -458,7 +464,7 @@ Training Size and RAM-Hours
 \end{itemize}
 \item Our results.
 \begin{itemize}
-\item 50\% reduction in terms of labeling effort without impact on accuracy.
+\item As more labeled examples better prediction performance (In general).
 \end{itemize}
 \item Future work includes:
 \begin{itemize}
@@ -472,7 +478,7 @@ Training Size and RAM-Hours
 \section{Contact}
 \begin{frame}{Thank you!}
 \begin{center}
-\tt adrianov@dcc.ufmg.br\\
+\tt robertolojr@dcc.ufmg.br\\
 \end{center}
 \end{frame}
 
