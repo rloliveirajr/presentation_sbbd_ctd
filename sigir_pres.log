@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.10.17)  11 OCT 2015 23:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.10.17)  11 OCT 2015 23:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1274,30 +1274,28 @@ File: Stream2.ps Graphic file (type eps)
 ] [8
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 196.
+LaTeX Font Info:    Try loading font information for U+msa on input line 195.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 196.
+LaTeX Font Info:    Try loading font information for U+msb on input line 195.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [9
 
-] [10
-
 ]
 File: drift3.eps Graphic file (type eps)
+ <drift3.eps>
+[10
 
-<drift3.eps> [11
-
-] [12
+] [11
 
 ]
 \openout2 = `tt_space.aux'.
 
- (./tt_space.tex) [13
+ (./tt_space.tex) [12
 
 
 
@@ -1305,10 +1303,10 @@ File: drift3.eps Graphic file (type eps)
 \openout2 = `tt_pareto.aux'.
 
  (./tt_pareto.tex)
-Overfull \vbox (16.52296pt too high) detected at line 261
+Overfull \vbox (16.52296pt too high) detected at line 260
  []
 
-[14
+[13
 
 
 
@@ -1316,36 +1314,36 @@ Overfull \vbox (16.52296pt too high) detected at line 261
 \openout2 = `tt_kh.aux'.
 
  (./tt_kh.tex)
-Overfull \vbox (16.52296pt too high) detected at line 278
+Overfull \vbox (16.52296pt too high) detected at line 277
  []
 
-[15
+[14
 
 
 
-] [16
+] [15
 
 ]
 File: pareto.eps Graphic file (type eps)
  <pareto.eps>
-Overfull \vbox (18.70534pt too high) detected at line 323
+Overfull \vbox (18.70534pt too high) detected at line 322
  []
 
-[17
+[16
 
-] [18
+] [17
 
 ]
 File: EESS.eps Graphic file (type eps)
- <EESS.eps> [19
+ <EESS.eps> [18
 
-] [20
+] [19
 
 ]
-Overfull \vbox (1.4325pt too high) detected at line 412
+Overfull \vbox (1.4325pt too high) detected at line 411
  []
 
-[21
+[20
 
 ]
 File: covtype_class_stream_1.eps Graphic file (type eps)
@@ -1355,32 +1353,32 @@ File: covtype_class_stream_2.eps Graphic file (type eps)
 File: covtype_class_stream_3.eps Graphic file (type eps)
 
 <covtype_class_stream_3.eps>
-Overfull \hbox (17.92842pt too wide) in paragraph at lines 509--509
+Overfull \hbox (17.92842pt too wide) in paragraph at lines 508--508
  [][][] 
  []
 
-[22
+[21
 
 ]
 File: covtype_mse.eps Graphic file (type eps)
  <covtype_mse.eps>
 File: covtype_le_mse.eps Graphic file (type eps)
- <covtype_le_mse.eps> [23
+ <covtype_le_mse.eps> [22
 
 ]
 File: covtype_window.eps Graphic file (type eps)
  <covtype_window.eps>
 File: covtype_ramhours.eps Graphic file (type eps)
 
-<covtype_ramhours.eps> [24
+<covtype_ramhours.eps> [23
+
+] [24
 
 ] [25
 
 ] [26
 
 ] [27
-
-] [28
 
 ]
 \tf@nav=\write8
@@ -1392,12 +1390,12 @@ File: covtype_ramhours.eps Graphic file (type eps)
 \tf@snm=\write10
 \openout10 = `sigir_pres.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 570.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 570.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 569.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 569.
  (./sigir_pres.aux
 (./tt_space.aux) (./tt_pareto.aux) (./tt_kh.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 570.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 570.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 569.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 569.
 Package rerunfilecheck Info: File `sigir_pres.out' has not changed.
 (rerunfilecheck)             Checksum: 1FA3CA442106D9DA9D6770C8B8013A6D;261.
 
@@ -1405,15 +1403,15 @@ Package rerunfilecheck Info: File `sigir_pres.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 570.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 569.
  ) 
 Here is how much of TeX's memory you used:
  23678 strings out of 495029
  433462 string characters out of 6181522
- 766742 words of memory out of 5000000
+ 766737 words of memory out of 5000000
  26245 multiletter control sequences out of 15000+600000
  18508 words of font info for 69 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,17n,74p,590b,661s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sigir_pres.dvi (28 pages, 428000 bytes).
+Output written on sigir_pres.dvi (27 pages, 419092 bytes).
