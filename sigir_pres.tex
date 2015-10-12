@@ -242,7 +242,7 @@ Example: Hotels in Petr\'{o}polis.
 
 \begin{frame}\frametitle{Pareto Efficiency}
 
-Pareto frontier: A point $a$ is said to dominate $b$ iff both of the following conditions are hold:
+Pareto frontier: Dominant Points
 
 \begin{itemize}
 \item $U_c(a)\ge U_c(b)$ and $U_d(a)\ge U_d(b)$
@@ -303,8 +303,6 @@ Region of compensation:
 
 \begin{frame}\frametitle{Utility Space}
 
-\begin{itemize}
-\item At each time step $n$:
 \begin{enumerate}
 \item Place training instances in the utility space.
 \item Select training instances in the Efficiency Region:
@@ -313,12 +311,11 @@ Region of compensation:
 \item Kaldor-Hicks Selective Sampling (KHSS).
 \end{itemize}
 \end{enumerate}
-\end{itemize}
 
 \vspace{-0.1in}
 \begin{figure}
 \centering
-\includegraphics[scale=0.45]{pareto}
+\includegraphics[scale=0.43]{pareto}
 \end{figure}
 
 \end{frame}
@@ -384,10 +381,7 @@ ILAC (SIGIR 2011) & Data Projection & Incremental Training Set \\
 \item AC and EESS.
 \end{itemize}
 \item Training set size.
-\item RAM-Hours:
-\begin{itemize}
-\item A GB of RAM deployed for 1 hour execution.
-\end{itemize}
+\item RAM-Hours.
 \end{itemize}
 \item Datasets:
 \end{itemize}
@@ -449,88 +443,88 @@ Spam Filtering & X & - & X & X \\
 % \end{figure}
 % \end{frame}
 
-% \begin{frame}\frametitle{Evaluation}
-% \framesubtitle{FIFA World Cup - Portuguese}
-% \vspace{-0.1in}
-% \begin{figure}
-% \centering
-% \includegraphics[height=0.9in]{golrobinho.eps}
-% \includegraphics[height=0.90in]{contra.eps}
-% \includegraphics[height=0.90in]{vermelho.eps}
-% \end{figure}
-
-% \vspace{-0.15in}
-% \begin{figure}
-% \centering
-% \includegraphics[scale=0.41]{felipemeloPositividade.eps}
-% \end{figure}
-
-% \end{frame}
-
-% \begin{frame}
-% \frametitle{Evaluation}
-% \framesubtitle{FIFA World Cup - Portuguese}
-% %MSE and Labeling Efforts
-% \begin{figure}[htp!]
-% \label{fig:fm_1}
-% \centering
-% %\includegraphics[scale=0.41]{felipemeloPositividade.eps}
-% \includegraphics[scale=0.45]{pt_mse.eps}
-% \includegraphics[scale=0.45]{pt_le_mse.eps}
-% \end{figure}
-% \end{frame}
-
-% \begin{frame}
-% \frametitle{Evaluation}
-% \framesubtitle{FIFA World Cup - Portuguese}
-% Training Size and RAM-Hours
-% \begin{figure}[htp!]
-% \label{fig:fm_2}
-% \centering
-% \includegraphics[scale=0.45]{pt_window.eps}
-% \includegraphics[scale=0.45]{pt_ramhours.eps}
-% \end{figure}
-% \end{frame}
-
-\begin{frame}
-\frametitle{Evaluation}
-\framesubtitle{Forest Cover Type Prediction}
-\begin{itemize}
-    \item Data from forest cover type in United State territory;
-    \item 581,102 examples with 54 features distributed among 7 classes;
-    \item Concept Drifts: Sudden, Gradual, Recurrent;
-\end{itemize}
-\begin{figure}[htp!]
+\begin{frame}\frametitle{Evaluation}
+\framesubtitle{FIFA World Cup - Portuguese}
+\vspace{-0.1in}
+\begin{figure}
 \centering
-\includegraphics[scale=0.3]{covtype_class_stream_1.eps}
-\includegraphics[scale=0.3]{covtype_class_stream_2.eps}
-\includegraphics[scale=0.3]{covtype_class_stream_3.eps}
+\includegraphics[height=0.9in]{golrobinho.eps}
+\includegraphics[height=0.90in]{contra.eps}
+\includegraphics[height=0.90in]{vermelho.eps}
+\end{figure}
+
+\vspace{-0.15in}
+\begin{figure}
+\centering
+\includegraphics[scale=0.41]{felipemeloPositividade.eps}
 \end{figure}
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Evaluation}
-\framesubtitle{Forest Cover Type Prediction}
-MSE and Labeling Efforts
+\framesubtitle{FIFA World Cup - Portuguese}
+%MSE and Labeling Efforts
 \begin{figure}[htp!]
+\label{fig:fm_1}
 \centering
-\includegraphics[scale=0.41]{covtype_mse.eps}
-\includegraphics[scale=0.41]{covtype_le_mse.eps}
+%\includegraphics[scale=0.41]{felipemeloPositividade.eps}
+\includegraphics[scale=0.45]{pt_mse.eps}
+\includegraphics[scale=0.45]{pt_le_mse.eps}
 \end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{Evaluation}
-\framesubtitle{Forest Cover Type Prediction}
+\framesubtitle{FIFA World Cup - Portuguese}
 Training Size and RAM-Hours
 \begin{figure}[htp!]
+\label{fig:fm_2}
 \centering
-\includegraphics[scale=0.41]{covtype_window.eps}
-\includegraphics[scale=0.41]{covtype_ramhours.eps}
+\includegraphics[scale=0.45]{pt_window.eps}
+\includegraphics[scale=0.45]{pt_ramhours.eps}
 \end{figure}
-
 \end{frame}
+
+% \begin{frame}
+% \frametitle{Evaluation}
+% \framesubtitle{Forest Cover Type Prediction}
+% \begin{itemize}
+%     \item Data from forest cover type in United State territory;
+%     \item 581,102 examples with 54 features and 7 classes;
+%     \item Concept Drifts: Sudden, Gradual, Recurrent;
+% \end{itemize}
+% \begin{figure}[htp!]
+% \centering
+% \includegraphics[scale=0.3]{covtype_class_stream_1.eps}
+% \includegraphics[scale=0.3]{covtype_class_stream_2.eps}
+% \includegraphics[scale=0.3]{covtype_class_stream_3.eps}
+% \end{figure}
+
+% \end{frame}
+
+% \begin{frame}
+% \frametitle{Evaluation}
+% \framesubtitle{Forest Cover Type Prediction}
+% MSE and Labeling Efforts
+% \begin{figure}[htp!]
+% \centering
+% \includegraphics[scale=0.41]{covtype_mse.eps}
+% \includegraphics[scale=0.41]{covtype_le_mse.eps}
+% \end{figure}
+% \end{frame}
+
+% \begin{frame}
+% \frametitle{Evaluation}
+% \framesubtitle{Forest Cover Type Prediction}
+% Training Size and RAM-Hours
+% \begin{figure}[htp!]
+% \centering
+% \includegraphics[scale=0.41]{covtype_window.eps}
+% \includegraphics[scale=0.41]{covtype_ramhours.eps}
+% \end{figure}
+
+% \end{frame}
 
 \section{Conclusions}
 
