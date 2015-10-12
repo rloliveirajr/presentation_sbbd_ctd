@@ -1,6 +1,8 @@
 \documentclass[14pt]{beamer}
 %\usetheme[compress]{Singapore} % Guia no alto, nada mais, degrade azul
 \usetheme{Frankfurt} % Guia no alto, nada mais
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{subfigure}
 \usepackage{multirow}
 \usepackage{etex}
@@ -23,8 +25,8 @@
 \setbeamertemplate{navigation symbols}{}
 
 \title{Economically-Efficient\\Data Stream Analysis}
-\author{\small{Roberto Oliveira Jr.\\Advisor: Adriano Veloso \\Co-advisor: Wagner Meira Jr.}}
-\institute{Computer Science Dept - UFMG - Brazil}
+\author{\small{Roberto Oliveira Jr.\\Orietador: Adriano Veloso \\Co-orientados: Wagner Meira Jr.}}
+\institute{DCC - UFMG - Brazil}
 \date{}
 
 \begin{document}
@@ -33,24 +35,24 @@
 \titlepage
 \end{frame}
 
-\section{Data Stream Analysis}
+\section{Análise de Fluxos de Dados}
 
-\begin{frame}\frametitle{Data Stream}
+\begin{frame}\frametitle{Fluxo de Dados}
 
 \begin{itemize}
-\item Definition
+\item Definição
 \begin{itemize}
-\item Fast and possible unbounded sequence of data that arrives at time-varying.
+\item Sequência de dados possivelmente ilimitada, de alta velocidade onde os dados chegam em intervalos de tempos variados.
 \end{itemize}
-\item Motivation
+\item Motivação
 \begin{itemize}
-\item It allows us to process huge volumes of data.
+\item Permite o processamento de grandes volumes de dados.
 \end{itemize}
 \end{itemize}
 \begin{itemize}
-\item Problem
+\item Problema
 \begin{itemize}
-\item Automatically extraction of relevant patterns and relations from data that is continuously created.
+\item Extrair automaticamente padrões e relações relevantes de dados continuamente criados.
 % \begin{itemize}
 % \item Keep track of data streams is useful for systems monitoring, online social network advertising, etc.
 % \end{itemize}
@@ -70,10 +72,10 @@
 
 % \end{frame}
 
-\begin{frame}\frametitle{Classification in Data Streams}
+\begin{frame}\frametitle{Classificação em Fluxo de Dados}
 
 \begin{itemize}
-\item Classification models are applied to distinguish between pre-defined labels.
+\item Modelos de classificação são aplicados para distinguir entre rótulos pré-estabelecidos.
 \end{itemize}
 
 \vspace{-0.2in}
@@ -82,15 +84,14 @@
 \includegraphics[scale=0.6]{Stream1}
 \end{figure}
 \vspace{-0.2in}
-\pause
 \begin{itemize}
-\item \alert{Data characteristics may change with time}.
+\item \alert{As características dos dados podem mudar ao longo do tempo}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}\frametitle{Concept Drifts}
+\begin{frame}\frametitle{Mudanças de Conceito}
 \begin{itemize}
-\item Concept Drift is unforeseen changes in data's nature over time.
+\item Mudança de Conceito é a alteração imprevisível da natureza dos dados ao longo do tempo.
 \end{itemize}
 
 \vspace{-0.5in}
@@ -103,7 +104,7 @@
 \pause
 
 \begin{itemize}
-\item Data streams contains combination of such patterns.
+\item Fluxo de dados contém combinação destes padrões.
 \end{itemize}
 \end{frame}
 
@@ -144,14 +145,14 @@
 
 % \end{frame}
 
-\begin{frame}\frametitle{Classifying Data Streams}
+\begin{frame}\frametitle{Classificação em Fluxo de Dados}
 
 \begin{itemize}
-\item Effective classification requires:
+\item Classificação efetiva requer::
 \begin{itemize}
-\item Updating the classification model as the stream evolves.
+\item Atualização do modelo de classificação à medida que o fluxo evolui.
 \begin{itemize}
-\item Taking into account resources limitation: memory, time and learning requirements.
+\item Considerar limitação de recursos: memória, tempo and dados rotulados.
 \end{itemize}
 \end{itemize}
 \end{itemize}
@@ -164,10 +165,10 @@
 \end{frame}
 
 
-\begin{frame}\frametitle{Research Question}
+\begin{frame}\frametitle{Questão de Pesquisa}
 
 \begin{center}
-\large{How to deal with concept drifts?}
+\large{Como lidar com mudanças de conceito?}
 \end{center}
 % \vspace{0.5in}
 % \small{\begin{enumerate}
@@ -178,35 +179,35 @@
 
 \section{Economically-Efficient Selective Sampling}
 %\section{Classification Model}
-\begin{frame}\frametitle{Classification Model}
+\begin{frame}\frametitle{Modelo de Classificação}
 \begin{itemize}
-\item Classification models are composed by association rules.
+\item Modelos de classificação compostos por regras de associação.
   \begin{itemize}
-    \item $\{x \to y\}$, where $x \in X$ and $y \in Y$
+    \item $\{x \to y\}$, onde $x \in X$ e $y \in Y$
   \end{itemize}
-\item Efficiently updated as the training set evolves.
-\item Models are built on-the-fly:
+\item Atualização eficiente à medida que o conjunto de treino evolui.
+\item Modelos são construidos sob demanda:
   \begin{itemize}
-    \item For a given $[x_i, *]$, rules $\{x \to y\}$ such that $x \in x_i$ are produced.
-    \item Prediction is performed from the combination of these rules.
+    \item Para um dado $[x_i, *]$, regras $\{x \to y\}$ tal que $x \subseteq x_i$ são produzidas.
+    \item Previsão é realizada pela combinação destas regras.
   \end{itemize}
-\item At each time step is produced a model $\mathcal{R}(x_i)$.
+\item A cada instante é produzido um modelo $\mathcal{R}(x_i)$.
 \end{itemize}
 \end{frame}
 
 %\section{Drifts}
-\begin{frame}\frametitle{Dealing with Drifts}
+\begin{frame}\frametitle{Lidando com Mudanças de Conceito}
 
 \begin{itemize}
-\item Two properties are necessary in order to produce classifiers that are robust to drifts:
+\item Duas propriedades são necessárias para produzir modelos de classificação robustos a mudanças nos dados:
 \begin{itemize}
-\item Adaptiveness:
+\item Adaptação:
 \begin{itemize}
-\item The ability to adapt itself to drifts.
+\item Abilidade de adaptar às mudanças.
 \end{itemize}
-\item Memorability:
+\item Memorização:
 \begin{itemize}
-\item The ability to recover itself from drifts.
+\item Capacidade de recuperar após mudanças.
 \end{itemize}
 \end{itemize}
 \end{itemize}
@@ -220,18 +221,18 @@
 \begin{frame}\frametitle{Dealing with Drifts}
 
 \begin{itemize}
-\item Improving both properties simultaneously may lead to a conflict-objective problem.
+\item Otimizando ambas propriedades leva a um problema de conflito de objetivo.
 \begin{itemize}
-\item Improve adaptiveness may hurt memorability, and vice-versa.
+\item Otimizar adaptação pode prejudicar memorização, e vice-versa.
 \end{itemize}
 \end{itemize}
 
 \end{frame}
 
 
-\begin{frame}\frametitle{Economic Efficiency}
+\begin{frame}\frametitle{Eficiência Econômica}
 
-Example: Hotels in Petr\'{o}polis.
+Exemplo: Hotéis em Petr\'{o}polis.
 
 \centering
 \include{tt_space}
@@ -242,13 +243,13 @@ Example: Hotels in Petr\'{o}polis.
 
 \end{frame}
 
-\begin{frame}\frametitle{Pareto Efficiency}
+\begin{frame}\frametitle{Eficência de Pareto}
 
-Pareto frontier: A point $a$ is said to dominate $b$ iff both of the following conditions are hold:
+Fronteira de Pareto - Pontos Dominantes
 
 \begin{itemize}
-\item $U_c(a)\ge U_c(b)$ and $U_d(a)\ge U_d(b)$
-\item $U_c(a) > U_c(b)$ or $U_d(a) > U_d(b)$
+\item $U_c(a)\ge U_c(b)$ e $U_d(a)\ge U_d(b)$
+\item $U_c(a) > U_c(b)$ ou $U_d(a) > U_d(b)$
 \end{itemize}
 
 \include{tt_pareto}
@@ -259,13 +260,13 @@ Pareto frontier: A point $a$ is said to dominate $b$ iff both of the following c
 
 \end{frame}
 
-\begin{frame}\frametitle{Compensation $-$ Kaldor-Hicks Principle}
+\begin{frame}\frametitle{Compensação $-$ Princípio de Kaldor-Hicks}
 
-Region of compensation:
+Região de Compensação:
 
 \begin{itemize}
-\item Overall utility: $U(d_i)=U_m(d_i)+U_a(d_i)$
-\item Baseline point: $d^*=\{d_i\in\mathcal{P}_n | \forall d_j\in\mathcal{P}_n: U(d_i)\leq U(d_j)\}$
+\item Utilidade total: $U(d_i)=U_m(d_i)+U_a(d_i)$
+\item Ponto base: $d^*=\{d_i\in\mathcal{P}_n | \forall d_j\in\mathcal{P}_n: U(d_i)\leq U(d_j)\}$
 \end{itemize}
 
 \include{tt_kh}
@@ -276,59 +277,60 @@ Region of compensation:
 
 \end{frame}
 
-\begin{frame}\frametitle{Utility Measures}
+\begin{frame}\frametitle{Medidas de Utilidade}
 \begin{itemize}
-\item Distance in space:
+\item Distância no espaço:
 \begin{itemize}
-\item How similar training instance $t_j$ is to the newest instance $t_n$.
+\item Similariade de cada instância de treino $t_j$ em relação a nova instância $t_n$.
 \item $U_s(t_j)=\frac{|\mathcal{R}(t_n) \cap \mathcal{R}(t_j)|}{|\mathcal{R}(t_n)|}$
 \end{itemize}
-\item Distance in time:
+\item Distância no tempo:
 \begin{itemize}
-\item How fresh is the training instance.
+\item Tempo de chegada de cada instância de treino $t_j$.
 \item $U_t(t_j)=\frac{\gamma(t_j)}{\gamma(t_n)}$.
 \begin{itemize}
-\item $\gamma(t_j)$ returns the time in which training instance $t_j$ arrived.
+\item $\gamma(t_j)$ retorna o tempo em que a instância de treino $t_j$ foi processada.
 \end{itemize}
 \end{itemize}
-\item Random permutation of training instances:
+\item Permutação aleatória das instâncias de treino:
 \begin{itemize}
 \item $U_r(t_j)=\frac{\alpha(t_j)}{|\mathcal{D}_n|}$
 \begin{itemize}
-\item $\alpha(t_j)$ returns the position of $t_j$ in the shuffle.
-\item $\mathcal{D}_n$ is the training set at time step $n$.
+\item $\alpha(t_j)$ retorna a posição de $t_j$ na permutação.
+\item $\mathcal{D}_n$ é o conjunto de treino a cada momento $n$.
 \end{itemize}
 \end{itemize}
 \end{itemize}
 
 \end{frame}
 
-\begin{frame}\frametitle{Utility Measures}
+\begin{frame}\frametitle{Espaço de Utilidade}
 
 \begin{enumerate}
-\item At each time step $n$:
-\begin{enumerate}
-\item Place training instances in the utility space.
-\item Select training instances in the Efficiency Region (Pareto-frontier / Kaldor-Hicks Region).
-\end{enumerate}
+\item Coloque as instâncias de treino no espaço de utilidade.
+\item Selecione as instâncias na Região de Eficiência:
+\begin{itemize}
+\item Pareto-Efficience Selective Sampling (PESS)
+\item Kaldor-Hicks Selective Sampling (KHSS).
+\end{itemize}
 \end{enumerate}
 
 \vspace{-0.1in}
 \begin{figure}
 \centering
-\includegraphics[height=2.30in]{pareto}
+\includegraphics[scale=0.37]{pareto}
 \end{figure}
 
 \end{frame}
 
 %\section{Labeling Efforts}
-\begin{frame}\frametitle{Reducing Labeling Efforts}
+\begin{frame}\frametitle{Redução do Esforço de Rotuação}
 \begin{itemize}
-\item Random Active Learning
+\item Amostragem Ativa Aleatória
 \begin{itemize}
-\item Naive strategy.
-\item Simple to integrate.
-\item Labeling Effort control: $\beta$.
+\item Estratégia ingênua.
+\item Simples para integrar.
+\item Controle de Esforço de Rotulação: $\beta$.
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -341,25 +343,25 @@ Region of compensation:
 \end{figure}
 \end{frame}
 
-\section{Results}
+\section{Resultados}
 \begin{frame}
-\frametitle{Experimental Evaluation}
+\frametitle{Avaliação}
 \framesubtitle{Setup}
 \begin{itemize}
-    \item Interleaved Test-Then-Train
-    \item 1\% of data provided as training seed;
-    \item Massive Online Analysis (MOA) framework as evaluation environment;
+    \item Interleaved Test-Then-Train.
+    \item 1\% do conjunto de dados provido como conjunto de treino.
+    \item Ambiente de avaliação: Massive Online Analysis (MOA) framework.
     \item Baselines:
 \begin{table}
 \centering
 \scalebox{0.6}{
 \begin{tabular}{lll}
 \hline
-Algorithm & Adaptiveness & Memorability \\
+Algoritmo & Adaptação & Memorização \\
 \hline \hline
-AC (KDD 2011) & Active Learning & Base Learner \\
-HAT (JMLR 2011) & ADWIN & Trees Ensemble \\
-ILAC (SIGIR 2011) & Data Projection & Incremental Training Set \\
+AC (KDD 2011) & Aprendizado Ativo & Classificador base \\
+HAT (JMLR 2011) & ADWIN & Conjunto de Árvores \\
+ILAC (SIGIR 2011) & Projeção de dados & Conjunto de treino incremental\\
 \hline
 % EESS (SIGIR 2014) & Active Learning \& EESS & EESS \\
 % \hline
@@ -371,39 +373,36 @@ ILAC (SIGIR 2011) & Data Projection & Incremental Training Set \\
 
 \end{frame}
 
-\begin{frame}\frametitle{Evaluation}
+\begin{frame}\frametitle{Avaliação}
 
 \begin{itemize}
-\item Measures used:
+\item Métricas:
 \begin{itemize}
-\item Mean Squared Error.
-\item Labeling Effort: 10\%; \textbf{25\%}; 50\%; 75\% and 100\%;
+\item Erro Quadrático Médio.
+\item Esforço de Rotuação: 10\%; \textbf{25\%}; 50\%; 75\% and 100\%;
 \begin{itemize}
-\item AC and EESS.
+\item AC e EESS.
 \end{itemize}
-\item Training set size.
-\item RAM-Hours:
-\begin{itemize}
-\item A GB of RAM deployed for 1 hour execution.
+\item Tamanho do conjunto de treino.
+\item RAM-Hours.
 \end{itemize}
-\end{itemize}
-\item Datasets:
+\item Conjuntos de Dados:
 \end{itemize}
 \begin{table}
 \centering
 \scalebox{0.6}{
 \begin{tabular}{lcccc}
 \hline
-& \multicolumn{4}{c}{Concept Drift Pattern} \\ \cline{2-5}
-Dataset & Sudden & Incremental & Gradual & Recurrent \\
+& \multicolumn{4}{c}{Padrão de Mudança de Conceito} \\ \cline{2-5}
+ & Repentino & Incremental & Gradual & Recorrente \\
 \hline \hline
-Presidential Elections & - & X & X & - \\
-Person of the Year & - & X & X &  - \\
-\textbf{FIFA World Cup - EN} & X & - & - & - \\
-\textbf{FIFA World Cup - PT} & X & - & - & -  \\
-\textbf{Cover Type} & X & - & X & X \\
-Spam Filtering & X & - & X & X \\
-\textbf{Poker Hand} & - & - & X & X \\
+Eleições Presidenciais 2010 & - & X & X & - \\
+Pessoa do Ano 2015 & - & X & X &  - \\
+\textbf{Copa do Mundo 2010 - Inglês} & X & - & - & - \\
+\textbf{Copa do Mundo 2010 - PT} & X & - & - & -  \\
+\textbf{Tipo de Cobertura} & X & - & X & X \\
+Filtragem de Spam & X & - & X & X \\
+\textbf{Mão de Poker} & - & - & X & X \\
 \hline
 \end{tabular}
 }
@@ -492,11 +491,11 @@ Spam Filtering & X & - & X & X \\
 
 \begin{frame}
 \frametitle{Evaluation}
-\framesubtitle{Forest Cover Type Prediction}
+\framesubtitle{Tipo de cobertura de florestas}
 \begin{itemize}
-    \item Data from forest cover type in United State territory;
-    \item 581,102 examples with 54 features distributed among 7 classes;
-    \item Concept Drifts: Sudden, Gradual, Recurrent;
+    \item Tipo de cobertura de florestas nos EUA.
+    \item 581,102 instâncias com 54 variáveis e 7 classes;
+    \item Mudanças de Conceito: Repentina, Gradual, Recorrent;
 \end{itemize}
 \begin{figure}[htp!]
 \centering
@@ -509,8 +508,8 @@ Spam Filtering & X & - & X & X \\
 
 \begin{frame}
 \frametitle{Evaluation}
-\framesubtitle{Forest Cover Type Prediction}
-MSE and Labeling Efforts
+\framesubtitle{Tipo de cobertura de florestas}
+MSE and Esforço de Rotulação:
 \begin{figure}[htp!]
 \centering
 \includegraphics[scale=0.41]{covtype_mse.eps}
@@ -520,8 +519,8 @@ MSE and Labeling Efforts
 
 \begin{frame}
 \frametitle{Evaluation}
-\framesubtitle{Forest Cover Type Prediction}
-Training Size and RAM-Hours
+\framesubtitle{Tipo de cobertura de florestas}
+Tamanho do conjunto de treino e RAM-Hours
 \begin{figure}[htp!]
 \centering
 \includegraphics[scale=0.41]{covtype_window.eps}
@@ -530,30 +529,30 @@ Training Size and RAM-Hours
 
 \end{frame}
 
-\section{Conclusions}
+\section{Conclusões}
 
-\begin{frame}\frametitle{Conclusions}
+\begin{frame}\frametitle{Conclusões}
 \begin{itemize}
-\item Data analysis on streams.
+\item Análise de Fluxos de Dados.
 \begin{itemize}
-\item Limited computing and training resources.
-\item Concept drifts.
+\item Limitação de recursos.
+\item Mudanas de Conceito.
 \end{itemize}
 \pause
-\item Efficiency and accuracy.
+\item Eficência e Precisão.
 \begin{itemize}
-\item Incremental classifiers.
-\item Adaptiveness and Memorability.
-\item Pareto efficiency and compensation principle.
-\item Simple-to-compute utility measures.
-\item Ours algorithms shown to be robust in different scenarios.
+\item Modelo de classificação incremental.
+\item Adaptação e Memorização.
+\item Eficência de Pareto e princípio de compensação.
+\item Medidas de utilidade simple de computar.
+\item Nossos algoritmos se mostraram robustos em diferentes cenários.
 \end{itemize}
 \pause
-\item Future work includes:
+\item Trabalho futuros:
 \begin{itemize}
-\item Other utility measures.
-\item Employ our method to reduce Labeling Efforts.
-\item Explore other classification models.
+\item Outras medidas de utilidade.
+\item Aplidar o nosso método para reudção de esforço de rotulação.
+\item Explorar outros modelos de classificação.
 \end{itemize}
 \end{itemize}
 
