@@ -100,8 +100,6 @@
 % \centering
 % \includegraphics[scale=1]{concept_drift}
 % \end{figure}
-\pause
-
 \begin{itemize}
 \item Data streams contains combination of such patterns.
 \end{itemize}
@@ -303,20 +301,24 @@ Region of compensation:
 
 \end{frame}
 
-\begin{frame}\frametitle{Utility Measures}
+\begin{frame}\frametitle{Utility Space}
 
-\begin{enumerate}
+\begin{itemize}
 \item At each time step $n$:
 \begin{enumerate}
 \item Place training instances in the utility space.
-\item Select training instances in the Efficiency Region (Pareto-frontier / Kaldor-Hicks Region).
+\item Select training instances in the Efficiency Region:
+\begin{itemize}
+\item Pareto-Efficient Selective Sampling (PESS).
+\item Kaldor-Hicks Selective Sampling (KHSS).
+\end{itemize}
 \end{enumerate}
-\end{enumerate}
+\end{itemize}
 
 \vspace{-0.1in}
 \begin{figure}
 \centering
-\includegraphics[height=2.30in]{pareto}
+\includegraphics[scale=0.45]{pareto}
 \end{figure}
 
 \end{frame}
