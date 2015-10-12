@@ -1,1312 +1,1815 @@
-%!PS-Adobe-2.0 EPSF-2.0
-%%Title: en_3_rmse-labelling.eps
-%%Creator: gnuplot 4.4 patchlevel 4
-%%CreationDate: Sun Sep  1 00:30:31 2013
-%%DocumentFonts: (atend)
-%%BoundingBox: 50 50 410 377
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 5 2 345 316
+%%HiResBoundingBox: 5.901562 2.234375 344.782812 315.218750
+%.........................................
+%%Creator: GPL Ghostscript 910 (epswrite)
+%%CreationDate: 2015/10/11 18:34:15
+%%DocumentData: Clean7Bit
+%%LanguageLevel: 2
 %%EndComments
 %%BeginProlog
-/gnudict 256 dict def
-gnudict begin
-%
-% The following true/false flags may be edited by hand if desired.
-% The unit line width and grayscale image gamma correction may also be changed.
-%
-/Color true def
-/Blacktext false def
-/Solid false def
-/Dashlength 1 def
-/Landscape false def
-/Level1 false def
-/Rounded false def
-/ClipToBoundingBox false def
-/TransparentPatterns false def
-/gnulinewidth 5.000 def
-/userlinewidth gnulinewidth def
-/Gamma 1.0 def
-%
-/vshift -100 def
-/dl1 {
-  10.0 Dashlength mul mul
-  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
-} def
-/dl2 {
-  10.0 Dashlength mul mul
-  Rounded { currentlinewidth 0.75 mul add } if
-} def
-/hpt_ 31.5 def
-/vpt_ 31.5 def
-/hpt hpt_ def
-/vpt vpt_ def
-Level1 {} {
-/SDict 10 dict def
-systemdict /pdfmark known not {
-  userdict /pdfmark systemdict /cleartomark get put
-} if
-SDict begin [
-  /Title (en_3_rmse-labelling.eps)
-  /Subject (gnuplot plot)
-  /Creator (gnuplot 4.4 patchlevel 4)
-  /Author (adriano)
-%  /Producer (gnuplot)
-%  /Keywords ()
-  /CreationDate (Sun Sep  1 00:30:31 2013)
-  /DOCINFO pdfmark
-end
-} ifelse
-/doclip {
-  ClipToBoundingBox {
-    newpath 50 50 moveto 410 50 lineto 410 377 lineto 50 377 lineto closepath
-    clip
-  } if
-} def
-%
-% Gnuplot Prolog Version 4.4 (August 2010)
-%
-%/SuppressPDFMark true def
-%
-/M {moveto} bind def
-/L {lineto} bind def
-/R {rmoveto} bind def
-/V {rlineto} bind def
-/N {newpath moveto} bind def
-/Z {closepath} bind def
-/C {setrgbcolor} bind def
-/f {rlineto fill} bind def
-/g {setgray} bind def
-/Gshow {show} def   % May be redefined later in the file to support UTF-8
-/vpt2 vpt 2 mul def
-/hpt2 hpt 2 mul def
-/Lshow {currentpoint stroke M 0 vshift R 
-	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
-/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
-	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
-/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
-	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
-/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
-  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
-/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
- {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
-/BL {stroke userlinewidth 2 mul setlinewidth
-	Rounded {1 setlinejoin 1 setlinecap} if} def
-/AL {stroke userlinewidth 2 div setlinewidth
-	Rounded {1 setlinejoin 1 setlinecap} if} def
-/UL {dup gnulinewidth mul /userlinewidth exch def
-	dup 1 lt {pop 1} if 10 mul /udl exch def} def
-/PL {stroke userlinewidth setlinewidth
-	Rounded {1 setlinejoin 1 setlinecap} if} def
-3.8 setmiterlimit
-% Default Line colors
-/LCw {1 1 1} def
-/LCb {0 0 0} def
-/LCa {0 0 0} def
-/LC0 {1 0 0} def
-/LC1 {0 1 0} def
-/LC2 {0 0 1} def
-/LC3 {1 0 1} def
-/LC4 {0 1 1} def
-/LC5 {1 1 0} def
-/LC6 {0 0 0} def
-/LC7 {1 0.3 0} def
-/LC8 {0.5 0.5 0.5} def
-% Default Line Types
-/LTw {PL [] 1 setgray} def
-/LTb {BL [] LCb DL} def
-/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
-/LT0 {PL [] LC0 DL} def
-/LT1 {PL [4 dl1 2 dl2] LC1 DL} def
-/LT2 {PL [2 dl1 3 dl2] LC2 DL} def
-/LT3 {PL [1 dl1 1.5 dl2] LC3 DL} def
-/LT4 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
-/LT5 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC5 DL} def
-/LT6 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC6 DL} def
-/LT7 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC7 DL} def
-/LT8 {PL [2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 4 dl2] LC8 DL} def
-/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
-/Dia {stroke [] 0 setdash 2 copy vpt add M
-  hpt neg vpt neg V hpt vpt neg V
-  hpt vpt V hpt neg vpt V closepath stroke
-  Pnt} def
-/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
-  currentpoint stroke M
-  hpt neg vpt neg R hpt2 0 V stroke
- } def
-/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
-  0 vpt2 neg V hpt2 0 V 0 vpt2 V
-  hpt2 neg 0 V closepath stroke
-  Pnt} def
-/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
-  hpt2 vpt2 neg V currentpoint stroke M
-  hpt2 neg 0 R hpt2 vpt2 V stroke} def
-/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
-  hpt neg vpt -1.62 mul V
-  hpt 2 mul 0 V
-  hpt neg vpt 1.62 mul V closepath stroke
-  Pnt} def
-/Star {2 copy Pls Crs} def
-/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
-  0 vpt2 neg V hpt2 0 V 0 vpt2 V
-  hpt2 neg 0 V closepath fill} def
-/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
-  hpt neg vpt -1.62 mul V
-  hpt 2 mul 0 V
-  hpt neg vpt 1.62 mul V closepath fill} def
-/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
-  hpt neg vpt 1.62 mul V
-  hpt 2 mul 0 V
-  hpt neg vpt -1.62 mul V closepath stroke
-  Pnt} def
-/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
-  hpt neg vpt 1.62 mul V
-  hpt 2 mul 0 V
-  hpt neg vpt -1.62 mul V closepath fill} def
-/DiaF {stroke [] 0 setdash vpt add M
-  hpt neg vpt neg V hpt vpt neg V
-  hpt vpt V hpt neg vpt V closepath fill} def
-/Pent {stroke [] 0 setdash 2 copy gsave
-  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
-  closepath stroke grestore Pnt} def
-/PentF {stroke [] 0 setdash gsave
-  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
-  closepath fill grestore} def
-/Circle {stroke [] 0 setdash 2 copy
-  hpt 0 360 arc stroke Pnt} def
-/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
-/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
-/C1 {BL [] 0 setdash 2 copy moveto
-	2 copy vpt 0 90 arc closepath fill
-	vpt 0 360 arc closepath} bind def
-/C2 {BL [] 0 setdash 2 copy moveto
-	2 copy vpt 90 180 arc closepath fill
-	vpt 0 360 arc closepath} bind def
-/C3 {BL [] 0 setdash 2 copy moveto
-	2 copy vpt 0 180 arc closepath fill
-	vpt 0 360 arc closepath} bind def
-/C4 {BL [] 0 setdash 2 copy moveto
-	2 copy vpt 180 270 arc closepath fill
-	vpt 0 360 arc closepath} bind def
-/C5 {BL [] 0 setdash 2 copy moveto
-	2 copy vpt 0 90 arc
-	2 copy moveto
-	2 copy vpt 180 270 arc closepath fill
-	vpt 0 360 arc} bind def
-/C6 {BL [] 0 setdash 2 copy moveto
-	2 copy vpt 90 270 arc closepath fill
-	vpt 0 360 arc closepath} bind def
-/C7 {BL [] 0 setdash 2 copy moveto
-	2 copy vpt 0 270 arc closepath fill
-	vpt 0 360 arc closepath} bind def
-/C8 {BL [] 0 setdash 2 copy moveto
-	2 copy vpt 270 360 arc closepath fill
-	vpt 0 360 arc closepath} bind def
-/C9 {BL [] 0 setdash 2 copy moveto
-	2 copy vpt 270 450 arc closepath fill
-	vpt 0 360 arc closepath} bind def
-/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
-	2 copy moveto
-	2 copy vpt 90 180 arc closepath fill
-	vpt 0 360 arc closepath} bind def
-/C11 {BL [] 0 setdash 2 copy moveto
-	2 copy vpt 0 180 arc closepath fill
-	2 copy moveto
-	2 copy vpt 270 360 arc closepath fill
-	vpt 0 360 arc closepath} bind def
-/C12 {BL [] 0 setdash 2 copy moveto
-	2 copy vpt 180 360 arc closepath fill
-	vpt 0 360 arc closepath} bind def
-/C13 {BL [] 0 setdash 2 copy moveto
-	2 copy vpt 0 90 arc closepath fill
-	2 copy moveto
-	2 copy vpt 180 360 arc closepath fill
-	vpt 0 360 arc closepath} bind def
-/C14 {BL [] 0 setdash 2 copy moveto
-	2 copy vpt 90 360 arc closepath fill
-	vpt 0 360 arc} bind def
-/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
-	vpt 0 360 arc closepath} bind def
-/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
-	neg 0 rlineto closepath} bind def
-/Square {dup Rec} bind def
-/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
-/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
-/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
-/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
-/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
-/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
-/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
-	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
-/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
-/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
-	2 copy vpt Square fill Bsquare} bind def
-/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
-/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
-/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
-	Bsquare} bind def
-/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
-	Bsquare} bind def
-/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
-/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
-	2 copy vpt Square fill Bsquare} bind def
-/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
-	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
-/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
-/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
-/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
-/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
-/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
-/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
-/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
-/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
-/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
-/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
-/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
-/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
-/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
-/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
-/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
-/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
-/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
-/DiaE {stroke [] 0 setdash vpt add M
-  hpt neg vpt neg V hpt vpt neg V
-  hpt vpt V hpt neg vpt V closepath stroke} def
-/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
-  0 vpt2 neg V hpt2 0 V 0 vpt2 V
-  hpt2 neg 0 V closepath stroke} def
-/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
-  hpt neg vpt -1.62 mul V
-  hpt 2 mul 0 V
-  hpt neg vpt 1.62 mul V closepath stroke} def
-/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
-  hpt neg vpt 1.62 mul V
-  hpt 2 mul 0 V
-  hpt neg vpt -1.62 mul V closepath stroke} def
-/PentE {stroke [] 0 setdash gsave
-  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
-  closepath stroke grestore} def
-/CircE {stroke [] 0 setdash 
-  hpt 0 360 arc stroke} def
-/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
-/DiaW {stroke [] 0 setdash vpt add M
-  hpt neg vpt neg V hpt vpt neg V
-  hpt vpt V hpt neg vpt V Opaque stroke} def
-/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
-  0 vpt2 neg V hpt2 0 V 0 vpt2 V
-  hpt2 neg 0 V Opaque stroke} def
-/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
-  hpt neg vpt -1.62 mul V
-  hpt 2 mul 0 V
-  hpt neg vpt 1.62 mul V Opaque stroke} def
-/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
-  hpt neg vpt 1.62 mul V
-  hpt 2 mul 0 V
-  hpt neg vpt -1.62 mul V Opaque stroke} def
-/PentW {stroke [] 0 setdash gsave
-  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
-  Opaque stroke grestore} def
-/CircW {stroke [] 0 setdash 
-  hpt 0 360 arc Opaque stroke} def
-/BoxFill {gsave Rec 1 setgray fill grestore} def
-/Density {
-  /Fillden exch def
-  currentrgbcolor
-  /ColB exch def /ColG exch def /ColR exch def
-  /ColR ColR Fillden mul Fillden sub 1 add def
-  /ColG ColG Fillden mul Fillden sub 1 add def
-  /ColB ColB Fillden mul Fillden sub 1 add def
-  ColR ColG ColB setrgbcolor} def
-/BoxColFill {gsave Rec PolyFill} def
-/PolyFill {gsave Density fill grestore grestore} def
-/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
-%
-% PostScript Level 1 Pattern Fill routine for rectangles
-% Usage: x y w h s a XX PatternFill
-%	x,y = lower left corner of box to be filled
-%	w,h = width and height of box
-%	  a = angle in degrees between lines and x-axis
-%	 XX = 0/1 for no/yes cross-hatch
-%
-/PatternFill {gsave /PFa [ 9 2 roll ] def
-  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
-  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
-  gsave 1 setgray fill grestore clip
-  currentlinewidth 0.5 mul setlinewidth
-  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
-  0 0 M PFa 5 get rotate PFs -2 div dup translate
-  0 1 PFs PFa 4 get div 1 add floor cvi
-	{PFa 4 get mul 0 M 0 PFs V} for
-  0 PFa 6 get ne {
-	0 1 PFs PFa 4 get div 1 add floor cvi
-	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
- } if
-  stroke grestore} def
-%
-/languagelevel where
- {pop languagelevel} {1} ifelse
- 2 lt
-	{/InterpretLevel1 true def}
-	{/InterpretLevel1 Level1 def}
- ifelse
-%
-% PostScript level 2 pattern fill definitions
-%
-/Level2PatternFill {
-/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
-	bind def
-/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
-<< Tile8x8
- /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
->> matrix makepattern
-/Pat1 exch def
-<< Tile8x8
- /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
-	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
->> matrix makepattern
-/Pat2 exch def
-<< Tile8x8
- /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
-	8 8 L 8 0 L 0 0 L fill}
->> matrix makepattern
-/Pat3 exch def
-<< Tile8x8
- /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
-	0 12 M 12 0 L stroke}
->> matrix makepattern
-/Pat4 exch def
-<< Tile8x8
- /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
-	0 -4 M 12 8 L stroke}
->> matrix makepattern
-/Pat5 exch def
-<< Tile8x8
- /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
-	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
->> matrix makepattern
-/Pat6 exch def
-<< Tile8x8
- /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
-	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
->> matrix makepattern
-/Pat7 exch def
-<< Tile8x8
- /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
-	12 0 M -4 8 L 12 4 M 0 10 L stroke}
->> matrix makepattern
-/Pat8 exch def
-<< Tile8x8
- /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
-	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
->> matrix makepattern
-/Pat9 exch def
-/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
-/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
-/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
-/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
-/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
-/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
-/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
-} def
-%
-%
-%End of PostScript Level 2 code
-%
-/PatternBgnd {
-  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
-} def
-%
-% Substitute for Level 2 pattern fill codes with
-% grayscale if Level 2 support is not selected.
-%
-/Level1PatternFill {
-/Pattern1 {0.250 Density} bind def
-/Pattern2 {0.500 Density} bind def
-/Pattern3 {0.750 Density} bind def
-/Pattern4 {0.125 Density} bind def
-/Pattern5 {0.375 Density} bind def
-/Pattern6 {0.625 Density} bind def
-/Pattern7 {0.875 Density} bind def
-} def
-%
-% Now test for support of Level 2 code
-%
-Level1 {Level1PatternFill} {Level2PatternFill} ifelse
-%
-/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
-dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
-currentdict end definefont pop
-/MFshow {
-   { dup 5 get 3 ge
-     { 5 get 3 eq {gsave} {grestore} ifelse }
-     {dup dup 0 get findfont exch 1 get scalefont setfont
-     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
-     get exch 4 get {Gshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
-     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
-     get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
-     dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
-     show 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
-     pop aload pop M} ifelse }ifelse }ifelse }
-     ifelse }
-   forall} def
-/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
-/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
- {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
-     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
-/MLshow { currentpoint stroke M
-  0 exch R
-  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
-/MRshow { currentpoint stroke M
-  exch dup MFwidth neg 3 -1 roll R
-  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
-/MCshow { currentpoint stroke M
-  exch dup MFwidth -2 div 3 -1 roll R
-  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
-/XYsave    { [( ) 1 2 true false 3 ()] } bind def
-/XYrestore { [( ) 1 2 true false 4 ()] } bind def
-end
+% This copyright applies to everything between here and the %%EndProlog:
+% Copyright (C) 2013 Artifex Software, Inc.  All rights reserved.
+%%BeginResource: procset GS_epswrite_2_0_1001 1.001 0
+/GS_epswrite_2_0_1001 80 dict dup begin
+/PageSize 2 array def/setpagesize{ PageSize aload pop 3 index eq exch
+4 index eq and{ pop pop pop}{ PageSize dup  1
+5 -1 roll put 0 4 -1 roll put dup null eq {false} {dup where} ifelse{ exch get exec}
+{ pop/setpagedevice where
+{ pop 1 dict dup /PageSize PageSize put setpagedevice}
+{ /setpage where{ pop PageSize aload pop pageparams 3 {exch pop} repeat
+setpage}if}ifelse}ifelse}ifelse} bind def
+/!{bind def}bind def/#{load def}!/N/counttomark #
+/rG{3{3 -1 roll 255 div}repeat setrgbcolor}!/G{255 div setgray}!/K{0 G}!
+/r6{dup 3 -1 roll rG}!/r5{dup 3 1 roll rG}!/r3{dup rG}!
+/w/setlinewidth #/J/setlinecap #
+/j/setlinejoin #/M/setmiterlimit #/d/setdash #/i/setflat #
+/m/moveto #/l/lineto #/c/rcurveto #
+/p{N 2 idiv{N -2 roll rlineto}repeat}!
+/P{N 0 gt{N -2 roll moveto p}if}!
+/h{p closepath}!/H{P closepath}!
+/lx{0 rlineto}!/ly{0 exch rlineto}!/v{0 0 6 2 roll c}!/y{2 copy c}!
+/re{4 -2 roll m exch dup lx exch ly neg lx h}!
+/^{3 index neg 3 index neg}!
+/f{P fill}!/f*{P eofill}!/s{H stroke}!/S{P stroke}!
+/q/gsave #/Q/grestore #/rf{re fill}!
+/Y{P clip newpath}!/Y*{P eoclip newpath}!/rY{re Y}!
+/|={pop exch 4 1 roll 1 array astore cvx 3 array astore cvx exch 1 index def exec}!
+/|{exch string readstring |=}!
+/+{dup type/nametype eq{2 index 7 add -3 bitshift 2 index mul}if}!
+/@/currentfile #/${+ @ |}!
+/B{{2 copy string{readstring pop}aload pop 4 array astore cvx
+3 1 roll}repeat pop pop true}!
+/Ix{[1 0 0 1 11 -2 roll exch neg exch neg]exch}!
+/,{true exch Ix imagemask}!/If{false exch Ix imagemask}!/I{exch Ix image}!
+/Ic{exch Ix false 3 colorimage}!
+/F{/Columns counttomark 3 add -2 roll/Rows exch/K -1/BlackIs1 true>>
+/CCITTFaxDecode filter}!/FX{<</EndOfBlock false F}!
+/X{/ASCII85Decode filter}!/@X{@ X}!/&2{2 index 2 index}!
+/@F{@ &2<<F}!/@C{@X &2 FX}!
+/$X{+ @X |}!/&4{4 index 4 index}!/$F{+ @ &4<<F |}!/$C{+ @X &4 FX |}!
+/IC{3 1 roll 10 dict begin 1{/ImageType/Interpolate/Decode/DataSource
+/ImageMatrix/BitsPerComponent/Height/Width}{exch def}forall
+currentdict end image}!
+/~{@ read {pop} if}!
+end def
+%%EndResource
+/pagesave null def
 %%EndProlog
-gnudict begin
-gsave
-doclip
-50 50 translate
-0.050 0.050 scale
-0 setgray
-newpath
-(Helvetica) findfont 300 scalefont setfont
-1.000 UL
-LTb
-1650 960 M
-63 0 V
-4946 0 R
--63 0 V
-stroke
-1470 960 M
-[ [(Helvetica) 300.0 0.0 true true 0 ( 0.05)]
-] -100.0 MRshow
-1.000 UL
-LTb
-1650 1707 M
-63 0 V
-4946 0 R
--63 0 V
-stroke
-1470 1707 M
-[ [(Helvetica) 300.0 0.0 true true 0 ( 0.1)]
-] -100.0 MRshow
-1.000 UL
-LTb
-1650 2455 M
-63 0 V
-4946 0 R
--63 0 V
-stroke
-1470 2455 M
-[ [(Helvetica) 300.0 0.0 true true 0 ( 0.15)]
-] -100.0 MRshow
-1.000 UL
-LTb
-1650 3202 M
-63 0 V
-4946 0 R
--63 0 V
-stroke
-1470 3202 M
-[ [(Helvetica) 300.0 0.0 true true 0 ( 0.2)]
-] -100.0 MRshow
-1.000 UL
-LTb
-1650 3949 M
-63 0 V
-4946 0 R
--63 0 V
-stroke
-1470 3949 M
-[ [(Helvetica) 300.0 0.0 true true 0 ( 0.25)]
-] -100.0 MRshow
-1.000 UL
-LTb
-1650 4696 M
-63 0 V
-4946 0 R
--63 0 V
-stroke
-1470 4696 M
-[ [(Helvetica) 300.0 0.0 true true 0 ( 0.3)]
-] -100.0 MRshow
-1.000 UL
-LTb
-1650 5444 M
-63 0 V
-4946 0 R
--63 0 V
-stroke
-1470 5444 M
-[ [(Helvetica) 300.0 0.0 true true 0 ( 0.35)]
-] -100.0 MRshow
-1.000 UL
-LTb
-1650 6191 M
-63 0 V
-4946 0 R
--63 0 V
-stroke
-1470 6191 M
-[ [(Helvetica) 300.0 0.0 true true 0 ( 0.4)]
-] -100.0 MRshow
-1.000 UL
-LTb
-1650 960 M
-0 63 V
-0 5168 R
-0 -63 V
-stroke
-1650 660 M
-[ [(Helvetica) 300.0 0.0 true true 0 ( 0)]
-] -100.0 MCshow
-1.000 UL
-LTb
-2902 960 M
-0 63 V
-0 5168 R
-0 -63 V
-stroke
-2902 660 M
-[ [(Helvetica) 300.0 0.0 true true 0 ( 0.2)]
-] -100.0 MCshow
-1.000 UL
-LTb
-4155 960 M
-0 63 V
-0 5168 R
-0 -63 V
-stroke
-4155 660 M
-[ [(Helvetica) 300.0 0.0 true true 0 ( 0.4)]
-] -100.0 MCshow
-1.000 UL
-LTb
-5407 960 M
-0 63 V
-0 5168 R
-0 -63 V
-stroke
-5407 660 M
-[ [(Helvetica) 300.0 0.0 true true 0 ( 0.6)]
-] -100.0 MCshow
-1.000 UL
-LTb
-6659 960 M
-0 63 V
-0 5168 R
-0 -63 V
-stroke
-6659 660 M
-[ [(Helvetica) 300.0 0.0 true true 0 ( 0.8)]
-] -100.0 MCshow
-1.000 UL
-LTb
-1.000 UL
-LTb
-1650 6191 N
-0 -5231 V
-5009 0 V
-0 5231 V
--5009 0 V
-Z stroke
-LCb setrgbcolor
-240 3575 M
-currentpoint gsave translate -270 rotate 0 0 moveto
-[ [(Helvetica) 300.0 0.0 true true 0 (MSE)]
-] -100.0 MCshow
-grestore
-LTb
-LCb setrgbcolor
-4154 210 M
-[ [(Helvetica) 300.0 0.0 true true 0 (Labeling Effort)]
-] -100.0 MCshow
-LTb
-1.000 UP
-1.000 UL
-LTb
-% Begin plot #1
-5.000 UL
-LT0
-LCb setrgbcolor
-5336 5978 M
-[ [(Helvetica) 300.0 0.0 true true 0 (PESS \(batch-0.01\))]
-] -100.0 MRshow
-LT0
-5516 5978 M
-783 0 V
-1983 2085 M
-16 -22 V
-17 -20 V
-17 -19 V
-18 -18 V
-18 -17 V
-19 -15 V
-19 -15 V
-19 -15 V
-20 -13 V
-20 -12 V
-21 -12 V
-20 -11 V
-21 -10 V
-21 -10 V
-22 -9 V
-21 -8 V
-22 -8 V
-22 -8 V
-23 -6 V
-22 -7 V
-23 -6 V
-23 -6 V
-23 -5 V
-24 -5 V
-23 -5 V
-24 -4 V
-24 -4 V
-24 -4 V
-25 -4 V
-25 -3 V
-25 -4 V
-25 -3 V
-26 -2 V
-25 -3 V
-27 -3 V
-26 -2 V
-27 -3 V
-27 -2 V
-28 -2 V
-28 -2 V
-28 -2 V
-29 -2 V
-30 -2 V
-30 -2 V
-30 -1 V
-31 -2 V
-32 -2 V
-32 -2 V
-32 -1 V
-34 -2 V
-34 -1 V
-35 -2 V
-35 -2 V
-37 -1 V
-37 -2 V
-38 -2 V
-39 -1 V
-40 -2 V
-40 -2 V
-42 -1 V
-43 -2 V
-43 -2 V
-45 -1 V
-46 -2 V
-47 -2 V
-48 -2 V
-50 -2 V
-50 -2 V
-52 -2 V
-54 -2 V
-54 -2 V
-56 -2 V
-58 -2 V
-58 -2 V
-61 -3 V
-62 -2 V
-63 -3 V
-65 -2 V
-66 -3 V
-69 -3 V
-70 -3 V
-71 -3 V
-74 -3 V
-75 -3 V
-77 -4 V
-79 -3 V
-80 -4 V
-83 -4 V
-85 -4 V
-86 -5 V
-89 -4 V
-90 -5 V
-93 -6 V
-94 -5 V
-97 -6 V
-99 -6 V
-101 -7 V
-103 -7 V
-106 -7 V
-% End plot #1
-% Begin plot #2
-stroke
-LT1
-LCb setrgbcolor
-5336 5678 M
-[ [(Helvetica) 300.0 0.0 true true 0 (KHSS \(batch-0.01\))]
-] -100.0 MRshow
-LT1
-5516 5678 M
-783 0 V
-1983 2144 M
-16 -20 V
-17 -20 V
-17 -19 V
-18 -19 V
-18 -18 V
-19 -18 V
-19 -17 V
-19 -17 V
-20 -16 V
-20 -16 V
-21 -16 V
-20 -15 V
-21 -15 V
-21 -14 V
-22 -14 V
-21 -13 V
-22 -14 V
-22 -12 V
-23 -13 V
-22 -12 V
-23 -11 V
-23 -11 V
-23 -11 V
-24 -11 V
-23 -10 V
-24 -10 V
-24 -9 V
-24 -9 V
-25 -9 V
-25 -8 V
-25 -8 V
-25 -8 V
-26 -8 V
-25 -7 V
-27 -7 V
-26 -6 V
-27 -6 V
-27 -6 V
-28 -5 V
-28 -6 V
-28 -5 V
-29 -4 V
-30 -5 V
-30 -4 V
-30 -4 V
-31 -3 V
-32 -4 V
-32 -3 V
-32 -2 V
-34 -3 V
-34 -2 V
-35 -2 V
-35 -2 V
-37 -2 V
-37 -1 V
-38 -2 V
-39 -1 V
-40 -1 V
-40 0 V
-42 -1 V
-43 0 V
-43 -1 V
-45 0 V
-46 0 V
-47 0 V
-48 0 V
-50 1 V
-50 0 V
-52 0 V
-54 1 V
-54 0 V
-56 1 V
-58 0 V
-58 1 V
-61 0 V
-62 0 V
-63 1 V
-65 0 V
-66 0 V
-69 0 V
-70 0 V
-71 -1 V
-74 0 V
-75 -1 V
-77 -1 V
-79 -1 V
-80 -2 V
-83 -2 V
-85 -2 V
-86 -2 V
-89 -3 V
-90 -4 V
-93 -3 V
-94 -5 V
-97 -5 V
-99 -5 V
-101 -6 V
-103 -6 V
-106 -7 V
-% End plot #2
-% Begin plot #3
-stroke
-LT2
-LCb setrgbcolor
-5336 5378 M
-[ [(Helvetica) 300.0 0.0 true true 0 (PESS \(batch-0.05\))]
-] -100.0 MRshow
-LT2
-5516 5378 M
-783 0 V
-1716 2688 M
-7 -39 V
-8 -35 V
-8 -32 V
-8 -27 V
-9 -24 V
-9 -20 V
-9 -17 V
-9 -14 V
-10 -12 V
-9 -9 V
-11 -7 V
-10 -5 V
-10 -2 V
-11 -2 V
-11 1 V
-11 2 V
-12 3 V
-12 5 V
-12 5 V
-12 7 V
-12 7 V
-13 7 V
-13 9 V
-13 8 V
-14 9 V
-14 9 V
-14 10 V
-14 9 V
-15 9 V
-16 10 V
-15 9 V
-16 9 V
-17 8 V
-17 9 V
-18 7 V
-18 8 V
-18 7 V
-20 6 V
-19 6 V
-21 6 V
-21 4 V
-22 5 V
-22 3 V
-23 3 V
-25 2 V
-24 2 V
-26 1 V
-27 0 V
-28 0 V
-28 -1 V
-30 -2 V
-31 -2 V
-32 -3 V
-33 -4 V
-34 -4 V
-35 -5 V
-37 -5 V
-38 -6 V
-40 -7 V
-41 -7 V
-42 -7 V
-44 -8 V
-46 -9 V
-47 -9 V
-49 -9 V
-50 -10 V
-53 -10 V
-54 -10 V
-56 -11 V
-59 -11 V
-60 -11 V
-62 -11 V
-65 -12 V
-66 -12 V
-69 -12 V
-72 -12 V
-73 -13 V
-77 -12 V
-78 -13 V
-82 -12 V
-84 -13 V
-86 -13 V
-90 -13 V
-92 -13 V
-95 -13 V
-99 -13 V
-101 -13 V
-104 -14 V
-108 -13 V
-111 -13 V
-114 -14 V
-117 -13 V
-122 -14 V
-124 -14 V
-128 -14 V
-132 -14 V
-136 -15 V
-140 -14 V
-143 -16 V
-% End plot #3
-% Begin plot #4
-stroke
-LT3
-LCb setrgbcolor
-5336 5078 M
-[ [(Helvetica) 300.0 0.0 true true 0 (KHSS \(batch-0.05\))]
-] -100.0 MRshow
-LT3
-5516 5078 M
-783 0 V
-1716 2736 M
-7 -14 V
-8 -13 V
-8 -13 V
-8 -12 V
-9 -11 V
-9 -11 V
-9 -9 V
-9 -10 V
-10 -8 V
-9 -8 V
-11 -8 V
-10 -7 V
-10 -7 V
-11 -6 V
-11 -6 V
-11 -6 V
-12 -5 V
-12 -5 V
-12 -5 V
-12 -4 V
-12 -4 V
-13 -4 V
-13 -4 V
-13 -4 V
-14 -3 V
-14 -4 V
-14 -3 V
-14 -3 V
-15 -3 V
-16 -3 V
-15 -3 V
-16 -3 V
-17 -2 V
-17 -3 V
-18 -3 V
-18 -2 V
-18 -3 V
-20 -2 V
-19 -3 V
-21 -2 V
-21 -3 V
-22 -2 V
-22 -3 V
-23 -3 V
-25 -2 V
-24 -3 V
-26 -2 V
-27 -3 V
-28 -3 V
-28 -2 V
-30 -3 V
-31 -3 V
-32 -3 V
-33 -3 V
-34 -2 V
-35 -3 V
-37 -3 V
-38 -4 V
-40 -3 V
-41 -3 V
-42 -3 V
-44 -4 V
-46 -3 V
-47 -4 V
-49 -3 V
-50 -4 V
-53 -4 V
-54 -4 V
-56 -5 V
-59 -4 V
-60 -5 V
-62 -4 V
-65 -5 V
-66 -5 V
-69 -6 V
-72 -5 V
-73 -6 V
-77 -6 V
-78 -7 V
-82 -7 V
-84 -7 V
-86 -7 V
-90 -8 V
-92 -8 V
-95 -9 V
-99 -9 V
-101 -10 V
-104 -10 V
-108 -11 V
-111 -12 V
-114 -12 V
-117 -12 V
-122 -14 V
-124 -14 V
-128 -15 V
-132 -16 V
-136 -17 V
-140 -18 V
-143 -19 V
-% End plot #4
-% Begin plot #5
-stroke
-LT4
-LCb setrgbcolor
-5336 4778 M
-[ [(Helvetica) 300.0 0.0 true true 0 (PESS \(batch-0.10\))]
-] -100.0 MRshow
-LT4
-5516 4778 M
-783 0 V
-1683 5587 M
-5 -111 V
-5 -102 V
-6 -95 V
-6 -88 V
-6 -82 V
-6 -75 V
-7 -69 V
-7 -63 V
-7 -58 V
-7 -53 V
-8 -48 V
-7 -44 V
-8 -39 V
-8 -35 V
-9 -32 V
-8 -28 V
-9 -25 V
-9 -22 V
-9 -19 V
-10 -17 V
-10 -15 V
-10 -12 V
-10 -11 V
-10 -9 V
-11 -8 V
-11 -7 V
-12 -5 V
-11 -5 V
-12 -3 V
-13 -4 V
-13 -2 V
-13 -3 V
-14 -3 V
-14 -2 V
-15 -3 V
-15 -3 V
-16 -3 V
-16 -4 V
-17 -5 V
-18 -5 V
-18 -6 V
-19 -7 V
-19 -8 V
-21 -9 V
-21 -10 V
-22 -11 V
-23 -12 V
-24 -14 V
-25 -15 V
-25 -16 V
-27 -18 V
-28 -19 V
-29 -20 V
-30 -22 V
-32 -24 V
-33 -24 V
-34 -27 V
-35 -27 V
-37 -29 V
-38 -31 V
-40 -32 V
-41 -33 V
-43 -34 V
-45 -36 V
-47 -37 V
-48 -38 V
-50 -40 V
-52 -40 V
-54 -41 V
-56 -42 V
-58 -43 V
-60 -44 V
-63 -44 V
-65 -45 V
-67 -45 V
-70 -46 V
-72 -46 V
-74 -46 V
-77 -46 V
-80 -46 V
-83 -46 V
-86 -45 V
-88 -45 V
-91 -44 V
-95 -44 V
-97 -42 V
-101 -42 V
-104 -40 V
-108 -39 V
-110 -37 V
-115 -35 V
-118 -34 V
-121 -31 V
-126 -29 V
-129 -27 V
-133 -24 V
-137 -21 V
-141 -18 V
-145 -14 V
-% End plot #5
-% Begin plot #6
-stroke
-LT5
-LCb setrgbcolor
-5336 4478 M
-[ [(Helvetica) 300.0 0.0 true true 0 (KHSS \(batch-0.10\))]
-] -100.0 MRshow
-LT5
-5516 4478 M
-783 0 V
-1683 5245 M
-5 -55 V
-5 -52 V
-6 -48 V
-6 -45 V
-6 -43 V
-6 -40 V
-7 -37 V
-7 -35 V
-7 -32 V
-7 -30 V
-8 -28 V
-7 -26 V
-8 -24 V
-8 -23 V
-9 -21 V
-8 -19 V
-9 -18 V
-9 -17 V
-9 -16 V
-10 -15 V
-10 -13 V
-10 -13 V
-10 -13 V
-10 -11 V
-11 -11 V
-11 -11 V
-12 -11 V
-11 -10 V
-12 -10 V
-13 -10 V
-13 -10 V
-13 -10 V
-14 -10 V
-14 -11 V
-15 -10 V
-15 -12 V
-16 -11 V
-16 -13 V
-17 -12 V
-18 -14 V
-18 -14 V
-19 -15 V
-19 -15 V
-21 -17 V
-21 -17 V
-22 -18 V
-23 -19 V
-24 -21 V
-25 -21 V
-25 -22 V
-27 -23 V
-28 -24 V
-29 -25 V
-30 -26 V
-32 -28 V
-33 -28 V
-34 -29 V
-35 -31 V
-37 -31 V
-38 -33 V
-40 -33 V
-41 -35 V
-43 -35 V
-45 -37 V
-47 -37 V
-48 -38 V
-50 -39 V
-52 -39 V
-54 -40 V
-56 -41 V
-58 -42 V
-60 -42 V
-63 -42 V
-65 -43 V
-67 -43 V
-70 -43 V
-72 -43 V
-74 -43 V
-77 -44 V
-80 -42 V
-83 -43 V
-86 -42 V
-88 -42 V
-91 -41 V
-95 -40 V
-97 -39 V
-101 -38 V
-104 -37 V
-108 -35 V
-110 -34 V
-115 -32 V
-118 -30 V
-121 -29 V
-126 -26 V
-129 -23 V
-133 -21 V
-137 -18 V
-141 -15 V
-145 -12 V
-% End plot #6
-stroke
-1.000 UL
-LTb
-1650 6191 N
-0 -5231 V
-5009 0 V
-0 5231 V
--5009 0 V
-Z stroke
-1.000 UP
-1.000 UL
-LTb
-stroke
-grestore
-end
-showpage
+%%Page: 1 1
+%%BeginPageSetup
+GS_epswrite_2_0_1001 begin
+/pagesave save store 197 dict begin
+0.1 0.1 scale
+%%EndPageSetup
+gsave mark
+Q q
+0 0 3600 0 0 3270 ^ Y
+5 w
+3.8 M
+K
+825 480 31.5 0 P
+3329.5 480 -31.5 0 S
+0.2 i
+484.19 536.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+484.19 524.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+540.031 430 15.5781 15.5781 re
+f
+609.19 536.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+609.19 524.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+723.3 536.19 -54.83 0 -7.94 -57.81 12.14 0 P
+6.14 7.34 11.23 9.89 19.47 9.89 c
+14.22 0 23.22 -9.73 23.22 -25.47 c
+0 -15.28 -8.84 -24.56 -23.22 -24.56 c
+-11.53 0 -18.58 5.84 -21.72 17.83 c
+-13.19 0 p
+1.81 -8.69 3.3 -12.87 6.45 -16.78 c
+5.98 -8.08 16.77 -12.72 28.75 -12.72 c
+21.42 0 36.39 15.56 36.39 38.03 c
+0 20.97 -13.92 35.34 -34.3 35.34 c
+-7.48 0 -13.47 -1.94 -19.61 -6.44 c
+4.19 29.66 44.19 0 0 13.03 p f
+1 i
+825 853.5 31.5 0 P
+3329.5 853.5 -31.5 0 S
+0.2 i
+568.19 910.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+568.19 898.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+623.031 804 15.5781 15.5781 re
+f
+690.8 879.64 0 -75.64 13.17 0 0 106.19 -8.69 0 P
+-4.64 -16.33 -7.64 -18.58 -28 -21.12 c
+0 -9.42 23.52 0 p f
+1 i
+825 1227.5 31.5 0 P
+3329.5 1227.5 -31.5 0 S
+0.2 i
+484.19 1284.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+484.19 1272.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+540.031 1178 15.5781 15.5781 re
+f
+606.8 1253.64 0 -75.64 13.17 0 0 106.19 -8.69 0 P
+-4.64 -16.33 -7.64 -18.58 -28 -21.12 c
+0 -9.42 23.52 0 p f
+723.3 1284.19 -54.83 0 -7.94 -57.81 12.14 0 P
+6.14 7.34 11.23 9.89 19.47 9.89 c
+14.22 0 23.22 -9.73 23.22 -25.47 c
+0 -15.28 -8.84 -24.56 -23.22 -24.56 c
+-11.53 0 -18.58 5.84 -21.72 17.83 c
+-13.19 0 p
+1.81 -8.69 3.3 -12.87 6.45 -16.78 c
+5.98 -8.08 16.77 -12.72 28.75 -12.72 c
+21.42 0 36.39 15.56 36.39 38.03 c
+0 20.97 -13.92 35.34 -34.3 35.34 c
+-7.48 0 -13.47 -1.94 -19.61 -6.44 c
+4.19 29.66 44.19 0 0 13.03 p f
+1 i
+825 1601 31.5 0 P
+3329.5 1601 -31.5 0 S
+0.2 i
+568.19 1657.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+568.19 1645.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+623.031 1551 15.5781 15.5781 re
+f
+727.78 1564.03 -55.86 0 P
+1.34 8.69 6.14 14.23 19.17 21.86 c
+14.97 8.09 p
+14.83 8.09 22.47 19.02 22.47 32.05 c
+0 8.84 -3.59 17.08 -9.89 22.77 c
+-6.28 5.69 -14.08 8.39 -24.11 8.39 c
+-13.47 0 -23.52 -4.8 -29.34 -13.78 c
+-3.75 -5.69 -5.41 -12.28 -5.7 -23.06 c
+13.19 0 p
+0.45 7.19 1.34 11.53 3.14 14.98 c
+3.45 6.44 10.33 10.33 18.27 10.33 c
+11.98 0 20.97 -8.53 20.97 -19.92 c
+0 -8.39 -4.94 -15.58 -14.37 -20.97 c
+-13.78 -7.78 p
+-22.16 -12.58 -28.59 -22.62 -29.8 -45.98 c
+70.69 0 0 13.03 p f
+1 i
+825 1974.5 31.5 0 P
+3329.5 1974.5 -31.5 0 S
+0.2 i
+484.19 2031.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+484.19 2019.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+540.031 1925 15.5781 15.5781 re
+f
+643.78 1938.03 -55.86 0 P
+1.34 8.69 6.14 14.23 19.17 21.86 c
+14.97 8.09 p
+14.83 8.09 22.47 19.02 22.47 32.05 c
+0 8.84 -3.59 17.08 -9.89 22.77 c
+-6.28 5.69 -14.08 8.39 -24.11 8.39 c
+-13.47 0 -23.52 -4.8 -29.34 -13.78 c
+-3.75 -5.69 -5.41 -12.28 -5.7 -23.06 c
+13.19 0 p
+0.45 7.19 1.34 11.53 3.14 14.98 c
+3.45 6.44 10.33 10.33 18.27 10.33 c
+11.98 0 20.97 -8.53 20.97 -19.92 c
+0 -8.39 -4.94 -15.58 -14.37 -20.97 c
+-13.78 -7.78 p
+-22.16 -12.58 -28.59 -22.62 -29.8 -45.98 c
+70.69 0 0 13.03 p f
+723.3 2031.19 -54.83 0 -7.94 -57.81 12.14 0 P
+6.14 7.34 11.23 9.89 19.47 9.89 c
+14.22 0 23.22 -9.73 23.22 -25.47 c
+0 -15.28 -8.84 -24.56 -23.22 -24.56 c
+-11.53 0 -18.58 5.84 -21.72 17.83 c
+-13.19 0 p
+1.81 -8.69 3.3 -12.87 6.45 -16.78 c
+5.98 -8.08 16.77 -12.72 28.75 -12.72 c
+21.42 0 36.39 15.56 36.39 38.03 c
+0 20.97 -13.92 35.34 -34.3 35.34 c
+-7.48 0 -13.47 -1.94 -19.61 -6.44 c
+4.19 29.66 44.19 0 0 13.03 p f
+1 i
+825 2348 31.5 0 P
+3329.5 2348 -31.5 0 S
+0.2 i
+568.19 2404.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+568.19 2392.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+623.031 2298 15.5781 15.5781 re
+f
+685.09 2346.67 1.66 0 5.53 0.16 P
+14.53 0 22.02 -6.59 22.02 -19.33 c
+0 -13.33 -8.23 -21.27 -22.02 -21.27 c
+-14.37 0 -21.41 7.19 -22.31 22.63 c
+-13.17 0 p
+0.59 -8.55 2.09 -14.08 4.64 -18.87 c
+5.39 -10.19 15.88 -15.42 30.41 -15.42 c
+21.86 0 35.94 13.02 35.94 33.09 c
+0 13.48 -5.23 20.97 -17.97 25.31 c
+9.89 3.89 14.83 11.38 14.83 22.02 c
+0 18.27 -12.14 29.2 -32.36 29.2 c
+-21.41 0 -32.8 -11.69 -33.23 -34.3 c
+13.17 0 p
+0.16 6.44 0.75 10.03 2.39 13.33 c
+3 5.84 9.59 9.44 17.83 9.44 c
+11.69 0 18.72 -6.89 18.72 -18.12 c
+0 -7.48 -2.69 -11.98 -8.53 -14.37 c
+-3.59 -1.5 -8.23 -2.09 -17.53 -2.25 c
+0 -11.23 p f
+1 i
+825 2722 31.5 0 P
+3329.5 2722 -31.5 0 S
+0.2 i
+484.19 2778.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+484.19 2766.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+540.031 2672 15.5781 15.5781 re
+f
+601.09 2720.67 1.66 0 5.53 0.16 P
+14.53 0 22.02 -6.59 22.02 -19.33 c
+0 -13.33 -8.23 -21.27 -22.02 -21.27 c
+-14.37 0 -21.41 7.19 -22.31 22.63 c
+-13.17 0 p
+0.59 -8.55 2.09 -14.08 4.64 -18.87 c
+5.39 -10.19 15.88 -15.42 30.41 -15.42 c
+21.86 0 35.94 13.02 35.94 33.09 c
+0 13.48 -5.23 20.97 -17.97 25.31 c
+9.89 3.89 14.83 11.38 14.83 22.02 c
+0 18.27 -12.14 29.2 -32.36 29.2 c
+-21.41 0 -32.8 -11.69 -33.23 -34.3 c
+13.17 0 p
+0.16 6.44 0.75 10.03 2.39 13.33 c
+3 5.84 9.59 9.44 17.83 9.44 c
+11.69 0 18.72 -6.89 18.72 -18.12 c
+0 -7.48 -2.69 -11.98 -8.53 -14.37 c
+-3.59 -1.5 -8.23 -2.09 -17.53 -2.25 c
+0 -11.23 p f
+723.3 2778.19 -54.83 0 -7.94 -57.81 12.14 0 P
+6.14 7.34 11.23 9.89 19.47 9.89 c
+14.22 0 23.22 -9.73 23.22 -25.47 c
+0 -15.28 -8.84 -24.56 -23.22 -24.56 c
+-11.53 0 -18.58 5.84 -21.72 17.83 c
+-13.19 0 p
+1.81 -8.69 3.3 -12.87 6.45 -16.78 c
+5.98 -8.08 16.77 -12.72 28.75 -12.72 c
+21.42 0 36.39 15.56 36.39 38.03 c
+0 20.97 -13.92 35.34 -34.3 35.34 c
+-7.48 0 -13.47 -1.94 -19.61 -6.44 c
+4.19 29.66 44.19 0 0 13.03 p f
+1 i
+825 3095.5 31.5 0 P
+3329.5 3095.5 -31.5 0 S
+0.2 i
+568.19 3152.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+568.19 3140.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+623.031 3046 15.5781 15.5781 re
+f
+700.97 3071.45 0 -25.45 13.19 0 ^ 15.72 0 0 11.84 ^ 0 68.89 
+-9.73 0 -48.23 -66.8 0 -13.94 44.78 0 H
+700.97 3083.3 -33.25 0 33.25 46.42 0 -46.42 f
+1 i
+825 480 0 31.5 P
+825 3095.5 0 -31.5 S
+0.2 i
+845.19 386.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+845.19 374.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+1 i
+1451 480 0 31.5 P
+1451 3095.5 0 -31.5 S
+0.2 i
+1409.19 386.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+1409.19 374.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+1464.03 280 15.5781 15.5781 re
+f
+1568.78 293.03 -55.86 0 P
+1.34 8.69 6.14 14.23 19.17 21.86 c
+14.97 8.09 p
+14.83 8.09 22.47 19.02 22.47 32.05 c
+0 8.84 -3.59 17.08 -9.89 22.77 c
+-6.28 5.69 -14.08 8.39 -24.11 8.39 c
+-13.47 0 -23.52 -4.8 -29.34 -13.78 c
+-3.75 -5.69 -5.41 -12.28 -5.7 -23.06 c
+13.19 0 p
+0.45 7.19 1.34 11.53 3.14 14.98 c
+3.45 6.44 10.33 10.33 18.27 10.33 c
+11.98 0 20.97 -8.53 20.97 -19.92 c
+0 -8.39 -4.94 -15.58 -14.37 -20.97 c
+-13.78 -7.78 p
+-22.16 -12.58 -28.59 -22.62 -29.8 -45.98 c
+70.69 0 0 13.03 p f
+1 i
+2077.5 480 0 31.5 P
+2077.5 3095.5 0 -31.5 S
+0.2 i
+2035.19 386.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2035.19 374.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2090.03 280 15.5781 15.5781 re
+f
+2167.97 305.45 0 -25.45 13.19 0 ^ 15.72 0 0 11.84 ^ 0 68.89 
+-9.73 0 -48.23 -66.8 0 -13.94 44.78 0 H
+2167.97 317.3 -33.25 0 33.25 46.42 0 -46.42 f
+1 i
+2703.5 480 0 31.5 P
+2703.5 3095.5 0 -31.5 S
+0.2 i
+2661.19 386.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2661.19 374.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2716.03 280 15.5781 15.5781 re
+f
+2819.58 358.48 m
+-2.53 17.38 -13.92 27.7 -30.09 27.7 c
+-11.69 0 -22.17 -5.69 -28.45 -15.12 c
+-6.59 -10.34 -9.59 -23.36 -9.59 -42.69 c
+0 -17.83 2.7 -29.2 8.98 -38.64 c
+5.7 -8.53 14.98 -13.17 26.66 -13.17 c
+20.22 0 34.75 14.97 34.75 35.78 c
+0 19.78 -13.47 33.7 -32.5 33.7 c
+-10.48 0 -18.72 -4.05 -24.41 -11.83 c
+0.14 25.91 8.53 40.28 23.66 40.28 c
+9.3 0 15.73 -5.84 17.83 -16.02 c
+13.17 0 h
+2787.69 334.36 m
+12.73 0 20.67 -8.83 20.67 -23.06 c
+0 -13.33 -9 -23.06 -21.12 -23.06 c
+-12.28 0 -21.56 10.19 -21.56 23.81 c
+0 13.19 8.98 22.31 22.02 22.31 c
+f
+1 i
+3329.5 480 0 31.5 P
+3329.5 3095.5 0 -31.5 S
+0.2 i
+3287.19 386.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+3287.19 374.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+3342.03 280 15.5781 15.5781 re
+f
+3429.56 335.86 m
+10.94 6.59 14.53 11.98 14.53 22.02 c
+0 16.63 -13.03 28.31 -31.91 28.31 c
+-18.72 0 -31.91 -11.69 -31.91 -28.31 c
+0 -9.87 3.59 -15.27 14.38 -22.02 c
+-12.12 -5.84 -18.11 -14.67 -18.11 -26.36 c
+0 -19.47 14.67 -32.94 35.64 -32.94 c
+20.97 0 35.64 13.47 35.64 32.8 c
+0 11.83 -5.98 20.66 -18.27 26.5 c
+h
+3412.19 374.5 m
+11.23 0 18.42 -6.58 18.42 -16.92 c
+0 -9.87 -7.34 -16.47 -18.42 -16.47 c
+-11.08 0 -18.42 6.59 -18.42 16.63 c
+0 10.19 7.34 16.77 18.42 16.77 c
+h
+3412.19 330.02 m
+13.17 0 22.17 -8.37 22.17 -20.81 c
+0 -12.58 -9 -20.97 -22.47 -20.97 c
+-12.89 0 -21.87 8.55 -21.87 20.97 c
+0 12.44 8.98 20.81 22.17 20.81 c
+f
+1 i
+825 480 2504.5 2615.5 re
+S
+0.2 i
+170 1695.09 -91.52 30.7 91.52 0 0 13.17 -109.19 0 0 -19.31 95.11 -31.75 -95.11 -32.36 
+0 -19.31 109.19 0 0 13.17 -91.52 0 91.52 31.02 0 14.67 f
+92.88 1839.27 m
+-21.42 -0.16 -33.86 -14.83 -33.86 -39.98 c
+0 -23.97 12.28 -38.8 32.06 -38.8 c
+13.33 0 21.7 7.03 25.45 21.42 c
+7.19 27.11 p
+3.59 13.77 9.14 20.06 17.67 20.06 c
+5.84 0 11.83 -3.14 15.13 -7.78 c
+3 -4.34 4.64 -11.23 4.64 -20.08 c
+0 -11.83 -2.84 -19.92 -9.12 -25.16 c
+-4.8 -4.05 -10.03 -5.84 -16.78 -5.69 c
+0 -13.19 p
+10.03 0.16 16.63 2.09 22.63 6.44 c
+10.17 7.5 15.56 20.08 15.56 36.7 c
+0 13.03 -2.98 23.66 -8.37 30.7 c
+-5.84 7.33 -15.58 11.97 -25.02 11.97 c
+-13.48 0 -23.36 -8.37 -27.41 -23.2 c
+-7.34 -27.41 p
+-3.59 -13.19 -7.78 -17.98 -16.17 -17.98 c
+-11.08 0 -18.42 9.73 -18.42 24.42 c
+0 17.38 7.94 27.11 22.17 27.25 c
+0 13.19 p f
+120.28 1877.41 0 59.45 -12.28 0 ^ -34.91 0 0 61.7 -12.28 0 0 -75.62 
+109.19 0 0 78.33 -12.28 0 0 -64.41 -37.44 0 f
+1618.91 164.19 -13.92 0 0 -109.19 67.84 0 0 12.28 -53.92 0 0 96.91 f
+1757.13 62.34 m
+-1.34 -0.3 -1.94 -0.3 -2.69 -0.3 c
+-4.34 0 -6.75 2.23 -6.75 6.14 c
+0 46.13 p
+0 13.92 -10.19 21.41 -29.5 21.41 c
+-11.39 0 -20.81 -3.28 -26.06 -9.12 c
+-3.59 -4.05 -5.09 -8.55 -5.39 -16.33 c
+12.58 0 p
+1.05 9.58 6.75 13.92 18.42 13.92 c
+11.23 0 17.53 -4.19 17.53 -11.67 c
+0 -3.3 p
+0 -5.25 -3.16 -7.48 -13.03 -8.69 c
+-17.67 -2.25 -20.37 -2.84 -25.17 -4.8 c
+-9.12 -3.73 -13.77 -10.78 -13.77 -20.97 c
+0 -14.22 9.88 -23.2 25.75 -23.2 c
+9.89 0 17.83 3.44 26.66 11.53 c
+0.91 -7.94 4.8 -11.53 12.89 -11.53 c
+2.55 0 4.48 0.3 8.53 1.34 c
+0 9.44 h
+1735.27 79.72 m
+0 -4.2 -1.2 -6.75 -4.95 -10.19 c
+-5.09 -4.64 -11.23 -7.05 -18.56 -7.05 c
+-9.73 0 -15.44 4.64 -15.44 12.58 c
+0 8.25 5.55 12.44 18.88 14.39 c
+13.19 1.8 15.88 2.39 20.08 4.34 c
+0 -14.08 p f
+1768.09 164.19 0 -109.19 11.22 0 0 10.03 P
+6 -9.12 13.94 -13.47 24.88 -13.47 c
+20.66 0 34.14 16.92 34.14 42.98 c
+0 25.45 -12.87 41.17 -33.55 41.17 c
+-10.78 0 -18.42 -4.03 -24.27 -12.87 c
+0 41.34 -12.42 0 h
+1802.39 124.05 m
+13.92 0 22.91 -12.14 22.91 -30.86 c
+0 -17.81 -9.28 -29.95 -22.91 -29.95 c
+-13.19 0 -21.87 11.98 -21.87 30.41 c
+0 18.42 8.69 30.41 21.88 30.41 c
+f
+1920.83 90.05 m
+0 11.98 -0.89 19.17 -3.14 25.02 c
+-5.09 12.88 -17.08 20.66 -31.75 20.66 c
+-21.87 0 -35.95 -16.77 -35.95 -42.53 c
+0 -25.75 13.64 -41.62 35.66 -41.62 c
+17.97 0 30.41 10.17 33.55 27.25 c
+-12.58 0 p
+-3.45 -10.33 -10.48 -15.72 -20.53 -15.72 c
+-7.94 0 -14.67 3.59 -18.86 10.17 c
+-3 4.5 -4.05 9 -4.2 16.78 c
+57.81 0 h
+1863.31 100.23 m
+1.06 14.53 9.89 23.95 22.47 23.95 c
+12.28 0 21.72 -10.17 21.72 -23.06 c
+0 -0.3 0 -0.59 -0.14 -0.89 c
+-44.05 0 p f
+1937.19 55 12.5781 109.188 re
+f
+1982.47 133.48 -12.44 0 0 -78.48 ^ ^ H
+1982.47 164.19 -12.58 0 0 -15.73 ^ ^ f
+2004.48 133.48 0 -78.48 12.58 0 0 43.28 P
+0 16.03 8.39 26.52 21.27 26.52 c
+9.89 0 16.17 -6 16.17 -15.44 c
+0 -54.36 12.44 0 0 59.31 p
+0 13.03 -9.73 21.41 -24.86 21.41 c
+-11.69 0 -19.17 -4.48 -26.06 -15.42 c
+0 13.19 -11.53 0 p f
+2138.7 133.48 0 -11.39 P
+-6.28 9.28 -13.92 13.63 -23.97 13.63 c
+-19.91 0 -33.39 -17.36 -33.39 -42.83 c
+0 -12.87 3.44 -23.36 9.89 -30.84 c
+5.83 -6.59 14.22 -10.48 22.45 -10.48 c
+9.89 0 16.78 4.19 23.81 14.08 c
+0 -4.05 p
+0 -10.64 -1.34 -17.08 -4.48 -21.42 c
+-3.3 -4.64 -9.73 -7.34 -17.37 -7.34 c
+-5.69 0 -10.78 1.5 -14.23 4.2 c
+-2.84 2.25 -4.03 4.34 -4.78 8.98 c
+-12.73 0 p
+1.34 -14.83 12.88 -23.67 31.3 -23.67 c
+11.69 0 21.72 3.75 26.81 10.05 c
+5.98 7.19 8.23 17.06 8.23 35.48 c
+0 65.61 -11.53 0 h
+2116.09 124.19 m
+13.47 0 21.41 -11.37 21.41 -31 c
+0 -18.72 -8.08 -30.09 -21.27 -30.09 c
+-13.62 0 -21.86 11.53 -21.86 30.55 c
+0 18.88 8.39 30.55 21.72 30.55 c
+f
+2229.41 104.72 59.45 0 0 12.28 ^ 0 34.91 61.7 0 0 12.28 -75.62 0 
+0 -109.19 78.33 0 0 12.28 -64.41 0 0 37.44 f
+2340.64 133.48 -13.03 0 0 12.28 P
+0 5.23 3 7.94 8.69 7.94 c
+1.05 0 1.5 0 4.34 -0.16 c
+0 10.33 p
+-2.84 0.61 -4.5 0.75 -7.05 0.75 c
+-11.53 0 -18.41 -6.58 -18.41 -17.81 c
+0 -13.33 -10.48 0 0 -10.19 ^ 0 -68.3 12.42 0 ^ 13.03 0 
+0 10.19 p f
+2382.64 133.48 -13.03 0 0 12.28 P
+0 5.23 3 7.94 8.69 7.94 c
+1.05 0 1.5 0 4.34 -0.16 c
+0 10.33 p
+-2.84 0.61 -4.5 0.75 -7.05 0.75 c
+-11.53 0 -18.41 -6.58 -18.41 -17.81 c
+0 -13.33 -10.48 0 0 -10.19 ^ 0 -68.3 12.42 0 ^ 13.03 0 
+0 10.19 p f
+2426.73 135.72 m
+-22.02 0 -35.34 -15.72 -35.34 -42.08 c
+0 -26.36 13.19 -42.08 35.5 -42.08 c
+22.02 0 35.48 15.72 35.48 41.48 c
+0 27.11 -13.02 42.67 -35.64 42.67 c
+h
+2426.89 124.19 m
+14.08 0 22.47 -11.53 22.47 -31 c
+0 -18.42 -8.69 -30.09 -22.47 -30.09 c
+-13.94 0 -22.47 11.53 -22.47 30.55 c
+0 18.88 8.53 30.55 22.47 30.55 c
+f
+2479.33 133.48 0 -78.48 12.59 0 0 40.73 P
+0 11.23 2.84 18.58 8.83 22.92 c
+3.89 2.84 7.64 3.73 16.33 3.89 c
+0 12.73 p
+-2.09 0.3 -3.14 0.44 -4.8 0.44 c
+-8.08 0 -14.22 -4.78 -21.42 -16.47 c
+0 14.23 -11.53 0 p f
+2557.05 133.48 -12.89 0 0 21.56 -12.42 0 ^ -10.64 0 0 -10.19 ^ 
+0 -59.31 P
+0 -7.94 5.39 -12.42 15.13 -12.42 c
+3 0 5.98 0.3 10.19 1.05 c
+0 10.48 p
+-1.66 -0.45 -3.59 -0.61 -6 -0.61 c
+-5.39 0 -6.89 1.5 -6.89 7.05 c
+0 53.77 12.89 0 0 10.19 p f
+1444.56 2985.28 34.3 0 P
+8.53 0 15.27 2.55 21.11 7.78 c
+6.59 6 9.44 13.03 9.44 23.06 c
+0 20.53 -12.12 32.06 -33.7 32.06 c
+-45.08 0 0 -109.19 13.94 0 0 46.28 h
+1444.56 2997.56 0 38.34 29.05 0 P
+13.33 0 21.27 -7.19 21.27 -19.17 c
+0 -11.98 -7.94 -19.17 -21.27 -19.17 c
+-29.05 0 p f
+1545.41 2988.72 59.45 0 0 12.28 ^ 0 34.91 61.7 0 0 12.28 -75.62 0 
+0 -109.19 78.33 0 0 12.28 -64.41 0 0 37.44 f
+1707.27 3016.13 m
+-0.16 21.42 -14.83 33.86 -39.98 33.86 c
+-23.97 0 -38.8 -12.28 -38.8 -32.06 c
+0 -13.33 7.03 -21.7 21.42 -25.45 c
+27.11 -7.19 p
+13.77 -3.59 20.06 -9.14 20.06 -17.67 c
+0 -5.84 -3.14 -11.83 -7.78 -15.12 c
+-4.34 -3 -11.23 -4.64 -20.08 -4.64 c
+-11.83 0 -19.92 2.84 -25.16 9.13 c
+-4.05 4.8 -5.84 10.03 -5.69 16.78 c
+-13.19 0 p
+0.16 -10.03 2.09 -16.62 6.44 -22.62 c
+7.5 -10.17 20.08 -15.56 36.7 -15.56 c
+13.03 0 23.66 2.98 30.7 8.38 c
+7.33 5.84 11.97 15.58 11.97 25.02 c
+0 13.48 -8.37 23.36 -23.2 27.41 c
+-27.41 7.34 p
+-13.19 3.59 -17.98 7.78 -17.98 16.17 c
+0 11.08 9.73 18.42 24.42 18.42 c
+17.38 0 27.11 -7.94 27.25 -22.17 c
+13.19 0 p f
+1807.27 3016.13 m
+-0.16 21.42 -14.83 33.86 -39.98 33.86 c
+-23.97 0 -38.8 -12.28 -38.8 -32.06 c
+0 -13.33 7.03 -21.7 21.42 -25.45 c
+27.11 -7.19 p
+13.77 -3.59 20.06 -9.14 20.06 -17.67 c
+0 -5.84 -3.14 -11.83 -7.78 -15.12 c
+-4.34 -3 -11.23 -4.64 -20.08 -4.64 c
+-11.83 0 -19.92 2.84 -25.16 9.13 c
+-4.05 4.8 -5.84 10.03 -5.69 16.78 c
+-13.19 0 p
+0.16 -10.03 2.09 -16.62 6.44 -22.62 c
+7.5 -10.17 20.08 -15.56 36.7 -15.56 c
+13.03 0 23.66 2.98 30.7 8.38 c
+7.33 5.84 11.97 15.58 11.97 25.02 c
+0 13.48 -8.37 23.36 -23.2 27.41 c
+-27.41 7.34 p
+-13.19 3.59 -17.98 7.78 -17.98 16.17 c
+0 11.08 9.73 18.42 24.42 18.42 c
+17.38 0 27.11 -7.94 27.25 -22.17 c
+13.19 0 p f
+1894.34 3048.19 m
+-14.97 -19.62 -24.41 -46.89 -24.41 -70.39 c
+0 -23.67 9.44 -50.92 24.41 -70.55 c
+8.23 0 p
+-13.17 21.42 -20.52 46.58 -20.52 70.55 c
+0 23.81 7.34 49.13 20.52 70.39 c
+-8.23 0 p f
+1917.09 3048.19 0 -109.19 11.22 0 0 10.03 P
+6 -9.12 13.94 -13.47 24.88 -13.47 c
+20.66 0 34.14 16.92 34.14 42.98 c
+0 25.45 -12.87 41.17 -33.55 41.17 c
+-10.78 0 -18.42 -4.03 -24.27 -12.87 c
+0 41.34 -12.42 0 h
+1951.39 3008.05 m
+13.92 0 22.91 -12.14 22.91 -30.86 c
+0 -17.81 -9.28 -29.95 -22.91 -29.95 c
+-13.19 0 -21.87 11.98 -21.87 30.41 c
+0 18.42 8.69 30.41 21.88 30.41 c
+f
+2073.13 2946.34 m
+-1.34 -0.3 -1.94 -0.3 -2.69 -0.3 c
+-4.34 0 -6.75 2.23 -6.75 6.14 c
+0 46.13 p
+0 13.92 -10.19 21.41 -29.5 21.41 c
+-11.39 0 -20.81 -3.28 -26.06 -9.12 c
+-3.59 -4.05 -5.09 -8.55 -5.39 -16.33 c
+12.58 0 p
+1.05 9.58 6.75 13.92 18.42 13.92 c
+11.23 0 17.53 -4.19 17.53 -11.67 c
+0 -3.3 p
+0 -5.25 -3.16 -7.48 -13.03 -8.69 c
+-17.67 -2.25 -20.37 -2.84 -25.17 -4.8 c
+-9.12 -3.73 -13.77 -10.78 -13.77 -20.97 c
+0 -14.22 9.88 -23.2 25.75 -23.2 c
+9.89 0 17.83 3.44 26.66 11.53 c
+0.91 -7.94 4.8 -11.53 12.89 -11.53 c
+2.55 0 4.48 0.3 8.53 1.34 c
+0 9.44 h
+2051.27 2963.72 m
+0 -4.2 -1.2 -6.75 -4.95 -10.19 c
+-5.09 -4.64 -11.23 -7.05 -18.56 -7.05 c
+-9.73 0 -15.44 4.64 -15.44 12.58 c
+0 8.25 5.55 12.44 18.88 14.39 c
+13.19 1.8 15.88 2.39 20.08 4.34 c
+0 -14.08 p f
+2114.05 3017.48 -12.89 0 0 21.56 -12.42 0 ^ -10.64 0 0 -10.19 ^ 
+0 -59.31 P
+0 -7.94 5.39 -12.42 15.13 -12.42 c
+3 0 5.98 0.3 10.19 1.05 c
+0 10.48 p
+-1.66 -0.45 -3.59 -0.61 -6 -0.61 c
+-5.39 0 -6.89 1.5 -6.89 7.05 c
+0 53.77 12.89 0 0 10.19 p f
+2188.55 2991.13 m
+-0.61 7.64 -2.25 12.58 -5.25 16.92 c
+-5.39 7.33 -14.83 11.67 -25.75 11.67 c
+-21.12 0 -34.91 -16.77 -34.91 -42.83 c
+0 -25.31 13.48 -41.33 34.75 -41.33 c
+18.72 0 30.55 11.22 32.05 30.39 c
+-12.58 0 p
+-2.09 -12.58 -8.53 -18.86 -19.17 -18.86 c
+-13.78 0 -22.02 11.22 -22.02 29.8 c
+0 19.63 8.09 31.3 21.72 31.3 c
+10.48 0 17.08 -6.14 18.56 -17.06 c
+12.59 0 p f
+2203.48 3048.19 0 -109.19 12.44 0 0 43.28 P
+0 16.03 8.38 26.52 21.27 26.52 c
+4.03 0 8.08 -1.36 11.08 -3.59 c
+3.59 -2.55 5.09 -6.3 5.09 -11.84 c
+0 -54.36 12.42 0 0 59.31 p
+0 13.17 -9.42 21.41 -24.7 21.41 c
+-11.08 0 -17.83 -3.44 -25.16 -13.02 c
+0 41.48 -12.44 0 p f
+2282.89 2974.94 35.6406 10.7969 re
+f
+2367.19 3045.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2367.19 3033.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2423.03 2939 15.5781 15.5781 re
+f
+2492.19 3045.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2492.19 3033.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2573.8 3014.64 0 -75.64 13.17 0 0 106.19 -8.69 0 P
+-4.64 -16.33 -7.64 -18.58 -28 -21.12 c
+0 -9.42 23.52 0 p f
+2631.92 2907.25 m
+14.98 19.63 24.42 46.88 24.42 70.39 c
+0 23.66 -9.44 50.92 -24.42 70.55 c
+-8.23 0 p
+13.19 -21.42 20.52 -46.58 20.52 -70.55 c
+0 -23.81 -7.33 -49.12 -20.52 -70.39 c
+8.23 0 p f
+12.5 w
+1 i
+255 0 r3
+2758 2989 391.5 0 P
+991.5 1042.5 8 -11 8.5 -10 8.5 -9.5 9 -9 9 -8.5 9.5 -7.5 9.5 -7.5 
+9.5 -7.5 10 -6.5 10 -6 10.5 -6 10 -5.5 10.5 -5 10.5 -5 11 -4.5 
+10.5 -4 11 -4 11 -4 11.5 -3 11 -3.5 11.5 -3 11.5 -3 11.5 -2.5 
+12 -2.5 11.5 -2.5 12 -2 12 -2 12 -2 12.5 -2 12.5 -1.5 12.5 -2 
+12.5 -1.5 13 -1 12.5 -1.5 13.5 -1.5 13 -1 13.5 -1.5 13.5 -1 14 -1 
+14 -1 14 -1 14.5 -1 15 -1 15 -1 15 -0.5 15.5 -1 16 -1 
+16 -1 16 -0.5 17 -1 17 -0.5 17.5 -1 17.5 -1 18.5 -0.5 18.5 -1 
+19 -1 19.5 -0.5 20 -1 20 -1 21 -0.5 21.5 -1 21.5 -1 22.5 -0.5 
+23 -1 23.5 -1 24 -1 25 -1 25 -1 26 -1 27 -1 27 -1 
+28 -1 29 -1 29 -1 30.5 -1.5 31 -1 31.5 -1.5 32.5 -1 33 -1.5 
+34.5 -1.5 35 -1.5 35.5 -1.5 37 -1.5 37.5 -1.5 38.5 -2 39.5 -1.5 40 -2 
+41.5 -2 42.5 -2 43 -2.5 44.5 -2 45 -2.5 46.5 -3 47 -2.5 48.5 -3 
+49.5 -3 50.5 -3.5 51.5 -3.5 53 -3.5 S
+0.2 i
+K
+1434.77 2827.19 17.81 17.83 38.5 -56.02 16.47 0 -44.92 64.7 44.47 44.48 -17.97 0 -54.36 -55.27 
+0 55.27 -13.94 0 0 -109.19 ^ 0 38.19 f
+1591.52 2838.72 0 -49.72 13.94 0 0 109.19 ^ 0 -47.19 -56.16 0 ^ 
+-13.92 0 0 -109.19 14.08 0 0 49.72 56 0 f
+1707.27 2866.13 m
+-0.16 21.42 -14.83 33.86 -39.98 33.86 c
+-23.97 0 -38.8 -12.28 -38.8 -32.06 c
+0 -13.33 7.03 -21.7 21.42 -25.45 c
+27.11 -7.19 p
+13.77 -3.59 20.06 -9.14 20.06 -17.67 c
+0 -5.84 -3.14 -11.83 -7.78 -15.12 c
+-4.34 -3 -11.23 -4.64 -20.08 -4.64 c
+-11.83 0 -19.92 2.84 -25.16 9.13 c
+-4.05 4.8 -5.84 10.03 -5.69 16.78 c
+-13.19 0 p
+0.16 -10.03 2.09 -16.62 6.44 -22.62 c
+7.5 -10.17 20.08 -15.56 36.7 -15.56 c
+13.03 0 23.66 2.98 30.7 8.38 c
+7.33 5.84 11.97 15.58 11.97 25.02 c
+0 13.48 -8.37 23.36 -23.2 27.41 c
+-27.41 7.34 p
+-13.19 3.59 -17.98 7.78 -17.98 16.17 c
+0 11.08 9.73 18.42 24.42 18.42 c
+17.38 0 27.11 -7.94 27.25 -22.17 c
+13.19 0 p f
+1807.27 2866.13 m
+-0.16 21.42 -14.83 33.86 -39.98 33.86 c
+-23.97 0 -38.8 -12.28 -38.8 -32.06 c
+0 -13.33 7.03 -21.7 21.42 -25.45 c
+27.11 -7.19 p
+13.77 -3.59 20.06 -9.14 20.06 -17.67 c
+0 -5.84 -3.14 -11.83 -7.78 -15.12 c
+-4.34 -3 -11.23 -4.64 -20.08 -4.64 c
+-11.83 0 -19.92 2.84 -25.16 9.13 c
+-4.05 4.8 -5.84 10.03 -5.69 16.78 c
+-13.19 0 p
+0.16 -10.03 2.09 -16.62 6.44 -22.62 c
+7.5 -10.17 20.08 -15.56 36.7 -15.56 c
+13.03 0 23.66 2.98 30.7 8.38 c
+7.33 5.84 11.97 15.58 11.97 25.02 c
+0 13.48 -8.37 23.36 -23.2 27.41 c
+-27.41 7.34 p
+-13.19 3.59 -17.98 7.78 -17.98 16.17 c
+0 11.08 9.73 18.42 24.42 18.42 c
+17.38 0 27.11 -7.94 27.25 -22.17 c
+13.19 0 p f
+1894.34 2898.19 m
+-14.97 -19.62 -24.41 -46.89 -24.41 -70.39 c
+0 -23.67 9.44 -50.92 24.41 -70.55 c
+8.23 0 p
+-13.17 21.42 -20.52 46.58 -20.52 70.55 c
+0 23.81 7.34 49.13 20.52 70.39 c
+-8.23 0 p f
+1917.09 2898.19 0 -109.19 11.22 0 0 10.03 P
+6 -9.12 13.94 -13.47 24.88 -13.47 c
+20.66 0 34.14 16.92 34.14 42.98 c
+0 25.45 -12.87 41.17 -33.55 41.17 c
+-10.78 0 -18.42 -4.03 -24.27 -12.87 c
+0 41.34 -12.42 0 h
+1951.39 2858.05 m
+13.92 0 22.91 -12.14 22.91 -30.86 c
+0 -17.81 -9.28 -29.95 -22.91 -29.95 c
+-13.19 0 -21.87 11.98 -21.87 30.41 c
+0 18.42 8.69 30.41 21.88 30.41 c
+f
+2073.13 2796.34 m
+-1.34 -0.3 -1.94 -0.3 -2.69 -0.3 c
+-4.34 0 -6.75 2.23 -6.75 6.14 c
+0 46.13 p
+0 13.92 -10.19 21.41 -29.5 21.41 c
+-11.39 0 -20.81 -3.28 -26.06 -9.12 c
+-3.59 -4.05 -5.09 -8.55 -5.39 -16.33 c
+12.58 0 p
+1.05 9.58 6.75 13.92 18.42 13.92 c
+11.23 0 17.53 -4.19 17.53 -11.67 c
+0 -3.3 p
+0 -5.25 -3.16 -7.48 -13.03 -8.69 c
+-17.67 -2.25 -20.37 -2.84 -25.17 -4.8 c
+-9.12 -3.73 -13.77 -10.78 -13.77 -20.97 c
+0 -14.22 9.88 -23.2 25.75 -23.2 c
+9.89 0 17.83 3.44 26.66 11.53 c
+0.91 -7.94 4.8 -11.53 12.89 -11.53 c
+2.55 0 4.48 0.3 8.53 1.34 c
+0 9.44 h
+2051.27 2813.72 m
+0 -4.2 -1.2 -6.75 -4.95 -10.19 c
+-5.09 -4.64 -11.23 -7.05 -18.56 -7.05 c
+-9.73 0 -15.44 4.64 -15.44 12.58 c
+0 8.25 5.55 12.44 18.88 14.39 c
+13.19 1.8 15.88 2.39 20.08 4.34 c
+0 -14.08 p f
+2114.05 2867.48 -12.89 0 0 21.56 -12.42 0 ^ -10.64 0 0 -10.19 ^ 
+0 -59.31 P
+0 -7.94 5.39 -12.42 15.13 -12.42 c
+3 0 5.98 0.3 10.19 1.05 c
+0 10.48 p
+-1.66 -0.45 -3.59 -0.61 -6 -0.61 c
+-5.39 0 -6.89 1.5 -6.89 7.05 c
+0 53.77 12.89 0 0 10.19 p f
+2188.55 2841.13 m
+-0.61 7.64 -2.25 12.58 -5.25 16.92 c
+-5.39 7.33 -14.83 11.67 -25.75 11.67 c
+-21.12 0 -34.91 -16.77 -34.91 -42.83 c
+0 -25.31 13.48 -41.33 34.75 -41.33 c
+18.72 0 30.55 11.22 32.05 30.39 c
+-12.58 0 p
+-2.09 -12.58 -8.53 -18.86 -19.17 -18.86 c
+-13.78 0 -22.02 11.22 -22.02 29.8 c
+0 19.63 8.09 31.3 21.72 31.3 c
+10.48 0 17.08 -6.14 18.56 -17.06 c
+12.59 0 p f
+2203.48 2898.19 0 -109.19 12.44 0 0 43.28 P
+0 16.03 8.38 26.52 21.27 26.52 c
+4.03 0 8.08 -1.36 11.08 -3.59 c
+3.59 -2.55 5.09 -6.3 5.09 -11.84 c
+0 -54.36 12.42 0 0 59.31 p
+0 13.17 -9.42 21.41 -24.7 21.41 c
+-11.08 0 -17.83 -3.44 -25.16 -13.02 c
+0 41.48 -12.44 0 p f
+2282.89 2824.94 35.6406 10.7969 re
+f
+2367.19 2895.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2367.19 2883.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2423.03 2789 15.5781 15.5781 re
+f
+2492.19 2895.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2492.19 2883.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2573.8 2864.64 0 -75.64 13.17 0 0 106.19 -8.69 0 P
+-4.64 -16.33 -7.64 -18.58 -28 -21.12 c
+0 -9.42 23.52 0 p f
+2631.92 2757.25 m
+14.98 19.63 24.42 46.88 24.42 70.39 c
+0 23.66 -9.44 50.92 -24.42 70.55 c
+-8.23 0 p
+13.19 -21.42 20.52 -46.58 20.52 -70.55 c
+0 -23.81 -7.33 -49.12 -20.52 -70.39 c
+8.23 0 p f
+[ 20 10 ] 0 d
+1 i
+255 0 r5
+2758 2839 391.5 0 P
+991.5 1072 8 -10 8.5 -10 8.5 -9.5 9 -9.5 9 -9 9.5 -9 9.5 -8.5 
+9.5 -8.5 10 -8 10 -8 10.5 -8 10 -7.5 10.5 -7.5 10.5 -7 11 -7 
+10.5 -6.5 11 -7 11 -6 11.5 -6.5 11 -6 11.5 -5.5 11.5 -5.5 11.5 -5.5 
+12 -5.5 11.5 -5 12 -5 12 -4.5 12 -4.5 12.5 -4.5 12.5 -4 12.5 -4 
+12.5 -4 13 -4 12.5 -3.5 13.5 -3.5 13 -3 13.5 -3 13.5 -3 14 -2.5 
+14 -3 14 -2.5 14.5 -2 15 -2.5 15 -2 15 -2 15.5 -1.5 16 -2 
+16 -1.5 16 -1 17 -1.5 17 -1 17.5 -1 17.5 -1 18.5 -1 18.5 -0.5 
+19 -1 19.5 -0.5 20 -0.5 20 0 21 -0.5 21.5 0 21.5 -0.5 93 0 
+25 0.5 51 0 27 0.5 27 0 28 0.5 29 0 29 0.5 61.5 0 
+31.5 0.5 135 0 35.5 -0.5 37 0 37.5 -0.5 38.5 -0.5 39.5 -0.5 40 -1 
+41.5 -1 42.5 -1 43 -1 44.5 -1.5 45 -2 46.5 -1.5 47 -2.5 48.5 -2.5 
+49.5 -2.5 50.5 -3 51.5 -3 53 -3.5 S
+0.2 i
+K
+1444.56 2685.28 34.3 0 P
+8.53 0 15.27 2.55 21.11 7.78 c
+6.59 6 9.44 13.03 9.44 23.06 c
+0 20.53 -12.12 32.06 -33.7 32.06 c
+-45.08 0 0 -109.19 13.94 0 0 46.28 h
+1444.56 2697.56 0 38.34 29.05 0 P
+13.33 0 21.27 -7.19 21.27 -19.17 c
+0 -11.98 -7.94 -19.17 -21.27 -19.17 c
+-29.05 0 p f
+1545.41 2688.72 59.45 0 0 12.28 ^ 0 34.91 61.7 0 0 12.28 -75.62 0 
+0 -109.19 78.33 0 0 12.28 -64.41 0 0 37.44 f
+1707.27 2716.13 m
+-0.16 21.42 -14.83 33.86 -39.98 33.86 c
+-23.97 0 -38.8 -12.28 -38.8 -32.06 c
+0 -13.33 7.03 -21.7 21.42 -25.45 c
+27.11 -7.19 p
+13.77 -3.59 20.06 -9.14 20.06 -17.67 c
+0 -5.84 -3.14 -11.83 -7.78 -15.12 c
+-4.34 -3 -11.23 -4.64 -20.08 -4.64 c
+-11.83 0 -19.92 2.84 -25.16 9.13 c
+-4.05 4.8 -5.84 10.03 -5.69 16.78 c
+-13.19 0 p
+0.16 -10.03 2.09 -16.62 6.44 -22.62 c
+7.5 -10.17 20.08 -15.56 36.7 -15.56 c
+13.03 0 23.66 2.98 30.7 8.38 c
+7.33 5.84 11.97 15.58 11.97 25.02 c
+0 13.48 -8.37 23.36 -23.2 27.41 c
+-27.41 7.34 p
+-13.19 3.59 -17.98 7.78 -17.98 16.17 c
+0 11.08 9.73 18.42 24.42 18.42 c
+17.38 0 27.11 -7.94 27.25 -22.17 c
+13.19 0 p f
+1807.27 2716.13 m
+-0.16 21.42 -14.83 33.86 -39.98 33.86 c
+-23.97 0 -38.8 -12.28 -38.8 -32.06 c
+0 -13.33 7.03 -21.7 21.42 -25.45 c
+27.11 -7.19 p
+13.77 -3.59 20.06 -9.14 20.06 -17.67 c
+0 -5.84 -3.14 -11.83 -7.78 -15.12 c
+-4.34 -3 -11.23 -4.64 -20.08 -4.64 c
+-11.83 0 -19.92 2.84 -25.16 9.13 c
+-4.05 4.8 -5.84 10.03 -5.69 16.78 c
+-13.19 0 p
+0.16 -10.03 2.09 -16.62 6.44 -22.62 c
+7.5 -10.17 20.08 -15.56 36.7 -15.56 c
+13.03 0 23.66 2.98 30.7 8.38 c
+7.33 5.84 11.97 15.58 11.97 25.02 c
+0 13.48 -8.37 23.36 -23.2 27.41 c
+-27.41 7.34 p
+-13.19 3.59 -17.98 7.78 -17.98 16.17 c
+0 11.08 9.73 18.42 24.42 18.42 c
+17.38 0 27.11 -7.94 27.25 -22.17 c
+13.19 0 p f
+1894.34 2748.19 m
+-14.97 -19.62 -24.41 -46.89 -24.41 -70.39 c
+0 -23.67 9.44 -50.92 24.41 -70.55 c
+8.23 0 p
+-13.17 21.42 -20.52 46.58 -20.52 70.55 c
+0 23.81 7.34 49.13 20.52 70.39 c
+-8.23 0 p f
+1917.09 2748.19 0 -109.19 11.22 0 0 10.03 P
+6 -9.12 13.94 -13.47 24.88 -13.47 c
+20.66 0 34.14 16.92 34.14 42.98 c
+0 25.45 -12.87 41.17 -33.55 41.17 c
+-10.78 0 -18.42 -4.03 -24.27 -12.87 c
+0 41.34 -12.42 0 h
+1951.39 2708.05 m
+13.92 0 22.91 -12.14 22.91 -30.86 c
+0 -17.81 -9.28 -29.95 -22.91 -29.95 c
+-13.19 0 -21.87 11.98 -21.87 30.41 c
+0 18.42 8.69 30.41 21.88 30.41 c
+f
+2073.13 2646.34 m
+-1.34 -0.3 -1.94 -0.3 -2.69 -0.3 c
+-4.34 0 -6.75 2.23 -6.75 6.14 c
+0 46.13 p
+0 13.92 -10.19 21.41 -29.5 21.41 c
+-11.39 0 -20.81 -3.28 -26.06 -9.12 c
+-3.59 -4.05 -5.09 -8.55 -5.39 -16.33 c
+12.58 0 p
+1.05 9.58 6.75 13.92 18.42 13.92 c
+11.23 0 17.53 -4.19 17.53 -11.67 c
+0 -3.3 p
+0 -5.25 -3.16 -7.48 -13.03 -8.69 c
+-17.67 -2.25 -20.37 -2.84 -25.17 -4.8 c
+-9.12 -3.73 -13.77 -10.78 -13.77 -20.97 c
+0 -14.22 9.88 -23.2 25.75 -23.2 c
+9.89 0 17.83 3.44 26.66 11.53 c
+0.91 -7.94 4.8 -11.53 12.89 -11.53 c
+2.55 0 4.48 0.3 8.53 1.34 c
+0 9.44 h
+2051.27 2663.72 m
+0 -4.2 -1.2 -6.75 -4.95 -10.19 c
+-5.09 -4.64 -11.23 -7.05 -18.56 -7.05 c
+-9.73 0 -15.44 4.64 -15.44 12.58 c
+0 8.25 5.55 12.44 18.88 14.39 c
+13.19 1.8 15.88 2.39 20.08 4.34 c
+0 -14.08 p f
+2114.05 2717.48 -12.89 0 0 21.56 -12.42 0 ^ -10.64 0 0 -10.19 ^ 
+0 -59.31 P
+0 -7.94 5.39 -12.42 15.13 -12.42 c
+3 0 5.98 0.3 10.19 1.05 c
+0 10.48 p
+-1.66 -0.45 -3.59 -0.61 -6 -0.61 c
+-5.39 0 -6.89 1.5 -6.89 7.05 c
+0 53.77 12.89 0 0 10.19 p f
+2188.55 2691.13 m
+-0.61 7.64 -2.25 12.58 -5.25 16.92 c
+-5.39 7.33 -14.83 11.67 -25.75 11.67 c
+-21.12 0 -34.91 -16.77 -34.91 -42.83 c
+0 -25.31 13.48 -41.33 34.75 -41.33 c
+18.72 0 30.55 11.22 32.05 30.39 c
+-12.58 0 p
+-2.09 -12.58 -8.53 -18.86 -19.17 -18.86 c
+-13.78 0 -22.02 11.22 -22.02 29.8 c
+0 19.63 8.09 31.3 21.72 31.3 c
+10.48 0 17.08 -6.14 18.56 -17.06 c
+12.59 0 p f
+2203.48 2748.19 0 -109.19 12.44 0 0 43.28 P
+0 16.03 8.38 26.52 21.27 26.52 c
+4.03 0 8.08 -1.36 11.08 -3.59 c
+3.59 -2.55 5.09 -6.3 5.09 -11.84 c
+0 -54.36 12.42 0 0 59.31 p
+0 13.17 -9.42 21.41 -24.7 21.41 c
+-11.08 0 -17.83 -3.44 -25.16 -13.02 c
+0 41.48 -12.44 0 p f
+2282.89 2674.94 35.6406 10.7969 re
+f
+2367.19 2745.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2367.19 2733.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2423.03 2639 15.5781 15.5781 re
+f
+2492.19 2745.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2492.19 2733.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2606.3 2745.19 -54.83 0 -7.94 -57.81 12.14 0 P
+6.14 7.34 11.23 9.89 19.47 9.89 c
+14.22 0 23.22 -9.73 23.22 -25.47 c
+0 -15.28 -8.84 -24.56 -23.22 -24.56 c
+-11.53 0 -18.58 5.84 -21.72 17.83 c
+-13.19 0 p
+1.81 -8.69 3.3 -12.87 6.45 -16.78 c
+5.98 -8.08 16.77 -12.72 28.75 -12.72 c
+21.42 0 36.39 15.56 36.39 38.03 c
+0 20.97 -13.92 35.34 -34.3 35.34 c
+-7.48 0 -13.47 -1.94 -19.61 -6.44 c
+4.19 29.66 44.19 0 0 13.03 p f
+2631.92 2607.25 m
+14.98 19.63 24.42 46.88 24.42 70.39 c
+0 23.66 -9.44 50.92 -24.42 70.55 c
+-8.23 0 p
+13.19 -21.42 20.52 -46.58 20.52 -70.55 c
+0 -23.81 -7.33 -49.12 -20.52 -70.39 c
+8.23 0 p f
+[ 10 15 ] 0 d
+1 i
+255 0 r6
+2758 2689 391.5 0 P
+858 1344 3.5 -19.5 4 -17.5 4 -16 4 -13.5 4.5 -12 4.5 -10 4.5 -8.5 
+4.5 -7 5 -6 4.5 -4.5 5.5 -3.5 5 -2.5 5 -1 5.5 -1 5.5 0.5 
+5.5 1 6 1.5 6 2.5 6 2.5 6 3.5 6 3.5 6.5 3.5 6.5 4.5 
+6.5 4 7 4.5 7 4.5 7 5 7 4.5 7.5 4.5 8 5 7.5 4.5 
+8 4.5 8.5 4 8.5 4.5 9 3.5 9 4 9 3.5 10 3 9.5 3 
+10.5 3 10.5 2 11 2.5 11 1.5 11.5 1.5 12.5 1 12 1 13 0.5 
+27.5 0 14 -0.5 15 -1 15.5 -1 16 -1.5 16.5 -2 17 -2 17.5 -2.5 
+18.5 -2.5 19 -3 20 -3.5 20.5 -3.5 21 -3.5 22 -4 23 -4.5 23.5 -4.5 
+24.5 -4.5 25 -5 26.5 -5 27 -5 28 -5.5 29.5 -5.5 30 -5.5 31 -5.5 
+32.5 -6 33 -6 34.5 -6 36 -6 36.5 -6.5 38.5 -6 39 -6.5 41 -6 
+42 -6.5 43 -6.5 45 -6.5 46 -6.5 47.5 -6.5 49.5 -6.5 50.5 -6.5 52 -7 
+54 -6.5 55.5 -6.5 57 -7 58.5 -6.5 61 -7 62 -7 64 -7 66 -7 
+68 -7.5 70 -7 71.5 -8 S
+0.2 i
+K
+1434.77 2527.19 17.81 17.83 38.5 -56.02 16.47 0 -44.92 64.7 44.47 44.48 -17.97 0 -54.36 -55.27 
+0 55.27 -13.94 0 0 -109.19 ^ 0 38.19 f
+1591.52 2538.72 0 -49.72 13.94 0 0 109.19 ^ 0 -47.19 -56.16 0 ^ 
+-13.92 0 0 -109.19 14.08 0 0 49.72 56 0 f
+1707.27 2566.13 m
+-0.16 21.42 -14.83 33.86 -39.98 33.86 c
+-23.97 0 -38.8 -12.28 -38.8 -32.06 c
+0 -13.33 7.03 -21.7 21.42 -25.45 c
+27.11 -7.19 p
+13.77 -3.59 20.06 -9.14 20.06 -17.67 c
+0 -5.84 -3.14 -11.83 -7.78 -15.12 c
+-4.34 -3 -11.23 -4.64 -20.08 -4.64 c
+-11.83 0 -19.92 2.84 -25.16 9.13 c
+-4.05 4.8 -5.84 10.03 -5.69 16.78 c
+-13.19 0 p
+0.16 -10.03 2.09 -16.62 6.44 -22.62 c
+7.5 -10.17 20.08 -15.56 36.7 -15.56 c
+13.03 0 23.66 2.98 30.7 8.38 c
+7.33 5.84 11.97 15.58 11.97 25.02 c
+0 13.48 -8.37 23.36 -23.2 27.41 c
+-27.41 7.34 p
+-13.19 3.59 -17.98 7.78 -17.98 16.17 c
+0 11.08 9.73 18.42 24.42 18.42 c
+17.38 0 27.11 -7.94 27.25 -22.17 c
+13.19 0 p f
+1807.27 2566.13 m
+-0.16 21.42 -14.83 33.86 -39.98 33.86 c
+-23.97 0 -38.8 -12.28 -38.8 -32.06 c
+0 -13.33 7.03 -21.7 21.42 -25.45 c
+27.11 -7.19 p
+13.77 -3.59 20.06 -9.14 20.06 -17.67 c
+0 -5.84 -3.14 -11.83 -7.78 -15.12 c
+-4.34 -3 -11.23 -4.64 -20.08 -4.64 c
+-11.83 0 -19.92 2.84 -25.16 9.13 c
+-4.05 4.8 -5.84 10.03 -5.69 16.78 c
+-13.19 0 p
+0.16 -10.03 2.09 -16.62 6.44 -22.62 c
+7.5 -10.17 20.08 -15.56 36.7 -15.56 c
+13.03 0 23.66 2.98 30.7 8.38 c
+7.33 5.84 11.97 15.58 11.97 25.02 c
+0 13.48 -8.37 23.36 -23.2 27.41 c
+-27.41 7.34 p
+-13.19 3.59 -17.98 7.78 -17.98 16.17 c
+0 11.08 9.73 18.42 24.42 18.42 c
+17.38 0 27.11 -7.94 27.25 -22.17 c
+13.19 0 p f
+1894.34 2598.19 m
+-14.97 -19.62 -24.41 -46.89 -24.41 -70.39 c
+0 -23.67 9.44 -50.92 24.41 -70.55 c
+8.23 0 p
+-13.17 21.42 -20.52 46.58 -20.52 70.55 c
+0 23.81 7.34 49.13 20.52 70.39 c
+-8.23 0 p f
+1917.09 2598.19 0 -109.19 11.22 0 0 10.03 P
+6 -9.12 13.94 -13.47 24.88 -13.47 c
+20.66 0 34.14 16.92 34.14 42.98 c
+0 25.45 -12.87 41.17 -33.55 41.17 c
+-10.78 0 -18.42 -4.03 -24.27 -12.87 c
+0 41.34 -12.42 0 h
+1951.39 2558.05 m
+13.92 0 22.91 -12.14 22.91 -30.86 c
+0 -17.81 -9.28 -29.95 -22.91 -29.95 c
+-13.19 0 -21.87 11.98 -21.87 30.41 c
+0 18.42 8.69 30.41 21.88 30.41 c
+f
+2073.13 2496.34 m
+-1.34 -0.3 -1.94 -0.3 -2.69 -0.3 c
+-4.34 0 -6.75 2.23 -6.75 6.14 c
+0 46.13 p
+0 13.92 -10.19 21.41 -29.5 21.41 c
+-11.39 0 -20.81 -3.28 -26.06 -9.12 c
+-3.59 -4.05 -5.09 -8.55 -5.39 -16.33 c
+12.58 0 p
+1.05 9.58 6.75 13.92 18.42 13.92 c
+11.23 0 17.53 -4.19 17.53 -11.67 c
+0 -3.3 p
+0 -5.25 -3.16 -7.48 -13.03 -8.69 c
+-17.67 -2.25 -20.37 -2.84 -25.17 -4.8 c
+-9.12 -3.73 -13.77 -10.78 -13.77 -20.97 c
+0 -14.22 9.88 -23.2 25.75 -23.2 c
+9.89 0 17.83 3.44 26.66 11.53 c
+0.91 -7.94 4.8 -11.53 12.89 -11.53 c
+2.55 0 4.48 0.3 8.53 1.34 c
+0 9.44 h
+2051.27 2513.72 m
+0 -4.2 -1.2 -6.75 -4.95 -10.19 c
+-5.09 -4.64 -11.23 -7.05 -18.56 -7.05 c
+-9.73 0 -15.44 4.64 -15.44 12.58 c
+0 8.25 5.55 12.44 18.88 14.39 c
+13.19 1.8 15.88 2.39 20.08 4.34 c
+0 -14.08 p f
+2114.05 2567.48 -12.89 0 0 21.56 -12.42 0 ^ -10.64 0 0 -10.19 ^ 
+0 -59.31 P
+0 -7.94 5.39 -12.42 15.13 -12.42 c
+3 0 5.98 0.3 10.19 1.05 c
+0 10.48 p
+-1.66 -0.45 -3.59 -0.61 -6 -0.61 c
+-5.39 0 -6.89 1.5 -6.89 7.05 c
+0 53.77 12.89 0 0 10.19 p f
+2188.55 2541.13 m
+-0.61 7.64 -2.25 12.58 -5.25 16.92 c
+-5.39 7.33 -14.83 11.67 -25.75 11.67 c
+-21.12 0 -34.91 -16.77 -34.91 -42.83 c
+0 -25.31 13.48 -41.33 34.75 -41.33 c
+18.72 0 30.55 11.22 32.05 30.39 c
+-12.58 0 p
+-2.09 -12.58 -8.53 -18.86 -19.17 -18.86 c
+-13.78 0 -22.02 11.22 -22.02 29.8 c
+0 19.63 8.09 31.3 21.72 31.3 c
+10.48 0 17.08 -6.14 18.56 -17.06 c
+12.59 0 p f
+2203.48 2598.19 0 -109.19 12.44 0 0 43.28 P
+0 16.03 8.38 26.52 21.27 26.52 c
+4.03 0 8.08 -1.36 11.08 -3.59 c
+3.59 -2.55 5.09 -6.3 5.09 -11.84 c
+0 -54.36 12.42 0 0 59.31 p
+0 13.17 -9.42 21.41 -24.7 21.41 c
+-11.08 0 -17.83 -3.44 -25.16 -13.02 c
+0 41.48 -12.44 0 p f
+2282.89 2524.94 35.6406 10.7969 re
+f
+2367.19 2595.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2367.19 2583.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2423.03 2489 15.5781 15.5781 re
+f
+2492.19 2595.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2492.19 2583.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2606.3 2595.19 -54.83 0 -7.94 -57.81 12.14 0 P
+6.14 7.34 11.23 9.89 19.47 9.89 c
+14.22 0 23.22 -9.73 23.22 -25.47 c
+0 -15.28 -8.84 -24.56 -23.22 -24.56 c
+-11.53 0 -18.58 5.84 -21.72 17.83 c
+-13.19 0 p
+1.81 -8.69 3.3 -12.87 6.45 -16.78 c
+5.98 -8.08 16.77 -12.72 28.75 -12.72 c
+21.42 0 36.39 15.56 36.39 38.03 c
+0 20.97 -13.92 35.34 -34.3 35.34 c
+-7.48 0 -13.47 -1.94 -19.61 -6.44 c
+4.19 29.66 44.19 0 0 13.03 p f
+2631.92 2457.25 m
+14.98 19.63 24.42 46.88 24.42 70.39 c
+0 23.66 -9.44 50.92 -24.42 70.55 c
+-8.23 0 p
+13.19 -21.42 20.52 -46.58 20.52 -70.55 c
+0 -23.81 -7.33 -49.12 -20.52 -70.39 c
+8.23 0 p f
+[ 5 7.5 ] 0 d
+1 i
+0 255 r5
+2758 2539 391.5 0 P
+858 1368 3.5 -7 4 -6.5 4 -6.5 4 -6 4.5 -5.5 4.5 -5.5 4.5 -4.5 
+4.5 -5 5 -4 4.5 -4 5.5 -4 5 -3.5 5 -3.5 5.5 -3 5.5 -3 
+5.5 -3 6 -2.5 6 -2.5 6 -2.5 6 -2 6 -2 6.5 -2 6.5 -2 
+6.5 -2 7 -1.5 7 -2 7 -1.5 7 -1.5 7.5 -1.5 8 -1.5 7.5 -1.5 
+8 -1.5 8.5 -1 8.5 -1.5 9 -1.5 9 -1 9 -1.5 10 -1 9.5 -1.5 
+10.5 -1 10.5 -1.5 11 -1 11 -1.5 11.5 -1.5 12.5 -1 12 -1.5 13 -1 
+13.5 -1.5 14 -1.5 14 -1 15 -1.5 15.5 -1.5 16 -1.5 16.5 -1.5 17 -1 
+17.5 -1.5 18.5 -1.5 19 -2 20 -1.5 20.5 -1.5 21 -1.5 22 -2 23 -1.5 
+23.5 -2 24.5 -1.5 25 -2 26.5 -2 27 -2 28 -2.5 29.5 -2 30 -2.5 
+31 -2 32.5 -2.5 33 -2.5 34.5 -3 36 -2.5 36.5 -3 38.5 -3 39 -3.5 
+41 -3.5 42 -3.5 43 -3.5 45 -4 46 -4 47.5 -4.5 49.5 -4.5 50.5 -5 
+52 -5 54 -5.5 55.5 -6 57 -6 58.5 -6 61 -7 62 -7 64 -7.5 
+66 -8 68 -8.5 70 -9 71.5 -9.5 S
+0.2 i
+K
+1444.56 2385.28 34.3 0 P
+8.53 0 15.27 2.55 21.11 7.78 c
+6.59 6 9.44 13.03 9.44 23.06 c
+0 20.53 -12.12 32.06 -33.7 32.06 c
+-45.08 0 0 -109.19 13.94 0 0 46.28 h
+1444.56 2397.56 0 38.34 29.05 0 P
+13.33 0 21.27 -7.19 21.27 -19.17 c
+0 -11.98 -7.94 -19.17 -21.27 -19.17 c
+-29.05 0 p f
+1545.41 2388.72 59.45 0 0 12.28 ^ 0 34.91 61.7 0 0 12.28 -75.62 0 
+0 -109.19 78.33 0 0 12.28 -64.41 0 0 37.44 f
+1707.27 2416.13 m
+-0.16 21.42 -14.83 33.86 -39.98 33.86 c
+-23.97 0 -38.8 -12.28 -38.8 -32.06 c
+0 -13.33 7.03 -21.7 21.42 -25.45 c
+27.11 -7.19 p
+13.77 -3.59 20.06 -9.14 20.06 -17.67 c
+0 -5.84 -3.14 -11.83 -7.78 -15.12 c
+-4.34 -3 -11.23 -4.64 -20.08 -4.64 c
+-11.83 0 -19.92 2.84 -25.16 9.13 c
+-4.05 4.8 -5.84 10.03 -5.69 16.78 c
+-13.19 0 p
+0.16 -10.03 2.09 -16.62 6.44 -22.62 c
+7.5 -10.17 20.08 -15.56 36.7 -15.56 c
+13.03 0 23.66 2.98 30.7 8.38 c
+7.33 5.84 11.97 15.58 11.97 25.02 c
+0 13.48 -8.37 23.36 -23.2 27.41 c
+-27.41 7.34 p
+-13.19 3.59 -17.98 7.78 -17.98 16.17 c
+0 11.08 9.73 18.42 24.42 18.42 c
+17.38 0 27.11 -7.94 27.25 -22.17 c
+13.19 0 p f
+1807.27 2416.13 m
+-0.16 21.42 -14.83 33.86 -39.98 33.86 c
+-23.97 0 -38.8 -12.28 -38.8 -32.06 c
+0 -13.33 7.03 -21.7 21.42 -25.45 c
+27.11 -7.19 p
+13.77 -3.59 20.06 -9.14 20.06 -17.67 c
+0 -5.84 -3.14 -11.83 -7.78 -15.12 c
+-4.34 -3 -11.23 -4.64 -20.08 -4.64 c
+-11.83 0 -19.92 2.84 -25.16 9.13 c
+-4.05 4.8 -5.84 10.03 -5.69 16.78 c
+-13.19 0 p
+0.16 -10.03 2.09 -16.62 6.44 -22.62 c
+7.5 -10.17 20.08 -15.56 36.7 -15.56 c
+13.03 0 23.66 2.98 30.7 8.38 c
+7.33 5.84 11.97 15.58 11.97 25.02 c
+0 13.48 -8.37 23.36 -23.2 27.41 c
+-27.41 7.34 p
+-13.19 3.59 -17.98 7.78 -17.98 16.17 c
+0 11.08 9.73 18.42 24.42 18.42 c
+17.38 0 27.11 -7.94 27.25 -22.17 c
+13.19 0 p f
+1894.34 2448.19 m
+-14.97 -19.62 -24.41 -46.89 -24.41 -70.39 c
+0 -23.67 9.44 -50.92 24.41 -70.55 c
+8.23 0 p
+-13.17 21.42 -20.52 46.58 -20.52 70.55 c
+0 23.81 7.34 49.13 20.52 70.39 c
+-8.23 0 p f
+1917.09 2448.19 0 -109.19 11.22 0 0 10.03 P
+6 -9.12 13.94 -13.47 24.88 -13.47 c
+20.66 0 34.14 16.92 34.14 42.98 c
+0 25.45 -12.87 41.17 -33.55 41.17 c
+-10.78 0 -18.42 -4.03 -24.27 -12.87 c
+0 41.34 -12.42 0 h
+1951.39 2408.05 m
+13.92 0 22.91 -12.14 22.91 -30.86 c
+0 -17.81 -9.28 -29.95 -22.91 -29.95 c
+-13.19 0 -21.87 11.98 -21.87 30.41 c
+0 18.42 8.69 30.41 21.88 30.41 c
+f
+2073.13 2346.34 m
+-1.34 -0.3 -1.94 -0.3 -2.69 -0.3 c
+-4.34 0 -6.75 2.23 -6.75 6.14 c
+0 46.13 p
+0 13.92 -10.19 21.41 -29.5 21.41 c
+-11.39 0 -20.81 -3.28 -26.06 -9.12 c
+-3.59 -4.05 -5.09 -8.55 -5.39 -16.33 c
+12.58 0 p
+1.05 9.58 6.75 13.92 18.42 13.92 c
+11.23 0 17.53 -4.19 17.53 -11.67 c
+0 -3.3 p
+0 -5.25 -3.16 -7.48 -13.03 -8.69 c
+-17.67 -2.25 -20.37 -2.84 -25.17 -4.8 c
+-9.12 -3.73 -13.77 -10.78 -13.77 -20.97 c
+0 -14.22 9.88 -23.2 25.75 -23.2 c
+9.89 0 17.83 3.44 26.66 11.53 c
+0.91 -7.94 4.8 -11.53 12.89 -11.53 c
+2.55 0 4.48 0.3 8.53 1.34 c
+0 9.44 h
+2051.27 2363.72 m
+0 -4.2 -1.2 -6.75 -4.95 -10.19 c
+-5.09 -4.64 -11.23 -7.05 -18.56 -7.05 c
+-9.73 0 -15.44 4.64 -15.44 12.58 c
+0 8.25 5.55 12.44 18.88 14.39 c
+13.19 1.8 15.88 2.39 20.08 4.34 c
+0 -14.08 p f
+2114.05 2417.48 -12.89 0 0 21.56 -12.42 0 ^ -10.64 0 0 -10.19 ^ 
+0 -59.31 P
+0 -7.94 5.39 -12.42 15.13 -12.42 c
+3 0 5.98 0.3 10.19 1.05 c
+0 10.48 p
+-1.66 -0.45 -3.59 -0.61 -6 -0.61 c
+-5.39 0 -6.89 1.5 -6.89 7.05 c
+0 53.77 12.89 0 0 10.19 p f
+2188.55 2391.13 m
+-0.61 7.64 -2.25 12.58 -5.25 16.92 c
+-5.39 7.33 -14.83 11.67 -25.75 11.67 c
+-21.12 0 -34.91 -16.77 -34.91 -42.83 c
+0 -25.31 13.48 -41.33 34.75 -41.33 c
+18.72 0 30.55 11.22 32.05 30.39 c
+-12.58 0 p
+-2.09 -12.58 -8.53 -18.86 -19.17 -18.86 c
+-13.78 0 -22.02 11.22 -22.02 29.8 c
+0 19.63 8.09 31.3 21.72 31.3 c
+10.48 0 17.08 -6.14 18.56 -17.06 c
+12.59 0 p f
+2203.48 2448.19 0 -109.19 12.44 0 0 43.28 P
+0 16.03 8.38 26.52 21.27 26.52 c
+4.03 0 8.08 -1.36 11.08 -3.59 c
+3.59 -2.55 5.09 -6.3 5.09 -11.84 c
+0 -54.36 12.42 0 0 59.31 p
+0 13.17 -9.42 21.41 -24.7 21.41 c
+-11.08 0 -17.83 -3.44 -25.16 -13.02 c
+0 41.48 -12.44 0 p f
+2282.89 2374.94 35.6406 10.7969 re
+f
+2367.19 2445.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2367.19 2433.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2423.03 2339 15.5781 15.5781 re
+f
+2489.8 2414.64 0 -75.64 13.17 0 0 106.19 -8.69 0 P
+-4.64 -16.33 -7.64 -18.58 -28 -21.12 c
+0 -9.42 23.52 0 p f
+2576.19 2445.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2576.19 2433.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2631.92 2307.25 m
+14.98 19.63 24.42 46.88 24.42 70.39 c
+0 23.66 -9.44 50.92 -24.42 70.55 c
+-8.23 0 p
+13.19 -21.42 20.52 -46.58 20.52 -70.55 c
+0 -23.81 -7.33 -49.12 -20.52 -70.39 c
+8.23 0 p f
+[ 30 10 5 10 ] 0 d
+1 i
+0 255 r3
+2758 2389 391.5 0 P
+841.5 2793.5 2.5 -55.5 2.5 -51 3 -47.5 3 -44 3 -41 3 -37.5 3.5 -34.5 
+3.5 -31.5 3.5 -29 3.5 -26.5 4 -24 3.5 -22 4 -19.5 4 -17.5 4.5 -16 
+4 -14 4.5 -12.5 4.5 -11 4.5 -9.5 5 -8.5 5 -7.5 5 -6 5 -5.5 
+5 -4.5 5.5 -4 5.5 -3.5 6 -2.5 5.5 -2.5 6 -1.5 6.5 -2 6.5 -1 
+6.5 -1.5 7 -1.5 7 -1 7.5 -1.5 7.5 -1.5 8 -1.5 8 -2 8.5 -2.5 
+9 -2.5 9 -3 9.5 -3.5 9.5 -4 10.5 -4.5 10.5 -5 11 -5.5 11.5 -6 
+12 -7 12.5 -7.5 12.5 -8 13.5 -9 14 -9.5 14.5 -10 15 -11 16 -12 
+16.5 -12 17 -13.5 17.5 -13.5 18.5 -14.5 19 -15.5 20 -16 20.5 -16.5 21.5 -17 
+22.5 -18 23.5 -18.5 24 -19 25 -20 26 -20 27 -20.5 28 -21 29 -21.5 
+30 -22 31.5 -22 32.5 -22.5 33.5 -22.5 35 -23 36 -23 37 -23 38.5 -23 
+40 -23 41.5 -23 43 -22.5 44 -22.5 45.5 -22 47.5 -22 48.5 -21 50.5 -21 
+52 -20 54 -19.5 55 -18.5 57.5 -17.5 59 -17 60.5 -15.5 63 -14.5 64.5 -13.5 
+66.5 -12 68.5 -10.5 70.5 -9 72.5 -7 S
+0.2 i
+K
+1434.77 2227.19 17.81 17.83 38.5 -56.02 16.47 0 -44.92 64.7 44.47 44.48 -17.97 0 -54.36 -55.27 
+0 55.27 -13.94 0 0 -109.19 ^ 0 38.19 f
+1591.52 2238.72 0 -49.72 13.94 0 0 109.19 ^ 0 -47.19 -56.16 0 ^ 
+-13.92 0 0 -109.19 14.08 0 0 49.72 56 0 f
+1707.27 2266.13 m
+-0.16 21.42 -14.83 33.86 -39.98 33.86 c
+-23.97 0 -38.8 -12.28 -38.8 -32.06 c
+0 -13.33 7.03 -21.7 21.42 -25.45 c
+27.11 -7.19 p
+13.77 -3.59 20.06 -9.14 20.06 -17.67 c
+0 -5.84 -3.14 -11.83 -7.78 -15.12 c
+-4.34 -3 -11.23 -4.64 -20.08 -4.64 c
+-11.83 0 -19.92 2.84 -25.16 9.13 c
+-4.05 4.8 -5.84 10.03 -5.69 16.78 c
+-13.19 0 p
+0.16 -10.03 2.09 -16.62 6.44 -22.62 c
+7.5 -10.17 20.08 -15.56 36.7 -15.56 c
+13.03 0 23.66 2.98 30.7 8.38 c
+7.33 5.84 11.97 15.58 11.97 25.02 c
+0 13.48 -8.37 23.36 -23.2 27.41 c
+-27.41 7.34 p
+-13.19 3.59 -17.98 7.78 -17.98 16.17 c
+0 11.08 9.73 18.42 24.42 18.42 c
+17.38 0 27.11 -7.94 27.25 -22.17 c
+13.19 0 p f
+1807.27 2266.13 m
+-0.16 21.42 -14.83 33.86 -39.98 33.86 c
+-23.97 0 -38.8 -12.28 -38.8 -32.06 c
+0 -13.33 7.03 -21.7 21.42 -25.45 c
+27.11 -7.19 p
+13.77 -3.59 20.06 -9.14 20.06 -17.67 c
+0 -5.84 -3.14 -11.83 -7.78 -15.12 c
+-4.34 -3 -11.23 -4.64 -20.08 -4.64 c
+-11.83 0 -19.92 2.84 -25.16 9.13 c
+-4.05 4.8 -5.84 10.03 -5.69 16.78 c
+-13.19 0 p
+0.16 -10.03 2.09 -16.62 6.44 -22.62 c
+7.5 -10.17 20.08 -15.56 36.7 -15.56 c
+13.03 0 23.66 2.98 30.7 8.38 c
+7.33 5.84 11.97 15.58 11.97 25.02 c
+0 13.48 -8.37 23.36 -23.2 27.41 c
+-27.41 7.34 p
+-13.19 3.59 -17.98 7.78 -17.98 16.17 c
+0 11.08 9.73 18.42 24.42 18.42 c
+17.38 0 27.11 -7.94 27.25 -22.17 c
+13.19 0 p f
+1894.34 2298.19 m
+-14.97 -19.62 -24.41 -46.89 -24.41 -70.39 c
+0 -23.67 9.44 -50.92 24.41 -70.55 c
+8.23 0 p
+-13.17 21.42 -20.52 46.58 -20.52 70.55 c
+0 23.81 7.34 49.13 20.52 70.39 c
+-8.23 0 p f
+1917.09 2298.19 0 -109.19 11.22 0 0 10.03 P
+6 -9.12 13.94 -13.47 24.88 -13.47 c
+20.66 0 34.14 16.92 34.14 42.98 c
+0 25.45 -12.87 41.17 -33.55 41.17 c
+-10.78 0 -18.42 -4.03 -24.27 -12.87 c
+0 41.34 -12.42 0 h
+1951.39 2258.05 m
+13.92 0 22.91 -12.14 22.91 -30.86 c
+0 -17.81 -9.28 -29.95 -22.91 -29.95 c
+-13.19 0 -21.87 11.98 -21.87 30.41 c
+0 18.42 8.69 30.41 21.88 30.41 c
+f
+2073.13 2196.34 m
+-1.34 -0.3 -1.94 -0.3 -2.69 -0.3 c
+-4.34 0 -6.75 2.23 -6.75 6.14 c
+0 46.13 p
+0 13.92 -10.19 21.41 -29.5 21.41 c
+-11.39 0 -20.81 -3.28 -26.06 -9.12 c
+-3.59 -4.05 -5.09 -8.55 -5.39 -16.33 c
+12.58 0 p
+1.05 9.58 6.75 13.92 18.42 13.92 c
+11.23 0 17.53 -4.19 17.53 -11.67 c
+0 -3.3 p
+0 -5.25 -3.16 -7.48 -13.03 -8.69 c
+-17.67 -2.25 -20.37 -2.84 -25.17 -4.8 c
+-9.12 -3.73 -13.77 -10.78 -13.77 -20.97 c
+0 -14.22 9.88 -23.2 25.75 -23.2 c
+9.89 0 17.83 3.44 26.66 11.53 c
+0.91 -7.94 4.8 -11.53 12.89 -11.53 c
+2.55 0 4.48 0.3 8.53 1.34 c
+0 9.44 h
+2051.27 2213.72 m
+0 -4.2 -1.2 -6.75 -4.95 -10.19 c
+-5.09 -4.64 -11.23 -7.05 -18.56 -7.05 c
+-9.73 0 -15.44 4.64 -15.44 12.58 c
+0 8.25 5.55 12.44 18.88 14.39 c
+13.19 1.8 15.88 2.39 20.08 4.34 c
+0 -14.08 p f
+2114.05 2267.48 -12.89 0 0 21.56 -12.42 0 ^ -10.64 0 0 -10.19 ^ 
+0 -59.31 P
+0 -7.94 5.39 -12.42 15.13 -12.42 c
+3 0 5.98 0.3 10.19 1.05 c
+0 10.48 p
+-1.66 -0.45 -3.59 -0.61 -6 -0.61 c
+-5.39 0 -6.89 1.5 -6.89 7.05 c
+0 53.77 12.89 0 0 10.19 p f
+2188.55 2241.13 m
+-0.61 7.64 -2.25 12.58 -5.25 16.92 c
+-5.39 7.33 -14.83 11.67 -25.75 11.67 c
+-21.12 0 -34.91 -16.77 -34.91 -42.83 c
+0 -25.31 13.48 -41.33 34.75 -41.33 c
+18.72 0 30.55 11.22 32.05 30.39 c
+-12.58 0 p
+-2.09 -12.58 -8.53 -18.86 -19.17 -18.86 c
+-13.78 0 -22.02 11.22 -22.02 29.8 c
+0 19.63 8.09 31.3 21.72 31.3 c
+10.48 0 17.08 -6.14 18.56 -17.06 c
+12.59 0 p f
+2203.48 2298.19 0 -109.19 12.44 0 0 43.28 P
+0 16.03 8.38 26.52 21.27 26.52 c
+4.03 0 8.08 -1.36 11.08 -3.59 c
+3.59 -2.55 5.09 -6.3 5.09 -11.84 c
+0 -54.36 12.42 0 0 59.31 p
+0 13.17 -9.42 21.41 -24.7 21.41 c
+-11.08 0 -17.83 -3.44 -25.16 -13.02 c
+0 41.48 -12.44 0 p f
+2282.89 2224.94 35.6406 10.7969 re
+f
+2367.19 2295.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2367.19 2283.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2423.03 2189 15.5781 15.5781 re
+f
+2489.8 2264.64 0 -75.64 13.17 0 0 106.19 -8.69 0 P
+-4.64 -16.33 -7.64 -18.58 -28 -21.12 c
+0 -9.42 23.52 0 p f
+2576.19 2295.19 m
+-9.89 0 -18.87 -4.34 -24.41 -11.69 c
+-6.89 -9.28 -10.34 -23.52 -10.34 -43.12 c
+0 -35.8 11.98 -54.81 34.75 -54.81 c
+22.47 0 34.75 19.02 34.75 53.91 c
+0 20.67 -3.3 34.45 -10.34 44.03 c
+-5.53 7.5 -14.37 11.69 -24.41 11.69 c
+h
+2576.19 2283.5 m
+14.23 0 21.27 -14.37 21.27 -42.83 c
+0 -30.11 -6.89 -44.19 -21.56 -44.19 c
+-13.94 0 -20.97 14.69 -20.97 43.73 c
+0 29.06 7.03 43.28 21.27 43.28 c
+f
+2631.92 2157.25 m
+14.98 19.63 24.42 46.88 24.42 70.39 c
+0 23.66 -9.44 50.92 -24.42 70.55 c
+-8.23 0 p
+13.19 -21.42 20.52 -46.58 20.52 -70.55 c
+0 -23.81 -7.33 -49.12 -20.52 -70.39 c
+8.23 0 p f
+[ 15 15 5 15 ] 0 d
+1 i
+0 255 r6
+2758 2239 391.5 0 P
+841.5 2622.5 2.5 -27.5 2.5 -26 3 -24 3 -22.5 3 -21.5 3 -20 3.5 -18.5 
+3.5 -17.5 3.5 -16 3.5 -15 4 -14 3.5 -13 4 -12 4 -11.5 4.5 -10.5 
+4 -9.5 4.5 -9 4.5 -8.5 4.5 -8 5 -7.5 5 -6.5 5 -6.5 5 -6.5 
+5 -5.5 5.5 -5.5 5.5 -5.5 6 -5.5 5.5 -5 6 -5 6.5 -5 6.5 -5 
+6.5 -5 7 -5 7 -5.5 7.5 -5 7.5 -6 8 -5.5 8 -6.5 8.5 -6 
+9 -7 9 -7 9.5 -7.5 9.5 -7.5 10.5 -8.5 10.5 -8.5 11 -9 11.5 -9.5 
+12 -10.5 12.5 -10.5 12.5 -11 13.5 -11.5 14 -12 14.5 -12.5 15 -13 16 -14 
+16.5 -14 17 -14.5 17.5 -15.5 18.5 -15.5 19 -16.5 20 -16.5 20.5 -17.5 21.5 -17.5 
+22.5 -18.5 23.5 -18.5 24 -19 25 -19.5 26 -19.5 27 -20 28 -20.5 29 -21 
+30 -21 31.5 -21 32.5 -21.5 33.5 -21.5 35 -21.5 36 -21.5 37 -21.5 38.5 -22 
+40 -21 41.5 -21.5 43 -21 44 -21 45.5 -20.5 47.5 -20 48.5 -19.5 50.5 -19 
+52 -18.5 54 -17.5 55 -17 57.5 -16 59 -15 60.5 -14.5 63 -13 64.5 -11.5 
+66.5 -10.5 68.5 -9 70.5 -7.5 72.5 -6 S
+[ ] 0 d
+5 w
+K
+825 480 2504.5 2615.5 re
+S
+cleartomark end end pagesave restore
+ showpage
+%%PageTrailer
 %%Trailer
-%%DocumentFonts: Helvetica
+%%Pages: 1

@@ -1,6 +1,6 @@
 \beamer@endinputifotherversion {3.24pt}
 \beamer@sectionintoc {1}{Data Stream Analysis}{2}{0}{1}
-\beamer@sectionintoc {2}{Economically-Efficient Selective Sampling}{11}{0}{2}
-\beamer@sectionintoc {3}{Results}{22}{0}{3}
-\beamer@sectionintoc {4}{Conclusions}{26}{0}{4}
-\beamer@sectionintoc {5}{Contact}{27}{0}{5}
+\beamer@sectionintoc {2}{Economically-Efficient Selective Sampling}{9}{0}{2}
+\beamer@sectionintoc {3}{Results}{20}{0}{3}
+\beamer@sectionintoc {4}{Conclusions}{25}{0}{4}
+\beamer@sectionintoc {5}{Contact}{28}{0}{5}

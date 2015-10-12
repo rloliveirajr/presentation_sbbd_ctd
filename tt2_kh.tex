@@ -1,0 +1,49 @@
+\begin{figure}[t!]
+\psscalebox{0.8 0.8}{
+\centering
+\begin{pspicture}(-6,-0.6)(0,-0.6)
+\psset{Alpha=50,Beta=20}
+
+\rput[c](0.60,2.45){$\bullet$}
+\rput[c](1.60,2.58){$\bullet$}
+\rput[c](2.30,2.41){$\bullet$}
+\rput[c](3.16,1.55){$\bullet$}
+\rput[c](1.82,1.30){$\bullet$}
+\rput[c](0.80,1.64){$\bullet$}
+
+\rput[c](0.60,1.45){$\bullet$}
+\rput[c](1.10,1.18){$\bullet$}
+\rput[c](2.30,0.41){$\circ$}
+\rput[c](3.05,0.25){$\circ$}
+\rput[c](2.82,0.35){$\circ$}
+\rput[c](1.82,0.40){$\circ$}
+\rput[c](1.82,0.10){$\circ$}
+\rput[c](1.72,-0.10){$\circ$}
+\rput[c](0.90,0.74){$\bullet$}
+\rput[c](0.80,0.64){$\bullet$}
+
+\rput[c](1.6,3.9){Kaldor-Hicks region}
+\pscurve[arrowscale=2,linecolor=gray]{->}(1.30,0.80)(4,1.4)(1.6,3.7)
+
+\pspolygon[linestyle=none, linewidth=0pt,fillstyle=solid,fillcolor=black!50,opacity=0.4](0.60,2.45)(1.60,2.58)(2.30,2.41)(3.16,1.55)(1.82,1.30)(0.80,1.64)
+\pspolygon[linestyle=none, linewidth=0pt,fillstyle=solid,fillcolor=black!50,opacity=0.4](0.60,2.45)(1.60,2.58)(2.30,2.41)(3.16,1.55)(0,0)%(0,1)
+
+\pstThreeDPut(-2.7,0,0){
+\pstThreeDLine[linecolor=lightgray,linewidth=0.5pt](0,0,2.7)(2.7,0,2.7)
+\pstThreeDLine[linecolor=lightgray,linewidth=0.5pt](0,0,0)(0,0,2.7)
+\pstThreeDLine[linecolor=lightgray,linewidth=0.5pt](0,0,0)(2.7,0,0)
+\pstThreeDLine[linecolor=lightgray,linewidth=0.5pt](0,0,0)(2.7,0,0)
+\pstThreeDLine[linecolor=lightgray,linewidth=0.5pt](0,0,0)(0,2.7,0)
+\pstThreeDLine[linecolor=lightgray,linewidth=0.5pt](0,2.7,2.7)(0,2.7,0)
+\pstThreeDLine[linecolor=lightgray,linewidth=0.5pt](2.7,0,2.7)(2.7,2.7,2.7)
+\pstThreeDLine[linecolor=lightgray,linewidth=0.5pt](0,2.7,2.7)(2.7,2.7,2.7)
+\pstThreeDLine[linecolor=lightgray,linewidth=0.5pt](0,0,2.7)(0,2.7,2.7)
+\pstThreeDLine[linecolor=lightgray,linewidth=0.5pt](2.7,0,2.7)(2.7,0,0)
+\pstThreeDLine[linecolor=lightgray,linewidth=0.5pt](2.7,2.7,0)(2.7,0,0)
+\pstThreeDLine[linecolor=lightgray,linewidth=0.5pt](2.7,2.7,0)(0,2.7,0)
+\pstThreeDLine[linecolor=lightgray,linewidth=0.5pt](2.7,2.7,0)(2.7,2.7,2.7)
+}
+\end{pspicture}
+
+}
+\end{figure}
