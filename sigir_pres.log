@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.10.17)  12 OCT 2015 00:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.10.17)  12 OCT 2015 22:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1371,6 +1371,8 @@ Overfull \hbox (17.9229pt too wide) in paragraph at lines 487--487
 
 ] [26
 
+] [27
+
 ]
 \tf@nav=\write8
 \openout8 = `sigir_pres.nav'.
@@ -1381,28 +1383,28 @@ Overfull \hbox (17.9229pt too wide) in paragraph at lines 487--487
 \tf@snm=\write10
 \openout10 = `sigir_pres.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 565.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 565.
- (./sigir_pres.aux (./tt_space.aux) (./tt_pareto.aux)
-(./tt_kh.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 565.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 565.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 579.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 579.
+ (./sigir_pres.aux (./tt_space.aux)
+(./tt_pareto.aux) (./tt_kh.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 579.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 579.
 Package rerunfilecheck Info: File `sigir_pres.out' has not changed.
-(rerunfilecheck)             Checksum: 1FA3CA442106D9DA9D6770C8B8013A6D;261.
+(rerunfilecheck)             Checksum: 46954ECF51D8559B3F4E1BF6FDCBEA97;308.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 565.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 579.
  ) 
 Here is how much of TeX's memory you used:
- 23666 strings out of 495029
- 432938 string characters out of 6181522
- 682423 words of memory out of 5000000
- 26234 multiletter control sequences out of 15000+600000
+ 23673 strings out of 495029
+ 432998 string characters out of 6181522
+ 682808 words of memory out of 5000000
+ 26241 multiletter control sequences out of 15000+600000
  18508 words of font info for 69 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,17n,74p,590b,649s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sigir_pres.dvi (26 pages, 326688 bytes).
+Output written on sigir_pres.dvi (27 pages, 341540 bytes).
