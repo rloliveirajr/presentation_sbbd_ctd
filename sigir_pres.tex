@@ -50,7 +50,7 @@
 \begin{itemize}
 \item Problem
 \begin{itemize}
-\item Automatically extraction of relevant patterns and relations from data that is continuously created.
+\item Automatically extraction of relevant patterns and relations considering limited computational resources.
 % \begin{itemize}
 % \item Keep track of data streams is useful for systems monitoring, online social network advertising, etc.
 % \end{itemize}
@@ -90,7 +90,7 @@
 
 \begin{frame}\frametitle{Concept Drifts}
 \begin{itemize}
-\item Concept Drift is unforeseen changes in data's nature over time.
+\item Concept Drifts are unforeseen changes in nature of data over time.
 \end{itemize}
 
 \vspace{-0.5in}
@@ -149,7 +149,7 @@
 \begin{itemize}
 \item Updating the classification model as the stream evolves.
 \begin{itemize}
-\item Resources limitation: memory, time and labeled examples.
+\item Limitation: memory, time and labeled examples.
 \end{itemize}
 \end{itemize}
 \end{itemize}
@@ -180,7 +180,7 @@
 \begin{itemize}
 \item Classification models are composed by association rules.
   \begin{itemize}
-    \item $\{x \to y\}$, where $x \in X$ and $y \in Y$
+    \item $\{x \to y\}$, where $x \in X$ (input space) and $y \in Y$ (output space).
   \end{itemize}
 \item Efficiently updated as the training set evolves.
 \item Models are built on-the-fly:
@@ -229,15 +229,10 @@
 
 \begin{frame}\frametitle{Economic Efficiency}
 
-Example: Hotels in Petr\'{o}polis.
+How to balance Adaptiveness and Memorability?
 
 \centering
 \include{tt_space}
-% \begin{figure}
-% \centering
-% \includegraphics[height=1.60in]{hotel1}
-% \end{figure}
-
 \end{frame}
 
 \begin{frame}\frametitle{Pareto Efficiency}
@@ -245,8 +240,8 @@ Example: Hotels in Petr\'{o}polis.
 Pareto frontier: Dominant Points
 
 \begin{itemize}
-\item $U_c(a)\ge U_c(b)$ and $U_d(a)\ge U_d(b)$
-\item $U_c(a) > U_c(b)$ or $U_d(a) > U_d(b)$
+\item $U_m(a)\ge U_m(b)$ and $U_a(a)\ge U_a(b)$
+\item $U_m(a) > U_m(b)$ or $U_a(a) > U_a(b)$
 \end{itemize}
 
 \include{tt_pareto}
@@ -357,7 +352,7 @@ Region of compensation:
 Algorithm & Adaptiveness & Memorability \\
 \hline \hline
 AC (KDD 2011) & Active Learning & Base Learner \\
-HAT (JMLR 2011) & ADWIN & Trees Ensemble \\
+HAT (JMLR 2011) & ADWIN & Decision Tree Model \\
 ILAC (SIGIR 2011) & Data Projection & Incremental Training Set \\
 \hline
 % EESS (SIGIR 2014) & Active Learning \& EESS & EESS \\
@@ -560,7 +555,7 @@ Training Size and RAM-Hours
 \begin{small}
 \begin{itemize}
 \item Oliveira Jr., R., Veloso, A., Pereira, A., Meira Jr., W., Ferreira, R., and Parthasarathy, S. (2014). \textbf{Economically-efficient sentiment stream analysis}. In SIGIR. ACM.
-\item Veloso, A. (2012). \textbf{UFMG respository of machine learning}. https://code.google.com/p/machine-learning-dcc-ufmg/.
+\item Veloso, A. (2012). \textbf{UFMG repository of machine learning}. https://code.google.com/p/machine-learning-dcc-ufmg/.
 \item Other results:
 \begin{itemize}
 \item Buehrer, G., Oliveira Jr., R., Fuhry, D., and Parthasarathy, S. (2015). \textbf{Towards a parameter-free and parallel itemset mining algorithm in linearithmic time}. In ICDE. IEEE.
